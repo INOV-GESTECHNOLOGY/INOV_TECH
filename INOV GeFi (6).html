@@ -1,0 +1,3665 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="FinEglise">
+<meta name="application-name" content="INOV_Gestion_Eglise">
+<meta name="theme-color" content="#182840">
+<meta name="msapplication-TileColor" content="#182840">
+<meta name="description" content="Application de gestion financière TASAMY">
+<link rel="manifest" href="data:application/json;base64,ewogICJuYW1lIjogIkZpbmFuY2VzIMOJZ2xpc2UiLAogICJzaG9ydF9uYW1lIjogIkZpbkVnbGlzZSIsCiAgImRlc2NyaXB0aW9uIjogIkdlc3Rpb24gZmluYW5jacOocmUgcGFyb2lzc2lhbGUiLAogICJzdGFydF91cmwiOiAiLi9FZ2xpc2VGaW5hbmNlcy5odG1sIiwKICAiZGlzcGxheSI6ICJzdGFuZGFsb25lIiwKICAib3JpZW50YXRpb24iOiAicG9ydHJhaXQiLAogICJiYWNrZ3JvdW5kX2NvbG9yIjogIiMxODI4NDAiLAogICJ0aGVtZV9jb2xvciI6ICIjMTgyODQwIiwKICAiaWNvbnMiOiBbCiAgICB7InNyYyI6ICJkYXRhOmltYWdlL3N2Zyt4bWw7YmFzZTY0LFBITjJaeUI0Yld4dWN6MGlhSFIwY0RvdkwzZDNkeTUzTXk1dmNtY3ZNakF3TUM5emRtY2lJSFpwWlhkQ2IzZzlJakFnTUNBMU1USWdOVEV5SWo0S0lDQThJUzB0SUVKaFkydG5jbTkxYm1RZ0xTMCtDaUFnUEhKbFkzUWdkMmxrZEdnOUlqVXhNaUlnYUdWcFoyaDBQU0kxTVRJaUlISjRQU0k0TUNJZ1ptbHNiRDBpSXpFNE1qZzBNQ0l2UGdvZ0lEd2hMUzBnUTNKdmMzTWdkbVZ5ZEdsallXd2dMUzArQ2lBZ1BISmxZM1FnZUQwaU1qUXdJaUI1UFNJMk1DSWdkMmxrZEdnOUlqTXlJaUJvWldsbmFIUTlJakl3TUNJZ2NuZzlJamdpSUdacGJHdzlJaU5ETkRsQk0wTWlMejRLSUNBOElTMHRJRU55YjNOeklHaHZjbWw2YjI1MFlXd2dMUzArQ2lBZ1BISmxZM1FnZUQwaU1UZ3dJaUI1UFNJeE1qQWlJSGRwWkhSb1BTSXhOVElpSUdobGFXZG9kRDBpTXpJaUlISjRQU0k0SWlCbWFXeHNQU0lqUXpRNVFUTkRJaTgrQ2lBZ1BDRXRMU0JEYUhWeVkyZ2dZbTlrZVNBdExUNEtJQ0E4Y21WamRDQjRQU0l4TURBaUlIazlJakk0TUNJZ2QybGtkR2c5SWpNeE1pSWdhR1ZwWjJoMFBTSXhPREFpSUhKNFBTSXhNaUlnWm1sc2JEMGlJekZsTXpNMU5DSXZQZ29nSUR3aExTMGdVbTl2WmlBdExUNEtJQ0E4Y0c5c2VXZHZiaUJ3YjJsdWRITTlJamd3TERJNU1DQXlOVFlzTVRnd0lEUXpNaXd5T1RBaUlHWnBiR3c5SWlNeU5ETTFOakFpTHo0S0lDQThJUzB0SUVSdmIzSWdMUzArQ2lBZ1BISmxZM1FnZUQwaU1qRXdJaUI1UFNJek5qQWlJSGRwWkhSb1BTSTVNaUlnYUdWcFoyaDBQU0l4TURBaUlISjRQU0kwTmlJZ1ptbHNiRDBpSTBNME9VRXpReUlnYjNCaFkybDBlVDBpTUM0NUlpOCtDaUFnUENFdExTQlhhVzVrYjNkeklDMHRQZ29nSUR4eVpXTjBJSGc5SWpFek1DSWdlVDBpTXpFd0lpQjNhV1IwYUQwaU5qQWlJR2hsYVdkb2REMGlOekFpSUhKNFBTSXpNQ0lnWm1sc2JEMGlJME0wT1VFelF5SWdiM0JoWTJsMGVUMGlNQzQySWk4K0NpQWdQSEpsWTNRZ2VEMGlNekl5SWlCNVBTSXpNVEFpSUhkcFpIUm9QU0kyTUNJZ2FHVnBaMmgwUFNJM01DSWdjbmc5SWpNd0lpQm1hV3hzUFNJalF6UTVRVE5ESWlCdmNHRmphWFI1UFNJd0xqWWlMejRLSUNBOElTMHRJRWR2YkdRZ2MyaHBibVVnYjI0Z1kzSnZjM01nTFMwK0NpQWdQSEpsWTNRZ2VEMGlNalE0SWlCNVBTSTJPQ0lnZDJsa2RHZzlJamdpSUdobGFXZG9kRDBpTmpBaUlISjRQU0kwSWlCbWFXeHNQU0lqUmpCRU1EY3dJaUJ2Y0dGamFYUjVQU0l3TGpVaUx6NEtQQzl6ZG1jKyIsICJzaXplcyI6ICIxOTJ4MTkyIiwgInR5cGUiOiAiaW1hZ2Uvc3ZnK3htbCIsICJwdXJwb3NlIjogImFueSBtYXNrYWJsZSJ9LAogICAgeyJzcmMiOiAiZGF0YTppbWFnZS9zdmcreG1sO2Jhc2U2NCxQSE4yWnlCNGJXeHVjejBpYUhSMGNEb3ZMM2QzZHk1M015NXZjbWN2TWpBd01DOXpkbWNpSUhacFpYZENiM2c5SWpBZ01DQTFNVElnTlRFeUlqNEtJQ0E4SVMwdElFSmhZMnRuY205MWJtUWdMUzArQ2lBZ1BISmxZM1FnZDJsa2RHZzlJalV4TWlJZ2FHVnBaMmgwUFNJMU1USWlJSEo0UFNJNE1DSWdabWxzYkQwaUl6RTRNamcwTUNJdlBnb2dJRHdoTFMwZ1EzSnZjM01nZG1WeWRHbGpZV3dnTFMwK0NpQWdQSEpsWTNRZ2VEMGlNalF3SWlCNVBTSTJNQ0lnZDJsa2RHZzlJak15SWlCb1pXbG5hSFE5SWpJd01DSWdjbmc5SWpnaUlHWnBiR3c5SWlORE5EbEJNME1pTHo0S0lDQThJUzB0SUVOeWIzTnpJR2h2Y21sNmIyNTBZV3dnTFMwK0NpQWdQSEpsWTNRZ2VEMGlNVGd3SWlCNVBTSXhNakFpSUhkcFpIUm9QU0l4TlRJaUlHaGxhV2RvZEQwaU16SWlJSEo0UFNJNElpQm1hV3hzUFNJalF6UTVRVE5ESWk4K0NpQWdQQ0V0TFNCRGFIVnlZMmdnWW05a2VTQXRMVDRLSUNBOGNtVmpkQ0I0UFNJeE1EQWlJSGs5SWpJNE1DSWdkMmxrZEdnOUlqTXhNaUlnYUdWcFoyaDBQU0l4T0RBaUlISjRQU0l4TWlJZ1ptbHNiRDBpSXpGbE16TTFOQ0l2UGdvZ0lEd2hMUzBnVW05dlppQXRMVDRLSUNBOGNHOXNlV2R2YmlCd2IybHVkSE05SWpnd0xESTVNQ0F5TlRZc01UZ3dJRFF6TWl3eU9UQWlJR1pwYkd3OUlpTXlORE0xTmpBaUx6NEtJQ0E4SVMwdElFUnZiM0lnTFMwK0NpQWdQSEpsWTNRZ2VEMGlNakV3SWlCNVBTSXpOakFpSUhkcFpIUm9QU0k1TWlJZ2FHVnBaMmgwUFNJeE1EQWlJSEo0UFNJME5pSWdabWxzYkQwaUkwTTBPVUV6UXlJZ2IzQmhZMmwwZVQwaU1DNDVJaTgrQ2lBZ1BDRXRMU0JYYVc1a2IzZHpJQzB0UGdvZ0lEeHlaV04wSUhnOUlqRXpNQ0lnZVQwaU16RXdJaUIzYVdSMGFEMGlOakFpSUdobGFXZG9kRDBpTnpBaUlISjRQU0l6TUNJZ1ptbHNiRDBpSTBNME9VRXpReUlnYjNCaFkybDBlVDBpTUM0MklpOCtDaUFnUEhKbFkzUWdlRDBpTXpJeUlpQjVQU0l6TVRBaUlIZHBaSFJvUFNJMk1DSWdhR1ZwWjJoMFBTSTNNQ0lnY25nOUlqTXdJaUJtYVd4c1BTSWpRelE1UVRORElpQnZjR0ZqYVhSNVBTSXdMallpTHo0S0lDQThJUzB0SUVkdmJHUWdjMmhwYm1VZ2IyNGdZM0p2YzNNZ0xTMCtDaUFnUEhKbFkzUWdlRDBpTWpRNElpQjVQU0kyT0NJZ2QybGtkR2c5SWpnaUlHaGxhV2RvZEQwaU5qQWlJSEo0UFNJMElpQm1hV3hzUFNJalJqQkVNRGN3SWlCdmNHRmphWFI1UFNJd0xqVWlMejRLUEM5emRtYysiLCAic2l6ZXMiOiAiNTEyeDUxMiIsICJ0eXBlIjogImltYWdlL3N2Zyt4bWwiLCAicHVycG9zZSI6ICJhbnkgbWFza2FibGUifQogIF0sCiAgImNhdGVnb3JpZXMiOiBbImZpbmFuY2UiLCAiYnVzaW5lc3MiXQp9">
+<link rel="apple-touch-icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj4KICA8IS0tIEJhY2tncm91bmQgLS0+CiAgPHJlY3Qgd2lkdGg9IjUxMiIgaGVpZ2h0PSI1MTIiIHJ4PSI4MCIgZmlsbD0iIzE4Mjg0MCIvPgogIDwhLS0gQ3Jvc3MgdmVydGljYWwgLS0+CiAgPHJlY3QgeD0iMjQwIiB5PSI2MCIgd2lkdGg9IjMyIiBoZWlnaHQ9IjIwMCIgcng9IjgiIGZpbGw9IiNDNDlBM0MiLz4KICA8IS0tIENyb3NzIGhvcml6b250YWwgLS0+CiAgPHJlY3QgeD0iMTgwIiB5PSIxMjAiIHdpZHRoPSIxNTIiIGhlaWdodD0iMzIiIHJ4PSI4IiBmaWxsPSIjQzQ5QTNDIi8+CiAgPCEtLSBDaHVyY2ggYm9keSAtLT4KICA8cmVjdCB4PSIxMDAiIHk9IjI4MCIgd2lkdGg9IjMxMiIgaGVpZ2h0PSIxODAiIHJ4PSIxMiIgZmlsbD0iIzFlMzM1NCIvPgogIDwhLS0gUm9vZiAtLT4KICA8cG9seWdvbiBwb2ludHM9IjgwLDI5MCAyNTYsMTgwIDQzMiwyOTAiIGZpbGw9IiMyNDM1NjAiLz4KICA8IS0tIERvb3IgLS0+CiAgPHJlY3QgeD0iMjEwIiB5PSIzNjAiIHdpZHRoPSI5MiIgaGVpZ2h0PSIxMDAiIHJ4PSI0NiIgZmlsbD0iI0M0OUEzQyIgb3BhY2l0eT0iMC45Ii8+CiAgPCEtLSBXaW5kb3dzIC0tPgogIDxyZWN0IHg9IjEzMCIgeT0iMzEwIiB3aWR0aD0iNjAiIGhlaWdodD0iNzAiIHJ4PSIzMCIgZmlsbD0iI0M0OUEzQyIgb3BhY2l0eT0iMC42Ii8+CiAgPHJlY3QgeD0iMzIyIiB5PSIzMTAiIHdpZHRoPSI2MCIgaGVpZ2h0PSI3MCIgcng9IjMwIiBmaWxsPSIjQzQ5QTNDIiBvcGFjaXR5PSIwLjYiLz4KICA8IS0tIEdvbGQgc2hpbmUgb24gY3Jvc3MgLS0+CiAgPHJlY3QgeD0iMjQ4IiB5PSI2OCIgd2lkdGg9IjgiIGhlaWdodD0iNjAiIHJ4PSI0IiBmaWxsPSIjRjBEMDcwIiBvcGFjaXR5PSIwLjUiLz4KPC9zdmc+">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj4KICA8IS0tIEJhY2tncm91bmQgLS0+CiAgPHJlY3Qgd2lkdGg9IjUxMiIgaGVpZ2h0PSI1MTIiIHJ4PSI4MCIgZmlsbD0iIzE4Mjg0MCIvPgogIDwhLS0gQ3Jvc3MgdmVydGljYWwgLS0+CiAgPHJlY3QgeD0iMjQwIiB5PSI2MCIgd2lkdGg9IjMyIiBoZWlnaHQ9IjIwMCIgcng9IjgiIGZpbGw9IiNDNDlBM0MiLz4KICA8IS0tIENyb3NzIGhvcml6b250YWwgLS0+CiAgPHJlY3QgeD0iMTgwIiB5PSIxMjAiIHdpZHRoPSIxNTIiIGhlaWdodD0iMzIiIHJ4PSI4IiBmaWxsPSIjQzQ5QTNDIi8+CiAgPCEtLSBDaHVyY2ggYm9keSAtLT4KICA8cmVjdCB4PSIxMDAiIHk9IjI4MCIgd2lkdGg9IjMxMiIgaGVpZ2h0PSIxODAiIHJ4PSIxMiIgZmlsbD0iIzFlMzM1NCIvPgogIDwhLS0gUm9vZiAtLT4KICA8cG9seWdvbiBwb2ludHM9IjgwLDI5MCAyNTYsMTgwIDQzMiwyOTAiIGZpbGw9IiMyNDM1NjAiLz4KICA8IS0tIERvb3IgLS0+CiAgPHJlY3QgeD0iMjEwIiB5PSIzNjAiIHdpZHRoPSI5MiIgaGVpZ2h0PSIxMDAiIHJ4PSI0NiIgZmlsbD0iI0M0OUEzQyIgb3BhY2l0eT0iMC45Ii8+CiAgPCEtLSBXaW5kb3dzIC0tPgogIDxyZWN0IHg9IjEzMCIgeT0iMzEwIiB3aWR0aD0iNjAiIGhlaWdodD0iNzAiIHJ4PSIzMCIgZmlsbD0iI0M0OUEzQyIgb3BhY2l0eT0iMC42Ii8+CiAgPHJlY3QgeD0iMzIyIiB5PSIzMTAiIHdpZHRoPSI2MCIgaGVpZ2h0PSI3MCIgcng9IjMwIiBmaWxsPSIjQzQ5QTNDIiBvcGFjaXR5PSIwLjYiLz4KICA8IS0tIEdvbGQgc2hpbmUgb24gY3Jvc3MgLS0+CiAgPHJlY3QgeD0iMjQ4IiB5PSI2OCIgd2lkdGg9IjgiIGhlaWdodD0iNjAiIHJ4PSI0IiBmaWxsPSIjRjBEMDcwIiBvcGFjaXR5PSIwLjUiLz4KPC9zdmc+">
+<title>⛪ Finances Église</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⛪</text></svg>">
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.2/jspdf.plugin.autotable.min.js"></script>
+<style>
+/* ══════════════ DESIGN TOKENS ══════════════ */
+:root {
+  --navy:   #182840; --navy2:  #1e3354; --navy3:  #26406a;
+  --gold:   #c08a28; --gold2:  #d4a43c; --gold3:  #e8c060; --goldp: #faf3df; --goldf: #fffcf0;
+  --parch:  #f7f4ec; --parch2: #ede9de; --parch3: #e2dccf;
+  --green:  #1f6b45; --greenl: #dff2ea;
+  --red:    #8b1e1e; --redl:   #fae8e8;
+  --amber:  #b85c10; --amberl: #fef0e3;
+  --blue:   #1a4a7a; --bluel:  #e3eef8;
+  --plum:   #4a2878; --pluml:  #ede6f8;
+  --slate:  #64748b;
+  --bdr:    rgba(24,40,64,.10); --bdr2: rgba(24,40,64,.18);
+  --sh:     0 1px 8px rgba(24,40,64,.08);
+  --shmd:   0 4px 20px rgba(24,40,64,.11);
+  --shlg:   0 12px 40px rgba(24,40,64,.15);
+  --r: 10px; --rs: 6px; --sw: 232px;
+}
+*, ::before, ::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 14px; scroll-behavior: smooth; }
+body { font-family: 'Source Sans 3', sans-serif; background: var(--parch); color: var(--navy); min-height: 100vh; display: flex; }
+
+/* ══════════════ SIDEBAR ══════════════ */
+.sb { width: var(--sw); min-width: var(--sw); background: var(--navy); display: flex; flex-direction: column; position: fixed; top: 0; left: 0; bottom: 0; z-index: 200; overflow-y: auto; }
+.sb-head { padding: 18px 15px 14px; border-bottom: 1px solid rgba(255,255,255,.07); }
+.sb-cross { width: 34px; height: 34px; position: relative; margin-bottom: 9px; }
+.sb-cross::before, .sb-cross::after { content: ''; position: absolute; background: var(--gold); border-radius: 2px; }
+.sb-cross::before { width: 5px; height: 30px; left: 14px; top: 2px; }
+.sb-cross::after  { width: 30px; height: 5px; left: 2px; top: 12px; }
+.sb-name { font-family: 'Libre Baskerville', serif; font-size: 15px; color: #fff; font-weight: 700; line-height: 1.3; }
+.sb-sub  { font-size: 9.5px; color: rgba(255,255,255,.3); margin-top: 2px; letter-spacing: .4px; }
+.sb-yr   { display: flex; align-items: center; gap: 5px; margin-top: 9px; background: rgba(255,255,255,.07); border-radius: 4px; padding: 4px 8px; }
+.sb-yr span { color: var(--gold3); font-weight: 700; font-size: 13px; min-width: 34px; text-align: center; }
+.sb-yr button { background: none; border: none; color: rgba(255,255,255,.4); cursor: pointer; font-size: 14px; padding: 0 2px; transition: color .15s; }
+.sb-yr button:hover { color: var(--gold3); }
+.sb-yr-lbl { font-size: 9.5px; color: rgba(255,255,255,.28); }
+.sb-nav { flex: 1; padding: 8px 0 12px; }
+.sb-grp { font-size: 9px; letter-spacing: 1.3px; text-transform: uppercase; color: rgba(255,255,255,.24); padding: 11px 15px 4px; }
+.sb-lnk { display: flex; align-items: center; gap: 9px; padding: 8px 15px; cursor: pointer; color: rgba(255,255,255,.5); font-size: 12.5px; border-left: 3px solid transparent; transition: all .15s; }
+.sb-lnk:hover { background: rgba(255,255,255,.05); color: #fff; }
+.sb-lnk.on { background: rgba(192,138,40,.14); color: var(--gold3); border-left-color: var(--gold); font-weight: 600; }
+.sb-ico { font-size: 14px; width: 17px; text-align: center; flex-shrink: 0; }
+.sb-bal { margin: 6px 11px 4px; background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.08); border-radius: var(--rs); padding: 9px 11px; }
+.sb-bal .l { font-size: 9px; text-transform: uppercase; letter-spacing: .6px; color: rgba(255,255,255,.27); margin-bottom: 2px; }
+.sb-bal .v { font-size: 15px; font-weight: 700; color: var(--gold3); }
+.sb-bal .s { font-size: 9.5px; color: rgba(255,255,255,.27); margin-top: 1px; }
+.sb-foot { padding: 9px 15px; border-top: 1px solid rgba(255,255,255,.07); font-size: 9px; color: rgba(255,255,255,.17); }
+
+/* ══════════════ MAIN ══════════════ */
+.main { margin-left: var(--sw); flex: 1; display: flex; flex-direction: column; min-height: 100vh; }
+.topbar { background: #fff; border-bottom: 1px solid var(--bdr); padding: 0 22px; height: 54px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 100; }
+.topbar h2 { font-family: 'Libre Baskerville', serif; font-size: 18px; font-weight: 700; color: var(--navy); }
+.topbar small { font-size: 10px; color: var(--slate); }
+.tb-r { display: flex; gap: 7px; align-items: center; }
+.content { padding: 18px 22px; flex: 1; }
+
+/* ══════════════ BUTTONS ══════════════ */
+.btn { display: inline-flex; align-items: center; gap: 5px; padding: 6px 13px; border-radius: var(--rs); font-family: 'Source Sans 3', sans-serif; font-size: 12.5px; font-weight: 600; cursor: pointer; border: none; transition: all .15s; white-space: nowrap; }
+.btn-gold  { background: var(--gold);  color: #fff; } .btn-gold:hover  { background: var(--gold2); }
+.btn-navy  { background: var(--navy);  color: #fff; } .btn-navy:hover  { background: var(--navy2); }
+.btn-out   { background: transparent; border: 1.5px solid var(--bdr2); color: var(--navy); } .btn-out:hover { background: var(--parch2); }
+.btn-red   { background: var(--redl);   color: var(--red);  border: 1px solid rgba(139,30,30,.14); } .btn-red:hover  { background: var(--red);  color: #fff; }
+.btn-green { background: var(--greenl); color: var(--green); border: 1px solid rgba(31,107,69,.14); } .btn-green:hover { background: var(--green); color: #fff; }
+.btn-sm  { padding: 5px 10px; font-size: 11.5px; }
+.btn-xs  { padding: 3px 7px;  font-size: 11px; }
+
+/* ══════════════ PAGES ══════════════ */
+.page { display: none; animation: fadeUp .2s ease; }
+.page.on { display: block; }
+@keyframes fadeUp { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
+
+/* ══════════════ CARD ══════════════ */
+.card { background: #fff; border-radius: var(--r); border: 1px solid var(--bdr); box-shadow: var(--sh); overflow: hidden; margin-bottom: 15px; }
+.card-hd { padding: 11px 17px; border-bottom: 1px solid var(--bdr); display: flex; align-items: center; justify-content: space-between; background: var(--navy); }
+.card-ht { font-family: 'Libre Baskerville', serif; font-size: 14.5px; color: #fff; font-weight: 700; display: flex; align-items: center; gap: 7px; }
+.card-bd { padding: 17px; }
+
+/* ══════════════ METRICS ══════════════ */
+.mets { display: grid; grid-template-columns: repeat(4,1fr); gap: 12px; margin-bottom: 15px; }
+.met { background: #fff; border-radius: var(--r); border: 1px solid var(--bdr); padding: 13px; position: relative; overflow: hidden; box-shadow: var(--sh); }
+.met::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 3px; }
+.met-gold::after { background: var(--gold); } .met-red::after { background: var(--red); }
+.met-green::after { background: var(--green); } .met-navy::after { background: var(--navy); }
+.met-plum::after { background: var(--plum); }
+.met-ico { font-size: 22px; opacity: .09; position: absolute; right: 10px; top: 50%; transform: translateY(-50%); }
+.met-lbl { font-size: 9.5px; text-transform: uppercase; letter-spacing: .6px; color: var(--slate); margin-bottom: 3px; }
+.met-val { font-size: 18px; font-weight: 700; color: var(--navy); line-height: 1.1; }
+.met-sub { font-size: 10px; color: var(--slate); margin-top: 2px; }
+
+/* ══════════════ FORM ══════════════ */
+.fg { display: flex; flex-direction: column; gap: 4px; }
+.fg.full { grid-column: 1 / -1; }
+label { font-size: 10.5px; font-weight: 700; color: var(--slate); text-transform: uppercase; letter-spacing: .5px; }
+input, select, textarea { border: 1.5px solid var(--bdr2); border-radius: var(--rs); padding: 7px 10px; font-family: 'Source Sans 3', sans-serif; font-size: 13px; color: var(--navy); background: var(--parch); outline: none; width: 100%; transition: border-color .15s, box-shadow .15s, background .15s; }
+input:focus, select:focus { border-color: var(--gold); background: #fff; box-shadow: 0 0 0 3px rgba(192,138,40,.12); }
+input[type=number] { text-align: right; }
+.g2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.g3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; }
+.g4 { display: grid; grid-template-columns: repeat(4,1fr); gap: 12px; }
+.sec-div { grid-column: 1 / -1; display: flex; align-items: center; gap: 8px; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .7px; color: var(--gold); margin: 5px 0 2px; }
+.sec-div::before, .sec-div::after { content: ''; flex: 1; height: 1px; background: var(--goldp); }
+.form-act { display: flex; gap: 7px; justify-content: flex-end; padding-top: 12px; border-top: 1px solid var(--bdr); margin-top: 5px; }
+.readonly-field { background: var(--goldp) !important; color: var(--navy) !important; font-weight: 700; cursor: not-allowed; }
+
+/* ══════════════ PREVIEW BOX ══════════════ */
+.pv-box { background: var(--navy); color: #fff; border-radius: var(--r); padding: 13px 16px; margin-top: 12px; display: none; }
+.pv-box.on { display: block; }
+.pv-row { display: flex; justify-content: space-between; align-items: center; padding: 4px 0; border-bottom: 1px solid rgba(255,255,255,.06); font-size: 12px; }
+.pv-row:last-child { border-bottom: none; }
+.pv-lbl { color: rgba(255,255,255,.5); }
+.pv-val { font-weight: 600; }
+.pv-total { font-size: 14px; font-weight: 700; color: var(--gold3); padding-top: 8px; }
+
+/* ══════════════ TABLE ══════════════ */
+.tw { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; font-size: 12px; }
+thead tr { background: var(--navy); }
+th { padding: 8px 11px; text-align: left; font-size: 9.5px; font-weight: 700; text-transform: uppercase; letter-spacing: .55px; color: rgba(255,255,255,.6); white-space: nowrap; }
+th.r { text-align: right; }
+td { padding: 8px 11px; border-bottom: 1px solid rgba(24,40,64,.05); vertical-align: middle; }
+td.r { text-align: right; }
+tbody tr:hover { background: var(--goldf); }
+tbody tr:last-child td { border-bottom: none; }
+tfoot td { background: var(--navy); color: var(--gold3); font-weight: 700; font-size: 12.5px; padding: 9px 11px; }
+.badge { display: inline-flex; align-items: center; padding: 2px 8px; border-radius: 20px; font-size: 10px; font-weight: 700; }
+.badge-g { background: var(--greenl); color: var(--green); }
+.badge-r { background: var(--redl);   color: var(--red);   }
+.badge-o { background: var(--amberl); color: var(--amber); }
+.badge-b { background: var(--bluel);  color: var(--blue);  }
+.badge-p { background: var(--pluml);  color: var(--plum);  }
+.pos { color: var(--green); font-weight: 700; }
+.neg { color: var(--red);   font-weight: 700; }
+
+/* ══════════════ TABS ══════════════ */
+.tabs { display: flex; border-bottom: 1px solid var(--bdr); margin-bottom: 13px; }
+.tab { padding: 7px 15px; cursor: pointer; font-size: 12.5px; color: var(--slate); border-bottom: 2.5px solid transparent; margin-bottom: -1px; transition: all .15s; font-weight: 500; }
+.tab:hover { color: var(--navy); }
+.tab.on { color: var(--gold); border-bottom-color: var(--gold); font-weight: 700; }
+
+/* ══════════════ BUDGET GRID ══════════════ */
+.bgt-grid { display: grid; grid-template-columns: repeat(6,1fr); gap: 8px; margin-bottom: 12px; }
+.bm { background: #fff; border-radius: var(--rs); border: 1px solid var(--bdr); padding: 8px; cursor: pointer; text-align: center; transition: all .15s; }
+.bm:hover { border-color: var(--gold); box-shadow: 0 0 0 2px rgba(192,138,40,.12); }
+.bm.sel { border-color: var(--gold); background: var(--goldf); box-shadow: 0 0 0 2px rgba(192,138,40,.17); }
+.bm .mn { font-size: 11px; font-weight: 700; color: var(--navy); margin-bottom: 2px; }
+.bm .mr { font-size: 9px; color: var(--green); font-weight: 600; }
+.bm .md { font-size: 9px; color: var(--red); font-weight: 600; }
+.bm .eq { font-size: 8.5px; margin-top: 2px; }
+.bm .eq.ok { color: var(--green); } .bm .eq.ko { color: var(--red); } .bm .eq.na { color: var(--slate); }
+.bgt-form { background: var(--parch); border: 1px solid var(--bdr); border-radius: var(--r); padding: 15px; margin-top: 11px; display: none; }
+.bgt-form.on { display: block; }
+.bgt-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.bgt-col-t { font-family: 'Libre Baskerville', serif; font-size: 13.5px; font-weight: 700; margin-bottom: 9px; padding-bottom: 6px; border-bottom: 2px solid; display: flex; align-items: center; gap: 6px; }
+.bgt-col-t.rec { color: var(--green); border-color: var(--greenl); }
+.bgt-col-t.dep { color: var(--red);   border-color: var(--redl); }
+.bgt-line { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; }
+.bgt-line label { flex: 1; font-size: 11.5px; color: var(--navy); font-weight: 500; text-transform: none; letter-spacing: 0; }
+.bgt-line input { width: 115px; min-width: 115px; }
+.bgt-summary { grid-column: 1/-1; background: var(--navy); border-radius: var(--rs); padding: 11px 14px; display: flex; gap: 16px; align-items: center; flex-wrap: wrap; margin-top: 4px; }
+.bgt-si { text-align: center; }
+.bgt-si .l { font-size: 9px; text-transform: uppercase; letter-spacing: .5px; color: rgba(255,255,255,.3); margin-bottom: 2px; }
+.bgt-si .v { font-size: 13.5px; font-weight: 700; }
+
+/* ══════════════ PROGRESS BAR ══════════════ */
+.pb-wrap { margin-bottom: 9px; }
+.pb-head { display: flex; justify-content: space-between; font-size: 11px; margin-bottom: 3px; }
+.pb { height: 5px; background: var(--parch2); border-radius: 3px; overflow: hidden; }
+.pb-fill { height: 100%; border-radius: 3px; transition: width .5s ease; }
+
+/* ══════════════ TOAST ══════════════ */
+.toast { position: fixed; bottom: 20px; right: 20px; padding: 10px 16px; border-radius: var(--rs); font-size: 12.5px; font-weight: 600; box-shadow: var(--shlg); z-index: 9999; display: flex; align-items: center; gap: 8px; max-width: 320px; transform: translateY(60px); opacity: 0; transition: all .28s cubic-bezier(.4,0,.2,1); }
+.toast.on { transform: translateY(0); opacity: 1; }
+.t-ok  { background: var(--green); color: #fff; }
+.t-err { background: var(--red);   color: #fff; }
+.t-inf { background: var(--navy);  color: #fff; }
+.t-wrn { background: var(--amber); color: #fff; }
+
+/* ══════════════ MODAL ══════════════ */
+.overlay { position: fixed; inset: 0; background: rgba(24,40,64,.55); z-index: 1000; display: flex; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: opacity .2s; }
+.overlay.on { opacity: 1; pointer-events: all; }
+.modal { background: #fff; border-radius: var(--r); box-shadow: var(--shlg); max-width: 480px; width: 92%; transform: scale(.96); transition: transform .2s; }
+.overlay.on .modal { transform: scale(1); }
+.modal-hd { padding: 13px 18px; border-bottom: 1px solid var(--bdr); display: flex; align-items: center; justify-content: space-between; }
+.modal-hd h3 { font-family: 'Libre Baskerville', serif; font-size: 16px; font-weight: 700; }
+.modal-bd { padding: 15px 18px; }
+.modal-ft { padding: 11px 18px; border-top: 1px solid var(--bdr); display: flex; gap: 7px; justify-content: flex-end; }
+.xbtn { background: none; border: none; font-size: 18px; cursor: pointer; color: var(--slate); line-height: 1; }
+
+/* ══════════════ SEARCH BAR ══════════════ */
+.sbar { display: flex; gap: 8px; align-items: center; margin-bottom: 12px; flex-wrap: wrap; }
+.sbar-wrap { position: relative; flex: 1; min-width: 180px; }
+.sbar-wrap input { padding-left: 30px; }
+.sbar-ico { position: absolute; left: 9px; top: 50%; transform: translateY(-50%); font-size: 12px; color: var(--slate); pointer-events: none; }
+
+/* ══════════════ SETTINGS ══════════════ */
+.set-row { display: flex; align-items: center; gap: 10px; padding: 9px 0; border-bottom: 1px solid var(--bdr); }
+.set-row:last-child { border-bottom: none; }
+.set-row > label { flex: 1; font-size: 13px; font-weight: 600; text-transform: none; letter-spacing: 0; color: var(--navy); }
+.set-row input { max-width: 260px; }
+
+/* ══════════════ CMP BAR ══════════════ */
+.cbar { height: 5px; border-radius: 3px; overflow: hidden; background: var(--parch2); margin-top: 2px; }
+.cbar-f { height: 100%; border-radius: 3px; transition: width .5s; }
+
+/* ══════════════ RECAP PRINT ══════════════ */
+.recap-doc { font-family: 'Source Sans 3', sans-serif; }
+.recap-header { background: var(--navy); color: #fff; padding: 20px 24px; border-radius: var(--r) var(--r) 0 0; }
+.recap-body { padding: 18px 22px; }
+.recap-sect { margin-bottom: 18px; }
+.recap-sect-title { font-family: 'Libre Baskerville', serif; font-size: 14px; font-weight: 700; padding-bottom: 5px; border-bottom: 2px solid; margin-bottom: 10px; display: flex; align-items: center; gap: 6px; }
+.recap-sect-title.r { color: var(--green); border-color: var(--greenl); }
+.recap-sect-title.d { color: var(--red); border-color: var(--redl); }
+.recap-sect-title.s { color: var(--plum); border-color: var(--pluml); }
+.recap-table { width: 100%; border-collapse: collapse; font-size: 12.5px; }
+.recap-table td { padding: 6px 10px; border-bottom: 1px solid var(--bdr); }
+.recap-table td:last-child { text-align: right; font-weight: 600; }
+.recap-table tr:last-child td { border-bottom: none; }
+.recap-table .total td { background: var(--navy); color: var(--gold3); font-weight: 700; font-size: 13px; border-bottom: none; }
+.recap-sig { display: flex; gap: 20px; margin-top: 20px; }
+.recap-sig-box { flex: 1; border: 1px solid var(--bdr2); border-radius: var(--rs); padding: 14px; }
+.recap-sig-box .title { font-size: 10.5px; font-weight: 700; text-transform: uppercase; letter-spacing: .5px; color: var(--slate); margin-bottom: 4px; }
+.recap-sig-box .name { font-size: 13.5px; font-weight: 700; color: var(--navy); }
+.recap-sig-box .role { font-size: 11px; color: var(--slate); }
+.recap-sig-line { border-bottom: 1px solid var(--bdr2); margin-top: 25px; }
+.recap-bilan { background: var(--navy); border-radius: var(--r); padding: 14px 18px; text-align: center; margin-top: 14px; }
+
+/* ══════════════ RESPONSIVE ══════════════ */
+@media (max-width: 1100px) {
+  .mets { grid-template-columns: repeat(2,1fr); }
+  .g4   { grid-template-columns: 1fr 1fr; }
+  .bgt-grid { grid-template-columns: repeat(4,1fr); }
+}
+@media print {
+  .sb, .topbar, .no-print, button { display: none !important; }
+  .main { margin-left: 0; }
+  body { background: #fff; font-size: 12px; }
+  .card { box-shadow: none; border: 1px solid #ddd; break-inside: avoid; margin-bottom: 8px; }
+}
+
+/* ══════════════ DASH LAYOUT ══════════════ */
+.dash-grid { display: grid; grid-template-columns: 1.35fr 1fr; gap: 15px; }
+
+/* empty state */
+.empty-state { text-align: center; padding: 32px; color: var(--slate); }
+.empty-state .ico { font-size: 36px; opacity: .3; margin-bottom: 8px; }
+
+/* ══════════════ LOGIN SCREEN ══════════════ */
+#login-screen {
+  position: fixed; inset: 0; z-index: 9999;
+  background: var(--navy);
+  display: flex; align-items: center; justify-content: center;
+  flex-direction: column;
+  background-image: radial-gradient(ellipse at 20% 50%, rgba(192,138,40,.12) 0%, transparent 60%),
+                    radial-gradient(ellipse at 80% 20%, rgba(30,51,84,.8) 0%, transparent 50%);
+}
+#login-screen.hidden { display: none; }
+.login-box {
+  width: 380px; max-width: 94vw;
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.10);
+  border-radius: 16px;
+  padding: 36px 34px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 24px 60px rgba(0,0,0,.4);
+}
+.login-cross {
+  width: 48px; height: 48px; position: relative; margin: 0 auto 16px;
+}
+.login-cross::before, .login-cross::after {
+  content: ''; position: absolute; background: var(--gold); border-radius: 3px;
+}
+.login-cross::before { width: 7px; height: 44px; left: 20px; top: 2px; }
+.login-cross::after  { width: 44px; height: 7px; left: 2px; top: 18px; }
+.login-church {
+  text-align: center; margin-bottom: 28px;
+}
+.login-church .name {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 20px; color: #fff; font-weight: 700; margin-top: 12px;
+}
+.login-church .sub {
+  font-size: 11px; color: rgba(255,255,255,.35); margin-top: 3px; letter-spacing: .5px;
+}
+.login-title {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 14px; color: var(--gold3); text-align: center;
+  text-transform: uppercase; letter-spacing: 1.5px;
+  margin-bottom: 24px; padding-bottom: 16px;
+  border-bottom: 1px solid rgba(255,255,255,.08);
+}
+.login-field { margin-bottom: 16px; }
+.login-field label {
+  display: block; font-size: 10px; font-weight: 700;
+  text-transform: uppercase; letter-spacing: .7px;
+  color: rgba(255,255,255,.4); margin-bottom: 6px;
+}
+.login-field input {
+  width: 100%; background: rgba(255,255,255,.06);
+  border: 1.5px solid rgba(255,255,255,.12);
+  border-radius: 8px; padding: 11px 14px;
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 15px; color: #fff; outline: none;
+  letter-spacing: 2px;
+  transition: border-color .2s, background .2s;
+}
+.login-field input::placeholder { color: rgba(255,255,255,.2); letter-spacing: 1px; }
+.login-field input:focus {
+  border-color: var(--gold); background: rgba(255,255,255,.1);
+  box-shadow: 0 0 0 3px rgba(192,138,40,.2);
+}
+.login-field .hint {
+  font-size: 10px; color: rgba(255,255,255,.25); margin-top: 4px; text-align: right;
+}
+.login-eye {
+  position: relative;
+}
+.login-eye input { padding-right: 40px; }
+.login-eye-btn {
+  position: absolute; right: 12px; top: 50%; transform: translateY(-50%);
+  background: none; border: none; cursor: pointer;
+  font-size: 16px; color: rgba(255,255,255,.3);
+  transition: color .15s; line-height: 1;
+}
+.login-eye-btn:hover { color: var(--gold3); }
+.login-btn {
+  width: 100%; padding: 13px; margin-top: 8px;
+  background: var(--gold); color: #fff; border: none;
+  border-radius: 8px; font-family: 'Source Sans 3', sans-serif;
+  font-size: 14px; font-weight: 700; cursor: pointer;
+  letter-spacing: .5px; transition: all .2s;
+}
+.login-btn:hover { background: var(--gold2); transform: translateY(-1px); box-shadow: 0 6px 20px rgba(192,138,40,.4); }
+.login-btn:active { transform: translateY(0); }
+.login-error {
+  background: rgba(139,30,30,.3); border: 1px solid rgba(139,30,30,.4);
+  border-radius: 6px; padding: 9px 12px;
+  font-size: 12px; color: #fca5a5; text-align: center;
+  margin-bottom: 14px; display: none;
+}
+.login-error.show { display: block; animation: shake .3s ease; }
+@keyframes shake {
+  0%,100%{transform:translateX(0)} 25%{transform:translateX(-6px)} 75%{transform:translateX(6px)}
+}
+.login-attempts {
+  text-align: center; font-size: 10.5px; color: rgba(255,255,255,.2); margin-top: 14px;
+}
+.login-attempts span { color: var(--gold3); font-weight: 700; }
+.login-locked {
+  text-align: center; padding: 18px;
+  font-size: 13px; color: #fca5a5;
+  background: rgba(139,30,30,.2); border-radius: 8px;
+  margin-top: 12px; display: none;
+}
+.login-locked.show { display: block; }
+/* App hidden until login */
+.app-hidden { display: none !important; }
+
+
+/* ══════════════ LICENCE SCREEN ══════════════ */
+#licence-screen {
+  position: fixed; inset: 0; z-index: 10000;
+  background: var(--navy);
+  display: flex; align-items: center; justify-content: center;
+  flex-direction: column;
+  background-image:
+    radial-gradient(ellipse at 30% 70%, rgba(139,30,30,.18) 0%, transparent 55%),
+    radial-gradient(ellipse at 70% 20%, rgba(192,138,40,.10) 0%, transparent 55%);
+}
+#licence-screen.hidden { display: none; }
+
+#admin-screen {
+  position: fixed; inset: 0; z-index: 10001;
+  background: rgba(10,16,28,.96);
+  display: flex; align-items: center; justify-content: center;
+  flex-direction: column;
+  display: none;
+}
+#admin-screen.show { display: flex; }
+
+.lic-box {
+  width: 420px; max-width: 94vw;
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 16px; padding: 34px 32px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 24px 60px rgba(0,0,0,.5);
+  text-align: center;
+}
+.lic-icon { font-size: 48px; margin-bottom: 12px; }
+.lic-title {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 20px; color: #fff; font-weight: 700; margin-bottom: 4px;
+}
+.lic-sub { font-size: 11px; color: rgba(255,255,255,.35); margin-bottom: 24px; letter-spacing: .5px; }
+
+.lic-status-badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 6px 14px; border-radius: 20px;
+  font-size: 12px; font-weight: 700; margin-bottom: 18px;
+}
+.lic-status-badge.expired { background: rgba(139,30,30,.3); color: #fca5a5; border: 1px solid rgba(139,30,30,.4); }
+.lic-status-badge.nolicence { background: rgba(180,92,16,.3); color: #fcd7aa; border: 1px solid rgba(180,92,16,.4); }
+.lic-status-badge.valid { background: rgba(31,107,69,.3); color: #86efac; border: 1px solid rgba(31,107,69,.4); }
+
+.lic-info-box {
+  background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.08);
+  border-radius: 8px; padding: 14px; margin-bottom: 20px; text-align: left;
+}
+.lic-info-row {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 5px 0; border-bottom: 1px solid rgba(255,255,255,.05); font-size: 12px;
+}
+.lic-info-row:last-child { border-bottom: none; }
+.lic-info-lbl { color: rgba(255,255,255,.45); }
+.lic-info-val { color: #fff; font-weight: 600; letter-spacing: .5px; }
+.lic-info-val.expired { color: #fca5a5; }
+.lic-info-val.valid  { color: #86efac; }
+.lic-info-val.warn   { color: #fcd7aa; }
+.lic-info-val.valid { color: #86efac; }
+.lic-info-val.warn { color: #fcd7aa; }
+
+.lic-input-group { margin-bottom: 14px; text-align: left; }
+.lic-input-group label {
+  display: block; font-size: 10px; font-weight: 700;
+  text-transform: uppercase; letter-spacing: .7px;
+  color: rgba(255,255,255,.4); margin-bottom: 6px;
+}
+.lic-input {
+  width: 100%; background: rgba(255,255,255,.07);
+  border: 1.5px solid rgba(255,255,255,.15);
+  border-radius: 8px; padding: 12px 14px;
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 20px; color: #fff; outline: none;
+  letter-spacing: 5px; text-align: center; text-transform: uppercase;
+  transition: border-color .2s, background .2s;
+}
+.lic-input::placeholder { color: rgba(255,255,255,.2); letter-spacing: 2px; font-size: 14px; }
+.lic-input:focus { border-color: var(--gold); background: rgba(255,255,255,.10); box-shadow: 0 0 0 3px rgba(192,138,40,.2); }
+
+.lic-btn {
+  width: 100%; padding: 13px; border: none; border-radius: 8px;
+  font-family: 'Source Sans 3', sans-serif; font-size: 14px; font-weight: 700;
+  cursor: pointer; letter-spacing: .5px; transition: all .2s; margin-bottom: 8px;
+}
+.lic-btn-gold { background: var(--gold); color: #fff; }
+.lic-btn-gold:hover { background: var(--gold2); transform: translateY(-1px); box-shadow: 0 6px 20px rgba(192,138,40,.4); }
+.lic-btn-out { background: rgba(255,255,255,.06); color: rgba(255,255,255,.6); border: 1px solid rgba(255,255,255,.12); }
+.lic-btn-out:hover { background: rgba(255,255,255,.12); color: #fff; }
+
+.lic-error {
+  background: rgba(139,30,30,.3); border: 1px solid rgba(139,30,30,.4);
+  border-radius: 6px; padding: 8px 12px; font-size: 12px; color: #fca5a5;
+  margin-bottom: 12px; display: none; text-align: left;
+}
+.lic-error.show { display: block; animation: shake .3s ease; }
+.lic-success {
+  background: rgba(31,107,69,.3); border: 1px solid rgba(31,107,69,.4);
+  border-radius: 6px; padding: 8px 12px; font-size: 12px; color: #86efac;
+  margin-bottom: 12px; display: none; text-align: left;
+}
+.lic-success.show { display: block; }
+
+.lic-format-hint {
+  font-size: 10.5px; color: rgba(255,255,255,.28); margin-top: 6px; text-align: center;
+}
+
+/* Admin panel */
+.admin-box {
+  width: 480px; max-width: 94vw;
+  background: #0f1a2e;
+  border: 1px solid rgba(192,138,40,.3);
+  border-radius: 16px; padding: 32px;
+  box-shadow: 0 24px 60px rgba(0,0,0,.7);
+}
+.admin-title {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 18px; color: var(--gold3); font-weight: 700;
+  text-align: center; margin-bottom: 20px;
+  padding-bottom: 14px; border-bottom: 1px solid rgba(192,138,40,.2);
+}
+.admin-field { margin-bottom: 14px; }
+.admin-field label { display: block; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .6px; color: rgba(255,255,255,.4); margin-bottom: 5px; }
+.admin-field input { width: 100%; background: rgba(255,255,255,.06); border: 1.5px solid rgba(255,255,255,.15); border-radius: 6px; padding: 10px 12px; font-family: 'Source Sans 3', sans-serif; font-size: 14px; color: #fff; outline: none; transition: border-color .2s; }
+.admin-field input:focus { border-color: var(--gold); }
+.admin-gen-result {
+  background: rgba(192,138,40,.12); border: 1px solid rgba(192,138,40,.25);
+  border-radius: 8px; padding: 16px; text-align: center; margin: 14px 0; display: none;
+}
+.admin-gen-result.show { display: block; }
+.admin-gen-code {
+  font-size: 28px; font-weight: 700; color: var(--gold3);
+  letter-spacing: 5px; font-family: 'Libre Baskerville', serif;
+  margin-bottom: 6px;
+}
+.admin-gen-date { font-size: 11px; color: rgba(255,255,255,.45); }
+.admin-gen-copy {
+  margin-top: 10px; padding: 7px 18px; background: var(--gold); color: #fff;
+  border: none; border-radius: 5px; cursor: pointer; font-size: 12px; font-weight: 700;
+}
+.admin-gen-copy:hover { background: var(--gold2); }
+
+/* Countdown timer on expiry warning */
+.lic-countdown {
+  font-size: 13px; color: rgba(255,255,255,.5); margin-top: 12px;
+  padding-top: 12px; border-top: 1px solid rgba(255,255,255,.07);
+}
+.lic-countdown span { color: var(--gold3); font-weight: 700; }
+
+/* Days remaining badge */
+.days-badge {
+  display: inline-block; padding: 3px 10px; border-radius: 12px;
+  font-size: 11px; font-weight: 700;
+}
+.days-ok  { background: rgba(31,107,69,.25); color: #86efac; }
+.days-warn{ background: rgba(180,92,16,.25); color: #fcd7aa; }
+.days-exp { background: rgba(139,30,30,.25); color: #fca5a5; }
+
+
+/* ══════════════ MOBILE / ANDROID OPTIMIZATIONS ══════════════ */
+* { -webkit-tap-highlight-color: transparent; }
+html { -webkit-text-size-adjust: 100%; }
+body { overscroll-behavior: none; }
+
+/* Safe area for notched phones */
+.topbar { padding-top: env(safe-area-inset-top, 0); }
+.sb     { padding-top: env(safe-area-inset-top, 0); }
+
+/* Hamburger menu for mobile */
+.ham-btn {
+  display: none; background: none; border: none;
+  cursor: pointer; padding: 8px; font-size: 22px; color: var(--navy);
+  margin-right: 6px;
+}
+
+/* Overlay for mobile sidebar */
+.sb-overlay {
+  display: none; position: fixed; inset: 0;
+  background: rgba(0,0,0,.5); z-index: 150;
+}
+.sb-overlay.show { display: block; }
+
+/* PWA Install Banner */
+#pwa-install-banner {
+  display: none;
+  position: fixed; bottom: 0; left: 0; right: 0; z-index: 8000;
+  background: var(--navy); color: #fff;
+  padding: 12px 16px 16px; padding-bottom: calc(16px + env(safe-area-inset-bottom, 0));
+  align-items: center; gap: 12px;
+  border-top: 2px solid var(--gold); box-shadow: 0 -4px 20px rgba(0,0,0,.3);
+}
+#pwa-install-banner .app-icon {
+  width: 48px; height: 48px; border-radius: 12px; flex-shrink: 0;
+  background: rgba(196,154,60,.2); display: flex; align-items: center; justify-content: center;
+  font-size: 26px;
+}
+#pwa-install-banner .banner-text { flex: 1; }
+#pwa-install-banner .banner-title { font-weight: 700; font-size: 13px; margin-bottom: 2px; }
+#pwa-install-banner .banner-sub   { font-size: 11px; color: rgba(255,255,255,.5); }
+#pwa-install-banner .banner-btns  { display: flex; gap: 8px; flex-shrink: 0; }
+.banner-install-btn {
+  background: var(--gold); color: #fff; border: none; border-radius: 6px;
+  padding: 8px 14px; font-size: 12.5px; font-weight: 700; cursor: pointer;
+}
+.banner-dismiss-btn {
+  background: rgba(255,255,255,.1); color: rgba(255,255,255,.6); border: none;
+  border-radius: 6px; padding: 8px 10px; font-size: 12px; cursor: pointer;
+}
+
+/* PWA manual modal */
+#pwa-manual-modal {
+  display: none; position: fixed; inset: 0; z-index: 9000;
+  background: rgba(0,0,0,.7); align-items: flex-end;
+}
+#pwa-manual-modal.show { display: flex; }
+#pwa-manual-modal .manual-box {
+  background: #fff; border-radius: 16px 16px 0 0; padding: 24px 20px;
+  width: 100%; max-height: 70vh; overflow-y: auto;
+}
+#pwa-manual-modal h3 { font-family: 'Libre Baskerville', serif; font-size: 17px; margin-bottom: 14px; color: var(--navy); }
+.manual-step { display: flex; gap: 12px; margin-bottom: 14px; align-items: flex-start; }
+.manual-step .num { width: 26px; height: 26px; background: var(--navy); color: var(--gold3); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+.manual-step p { font-size: 13px; color: var(--slate); line-height: 1.5; }
+.manual-step strong { color: var(--navy); }
+.manual-close-btn { width: 100%; padding: 12px; background: var(--navy); color: #fff; border: none; border-radius: 8px; font-size: 14px; font-weight: 700; cursor: pointer; margin-top: 8px; }
+
+/* Splash screen */
+#splash-screen {
+  position: fixed; inset: 0; z-index: 99999;
+  background: var(--navy);
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  transition: opacity .5s ease;
+}
+#splash-screen.fade-out { opacity: 0; pointer-events: none; }
+#splash-screen.gone { display: none; }
+.splash-cross { width: 60px; height: 60px; position: relative; margin-bottom: 16px; }
+.splash-cross::before, .splash-cross::after { content: ''; position: absolute; background: var(--gold); border-radius: 3px; }
+.splash-cross::before { width: 8px; height: 56px; left: 26px; top: 2px; }
+.splash-cross::after  { width: 56px; height: 8px; left: 2px; top: 24px; }
+.splash-name  { font-family: 'Libre Baskerville', serif; font-size: 22px; color: #fff; font-weight: 700; }
+.splash-sub   { font-size: 12px; color: rgba(255,255,255,.35); margin-top: 5px; }
+.splash-dots  { display: flex; gap: 7px; margin-top: 28px; }
+.splash-dot   { width: 8px; height: 8px; border-radius: 50%; background: var(--gold); opacity: .3; animation: dotPulse 1.2s ease-in-out infinite; }
+.splash-dot:nth-child(2) { animation-delay: .2s; }
+.splash-dot:nth-child(3) { animation-delay: .4s; }
+@keyframes dotPulse { 0%,100%{opacity:.3;transform:scale(1)} 50%{opacity:1;transform:scale(1.3)} }
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  :root { --sw: 260px; }
+  .ham-btn { display: flex !important; }
+  .sb {
+    transform: translateX(-100%);
+    transition: transform .25s ease;
+    z-index: 201;
+  }
+  .sb.mobile-open { transform: translateX(0); }
+  .main { margin-left: 0 !important; }
+  .topbar { padding-left: 8px; }
+  .tb-r .btn-sm { display: none; }
+  .content { padding: 14px 14px; }
+  .mets { grid-template-columns: 1fr 1fr; }
+  .g4 { grid-template-columns: 1fr 1fr; }
+  .g3 { grid-template-columns: 1fr 1fr; }
+  .dash-grid { grid-template-columns: 1fr; }
+  .bgt-grid { grid-template-columns: repeat(3,1fr); }
+  .bgt-cols { grid-template-columns: 1fr; }
+  table { font-size: 11px; }
+  th, td { padding: 7px 8px; }
+}
+@media (max-width: 420px) {
+  .mets { grid-template-columns: 1fr; }
+  .g3, .g4 { grid-template-columns: 1fr; }
+  .met-val { font-size: 16px; }
+  .bgt-grid { grid-template-columns: repeat(2,1fr); }
+}
+
+
+/* ══════════════ MODULE FIDÈLES ══════════════ */
+.fideles-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 20px;
+}
+.fidele-card {
+  border-radius: var(--r);
+  padding: 20px 16px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: transform .15s, box-shadow .15s;
+  cursor: default;
+}
+.fidele-card:hover { transform: translateY(-2px); box-shadow: var(--shmd); }
+.fidele-card.fc-h { background: linear-gradient(135deg,#1a3a6a,#243560); border: 1px solid rgba(100,150,255,.2); }
+.fidele-card.fc-f { background: linear-gradient(135deg,#5a1a3a,#7a2050); border: 1px solid rgba(255,150,200,.2); }
+.fidele-card.fc-e { background: linear-gradient(135deg,#1a5a3a,#246040); border: 1px solid rgba(100,255,180,.2); }
+.fidele-card .fc-ico { font-size: 36px; margin-bottom: 8px; display: block; }
+.fidele-card .fc-lbl { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .8px; color: rgba(255,255,255,.5); margin-bottom: 10px; }
+.fidele-card .fc-val { font-size: 40px; font-weight: 700; color: #fff; line-height: 1; font-family: 'Libre Baskerville', serif; }
+.fidele-card .fc-pct { font-size: 11px; color: rgba(255,255,255,.4); margin-top: 5px; }
+
+/* Input counter stylé */
+.counter-input-wrap {
+  display: flex; align-items: center; justify-content: center; gap: 0;
+  margin-top: 10px;
+}
+.counter-btn {
+  width: 36px; height: 44px;
+  background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.2);
+  color: #fff; font-size: 20px; cursor: pointer;
+  transition: background .15s; display: flex; align-items: center; justify-content: center;
+  user-select: none; font-weight: 300;
+}
+.counter-btn:first-child { border-radius: 8px 0 0 8px; }
+.counter-btn:last-child  { border-radius: 0 8px 8px 0; }
+.counter-btn:hover { background: rgba(255,255,255,.22); }
+.counter-btn:active { background: rgba(255,255,255,.3); }
+.counter-inp {
+  width: 70px; height: 44px;
+  background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.2);
+  border-left: none; border-right: none;
+  color: #fff; font-size: 22px; font-weight: 700;
+  text-align: center; outline: none;
+  font-family: 'Libre Baskerville', serif;
+}
+.counter-inp:focus { background: rgba(255,255,255,.15); }
+
+/* Total fidèles */
+.fideles-total-bar {
+  background: var(--navy);
+  border-radius: var(--r);
+  padding: 16px 20px;
+  display: flex; align-items: center; justify-content: space-between;
+  margin-bottom: 16px;
+}
+.fideles-total-bar .tot-lbl { font-size: 12px; color: rgba(255,255,255,.5); font-weight: 600; }
+.fideles-total-bar .tot-val { font-size: 24px; font-weight: 700; color: var(--gold3); font-family: 'Libre Baskerville', serif; }
+
+/* Barre visuelle proportion */
+.fideles-proportion {
+  height: 10px; border-radius: 5px; overflow: hidden;
+  display: flex; margin-bottom: 6px;
+  background: rgba(255,255,255,.06);
+}
+.fp-h { background: #4a7fd4; transition: width .5s ease; }
+.fp-f { background: #d44a90; transition: width .5s ease; }
+.fp-e { background: #4ad494; transition: width .5s ease; }
+
+/* Stats dashboard fidèles */
+.fideles-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 16px;
+}
+.fstat {
+  background: #fff; border-radius: var(--r);
+  border: 1px solid var(--bdr); padding: 13px 14px;
+  box-shadow: var(--sh);
+}
+.fstat .fl { font-size: 9.5px; text-transform: uppercase; letter-spacing: .6px; color: var(--slate); margin-bottom: 4px; }
+.fstat .fv { font-size: 20px; font-weight: 700; color: var(--navy); }
+.fstat .fs { font-size: 10px; color: var(--slate); margin-top: 2px; }
+
+/* Historique fidèles table */
+.fideles-hist-row td { padding: 9px 11px; }
+.fideles-chart-bar {
+  height: 120px; display: flex; align-items: flex-end; gap: 4px;
+  padding: 0 4px;
+}
+.chart-col {
+  flex: 1; display: flex; flex-direction: column; align-items: center;
+  gap: 2px;
+}
+.chart-col .bar-h { background: #4a7fd4; border-radius: 3px 3px 0 0; width: 100%; min-height: 2px; transition: height .4s; }
+.chart-col .bar-f { background: #d44a90; width: 100%; min-height: 2px; transition: height .4s; }
+.chart-col .bar-e { background: #4ad494; border-radius: 0; width: 100%; min-height: 2px; transition: height .4s; }
+.chart-col .bar-lbl { font-size: 8px; color: var(--slate); margin-top: 3px; }
+
+@media (max-width: 768px) {
+  .fideles-grid { grid-template-columns: 1fr; }
+  .fideles-stats-grid { grid-template-columns: repeat(2,1fr); }
+}
+
+
+/* ══════════════ MODAL CHANGEMENT MOT DE PASSE ══════════════ */
+#chpw-overlay {
+  position: fixed; inset: 0; background: rgba(24,40,64,.65);
+  z-index: 5000; display: flex; align-items: center; justify-content: center;
+  opacity: 0; pointer-events: none; transition: opacity .2s;
+}
+#chpw-overlay.on { opacity: 1; pointer-events: all; }
+.chpw-box {
+  background: #fff; border-radius: 14px;
+  box-shadow: 0 20px 60px rgba(24,40,64,.25);
+  width: 420px; max-width: 94vw;
+  transform: scale(.96); transition: transform .2s;
+  overflow: hidden;
+}
+#chpw-overlay.on .chpw-box { transform: scale(1); }
+.chpw-hd {
+  background: var(--navy); padding: 18px 22px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.chpw-hd h3 {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 17px; color: #fff; font-weight: 700;
+  display: flex; align-items: center; gap: 8px;
+}
+.chpw-body { padding: 22px; }
+.chpw-field { margin-bottom: 16px; }
+.chpw-field label {
+  display: block; font-size: 10.5px; font-weight: 700;
+  text-transform: uppercase; letter-spacing: .5px;
+  color: var(--slate); margin-bottom: 6px;
+}
+.chpw-input-wrap { position: relative; }
+.chpw-input-wrap input {
+  padding-right: 40px;
+  font-size: 14px; letter-spacing: 1px;
+}
+.chpw-eye {
+  position: absolute; right: 10px; top: 50%; transform: translateY(-50%);
+  background: none; border: none; cursor: pointer;
+  font-size: 16px; color: var(--slate); line-height: 1;
+}
+.chpw-eye:hover { color: var(--navy); }
+.chpw-strength {
+  display: flex; gap: 4px; margin-top: 6px;
+}
+.chpw-strength-bar {
+  flex: 1; height: 4px; border-radius: 2px;
+  background: var(--parch2); transition: background .3s;
+}
+.chpw-strength-txt {
+  font-size: 10.5px; margin-top: 4px;
+  font-weight: 600;
+}
+.chpw-rules {
+  background: var(--parch); border-radius: var(--rs);
+  padding: 10px 12px; margin-bottom: 16px;
+  font-size: 11px; color: var(--slate); line-height: 1.8;
+}
+.chpw-rules .rule { display: flex; align-items: center; gap: 6px; }
+.chpw-rules .rule .ico { font-size: 12px; }
+.chpw-err {
+  background: var(--redl); border: 1px solid rgba(139,30,30,.15);
+  border-radius: var(--rs); padding: 9px 12px;
+  font-size: 12px; color: var(--red); font-weight: 600;
+  margin-bottom: 12px; display: none;
+}
+.chpw-err.show { display: block; animation: shake .3s; }
+.chpw-ok {
+  background: var(--greenl); border: 1px solid rgba(31,107,69,.15);
+  border-radius: var(--rs); padding: 9px 12px;
+  font-size: 12px; color: var(--green); font-weight: 600;
+  margin-bottom: 12px; display: none;
+}
+.chpw-ok.show { display: block; }
+.chpw-ft {
+  display: flex; gap: 8px; justify-content: flex-end;
+  padding: 14px 22px; border-top: 1px solid var(--bdr);
+  background: var(--parch);
+}
+
+/* Indicateur "Paramètres par défaut" */
+.default-warn {
+  display: flex; align-items: center; gap: 10px;
+  background: #fff8e6; border: 1px solid #f0c840;
+  border-radius: var(--rs); padding: 11px 14px;
+  margin-bottom: 14px; font-size: 12px; color: #7a5810;
+}
+.default-warn .dw-ico { font-size: 20px; flex-shrink: 0; }
+.default-warn strong { display: block; margin-bottom: 2px; }
+.btn-chpw-now {
+  margin-top: 6px; padding: 5px 12px;
+  background: var(--gold); color: #fff; border: none;
+  border-radius: 5px; font-size: 11.5px; font-weight: 700;
+  cursor: pointer;
+}
+.btn-chpw-now:hover { background: var(--gold2); }
+
+</style>
+</head>
+<body>
+
+<!-- ══ SPLASH SCREEN ══ -->
+<div id="splash-screen">
+  <div class="splash-cross"></div>
+  <div class="splash-name" id="splash-name">Finances Église</div>
+  <div class="splash-sub">Gestion comptable paroissiale</div>
+  <div class="splash-dots">
+    <div class="splash-dot"></div>
+    <div class="splash-dot"></div>
+    <div class="splash-dot"></div>
+  </div>
+</div>
+
+<!-- ══ PWA INSTALL BANNER ══ -->
+<div id="pwa-install-banner">
+  <div class="app-icon">⛪</div>
+  <div class="banner-text">
+    <div class="banner-title">Installer l'application</div>
+    <div class="banner-sub">Accès rapide depuis votre écran d'accueil</div>
+  </div>
+  <div class="banner-btns">
+    <button class="banner-install-btn" onclick="installPWA()">Installer</button>
+    <button class="banner-dismiss-btn" onclick="dismissInstallBanner()">✕</button>
+  </div>
+</div>
+
+<!-- ══ PWA MANUAL INSTALL MODAL ══ -->
+<div id="pwa-manual-modal">
+  <div class="manual-box">
+    <h3>📱 Installer sur votre téléphone</h3>
+    <div class="manual-step">
+      <div class="num">1</div>
+      <p>Ouvrez ce fichier dans <strong>Google Chrome</strong> sur votre Android</p>
+    </div>
+    <div class="manual-step">
+      <div class="num">2</div>
+      <p>Appuyez sur le menu <strong>⋮ (3 points)</strong> en haut à droite de Chrome</p>
+    </div>
+    <div class="manual-step">
+      <div class="num">3</div>
+      <p>Sélectionnez <strong>"Ajouter à l'écran d'accueil"</strong> ou <strong>"Installer l'application"</strong></p>
+    </div>
+    <div class="manual-step">
+      <div class="num">4</div>
+      <p>Confirmez en appuyant sur <strong>"Installer"</strong> ou <strong>"Ajouter"</strong></p>
+    </div>
+    <div class="manual-step">
+      <div class="num">5</div>
+      <p>L'icône <strong>⛪ Finances Église</strong> apparaît sur votre écran d'accueil !</p>
+    </div>
+    <button class="manual-close-btn" onclick="document.getElementById('pwa-manual-modal').classList.remove('show')">✕ Fermer</button>
+  </div>
+</div>
+
+<!-- ══ SIDEBAR OVERLAY (mobile) ══ -->
+<div class="sb-overlay" id="sb-overlay" onclick="closeMobileSb()"></div>
+
+
+<!-- ══════════════════════ SIDEBAR ══════════════════════ -->
+
+<!-- ══════════════════════ LOGIN SCREEN ══════════════════════ -->
+<div id="login-screen">
+  <div class="login-box">
+    <div class="login-cross"></div>
+    <div class="login-church">
+      <div class="name" id="login-church-name">Finances Église</div>
+      <div class="sub" id="login-church-sub">Système de gestion comptable</div>
+    </div>
+    <div class="login-title">🔐 Connexion sécurisée</div>
+
+    <div id="login-error" class="login-error">Identifiant ou mot de passe incorrect.</div>
+    <div id="login-locked" class="login-locked">🔒 Compte bloqué — Réessayez dans <span id="lock-countdown">60</span>s</div>
+
+    <div class="login-field">
+      <label>Identifiant (9 chiffres)</label>
+      <input type="text" id="login-id" placeholder="000 000 000" maxlength="9"
+        oninput="this.value=this.value.replace(/[^0-9]/g,'')" onkeydown="loginKey(event)">
+      <div class="hint" id="id-hint">0 / 9 chiffres</div>
+    </div>
+
+    <div class="login-field">
+      <label>Mot de passe (6 caractères)</label>
+      <div class="login-eye">
+        <input type="password" id="login-pw" placeholder="••••••" maxlength="6" onkeydown="loginKey(event)">
+        <button class="login-eye-btn" onclick="togglePw()" id="eye-btn" title="Afficher/Masquer">👁</button>
+      </div>
+      <div class="hint" id="pw-hint">0 / 6 caractères</div>
+    </div>
+
+    <button class="login-btn" onclick="doLogin()">Connexion →</button>
+    <div class="login-attempts">Tentatives restantes : <span id="attempts-left">5</span></div>
+  </div>
+</div>
+
+<!-- ══════════════════════ LICENCE SCREEN ══════════════════════ -->
+<div id="licence-screen">
+  <div class="lic-box" id="lic-box-main">
+    <div class="lic-icon" id="lic-icon">🔐</div>
+    <div class="lic-title" id="lic-church-title">Finances Église</div>
+    <div class="lic-sub">Licence d'utilisation · Gestion Financière Paroissiale</div>
+
+    <div id="lic-status-badge" class="lic-status-badge nolicence">⚠️ Aucune licence active</div>
+
+    <div class="lic-info-box" id="lic-info-box" style="display:none">
+      <div class="lic-info-row"><span class="lic-info-lbl">🔑 Clé de licence</span><span class="lic-info-val" id="lic-disp-key">—</span></div>
+      <div class="lic-info-row"><span class="lic-info-lbl">📅 Activation</span><span class="lic-info-val" id="lic-disp-start">—</span></div>
+      <div class="lic-info-row"><span class="lic-info-lbl">⏰ Expiration</span><span class="lic-info-val" id="lic-disp-end">—</span></div>
+      <div class="lic-info-row"><span class="lic-info-lbl">📆 Jours restants</span><span class="lic-info-val" id="lic-disp-days">—</span></div>
+    </div>
+
+    <div id="lic-err" class="lic-error"></div>
+    <div id="lic-ok" class="lic-success"></div>
+
+    <div class="lic-input-group">
+      <label>Entrez votre clé de licence (9 caractères)</label>
+      <input type="text" id="lic-key-input" class="lic-input"
+        placeholder="XXX-XXX-XXX"
+        maxlength="11"
+        autocomplete="off" spellcheck="false"
+        oninput="licFormatInput(this)"
+        onkeydown="if(event.key==='Enter')activateLicence()">
+      <div style="display:flex;justify-content:space-between;margin-top:5px">
+        <span style="font-size:10px;color:rgba(255,255,255,.28)">Format : XXX-XXX-XXX</span>
+        <span id="lic-cnt" style="font-size:10px;color:rgba(255,255,255,.3);font-weight:700">0 / 9</span>
+      </div>
+    </div>
+    <div class="lic-format-hint">
+      9 caractères : chiffres <strong>0–9</strong> et lettres <strong>A–Z</strong><br>
+      Exemple : <strong style="color:#f0d070;letter-spacing:3px">A7B-3KZ-29M</strong>
+    </div>
+
+    <button class="lic-btn lic-btn-gold" style="margin-top:18px" onclick="activateLicence()">✅ Activer la licence</button>
+    <button class="lic-btn lic-btn-out" style="margin-top:6px" onclick="showAdminPanel()">🔑 Panneau Administrateur</button>
+
+    <div style="margin-top:14px;padding-top:12px;border-top:1px solid rgba(255,255,255,.07);font-size:10px;color:rgba(255,255,255,.2);text-align:center">
+      Contactez votre administrateur pour obtenir une clé de licence
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════ ADMIN PANEL ══════════════════════ -->
+<div id="admin-screen">
+  <div class="admin-box">
+    <div class="admin-title">🔑 Panneau Administrateur</div>
+
+    <div id="admin-err" class="lic-error" style="margin-bottom:12px"></div>
+
+    <!-- Authentification -->
+    <div id="admin-pw-field" class="admin-field">
+      <label>Mot de passe administrateur</label>
+      <input type="password" id="admin-pw" placeholder="Saisissez le mot de passe" onkeydown="if(event.key==='Enter')adminAuth()">
+    </div>
+    <button id="admin-auth-btn" class="lic-btn lic-btn-gold" onclick="adminAuth()">🔓 Accéder</button>
+
+    <!-- Contenu admin (après auth) -->
+    <div id="admin-panel-content" style="display:none">
+      <div style="border-top:1px solid rgba(255,255,255,.1);margin:16px 0 14px"></div>
+
+      <!-- Licence active -->
+      <div style="font-size:10px;color:rgba(255,255,255,.35);text-transform:uppercase;letter-spacing:.6px;margin-bottom:6px">Licence active sur cet appareil</div>
+      <div id="admin-current-lic" style="font-size:12px;padding:8px 10px;background:rgba(255,255,255,.05);border-radius:6px;margin-bottom:14px">—</div>
+
+      <!-- Générer -->
+      <div style="font-size:10px;color:rgba(255,255,255,.35);text-transform:uppercase;letter-spacing:.6px;margin-bottom:8px">Générer une nouvelle clé (12 mois)</div>
+      <div class="admin-field">
+        <label>Nom de l'église (référence)</label>
+        <input type="text" id="admin-church-ref" placeholder="Ex: Église Bethel Douala">
+      </div>
+      <button class="lic-btn lic-btn-gold" onclick="adminGenerate()">⚡ Générer la licence</button>
+
+      <div class="admin-gen-result" id="admin-result">
+        <div style="font-size:9px;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:.7px;margin-bottom:6px">Clé de licence générée</div>
+        <div class="admin-gen-code" id="admin-gen-code">—</div>
+        <div class="admin-gen-date" id="admin-gen-date" style="font-size:11px;color:rgba(255,255,255,.5);margin-top:5px">—</div>
+        <button class="admin-gen-copy" onclick="copyLicence()">📋 Copier la clé</button>
+      </div>
+
+      <div style="border-top:1px solid rgba(255,255,255,.1);margin:14px 0 12px"></div>
+      <div style="font-size:10px;color:rgba(255,255,255,.35);text-transform:uppercase;letter-spacing:.6px;margin-bottom:8px">Historique des licences</div>
+      <div id="admin-history" style="max-height:200px;overflow-y:auto"></div>
+
+      <div style="border-top:1px solid rgba(255,255,255,.1);margin:14px 0 12px"></div>
+      <div class="admin-field">
+        <label>Changer le mot de passe administrateur</label>
+        <input type="password" id="admin-new-pw" placeholder="Nouveau mot de passe (min. 4 car.)">
+      </div>
+      <button class="lic-btn lic-btn-out" onclick="changeAdminPw()">🔒 Changer le mot de passe</button>
+      <div id="admin-pw-ok" style="display:none;margin-top:8px;padding:7px;background:rgba(31,107,69,.3);border-radius:5px;font-size:11px;color:#86efac;text-align:center">✅ Mot de passe modifié avec succès</div>
+    </div>
+
+    <div style="border-top:1px solid rgba(255,255,255,.1);margin-top:14px;padding-top:12px">
+      <button class="lic-btn lic-btn-out" onclick="closeAdminPanel()">✕ Fermer</button>
+    </div>
+  </div>
+</div>
+
+<aside class="sb" id="main-sb">
+  <div class="sb-head">
+    <div class="sb-cross"></div>
+    <div class="sb-name" id="sb-church-name">Finances Église</div>
+    <div class="sb-sub"  id="sb-church-sub">Gestion comptable paroissiale</div>
+    <div class="sb-yr">
+      <span class="sb-yr-lbl">Année</span>
+      <button onclick="changeYear(-1)">‹</button>
+      <span id="yr-display">2025</span>
+      <button onclick="changeYear(1)">›</button>
+    </div>
+  </div>
+  <nav class="sb-nav">
+    <div class="sb-grp">Vue d'ensemble</div>
+    <div class="sb-lnk on" onclick="go('dashboard')"><span class="sb-ico">📊</span>Tableau de bord</div>
+    <div class="sb-lnk"    onclick="go('budget')">   <span class="sb-ico">🗓</span>Budget annuel</div>
+    <div class="sb-grp">Saisie</div>
+    <div class="sb-lnk" onclick="go('recettes')"> <span class="sb-ico">📥</span>Recettes dimanche</div>
+    <div class="sb-lnk" onclick="go('fideles')">  <span class="sb-ico">👥</span>Présence fidèles</div>
+    <div class="sb-lnk" onclick="go('depenses')"> <span class="sb-ico">📤</span>Dépenses</div>
+    <div class="sb-grp">Consultation</div>
+    <div class="sb-lnk" onclick="go('historique')">  <span class="sb-ico">📋</span>Historique</div>
+    <div class="sb-lnk" onclick="go('budgetvs')">    <span class="sb-ico">📈</span>Budget vs Réel</div>
+    <div class="sb-lnk" onclick="go('repartition')"> <span class="sb-ico">⚖️</span>Répartition</div>
+    <div class="sb-lnk" onclick="go('recap')">       <span class="sb-ico">📄</span>Récapitulatif mensuel</div>
+    <div class="sb-lnk" onclick="go('recherche')">   <span class="sb-ico">🔍</span>Recherche</div>
+    <div class="sb-lnk" onclick="go('parametres')">  <span class="sb-ico">⚙️</span>Paramètres</div>
+  </nav>
+  <div class="sb-bal">
+    <div class="l">Solde net <span id="sb-yr2"></span></div>
+    <div class="v" id="sb-solde">0 FCFA</div>
+    <div class="s" id="sb-solde-s">En attente de saisie</div>
+  </div>
+  <div class="sb-bal" id="sb-lic-info-box" style="margin-top:0;border-top:1px solid rgba(255,255,255,.06)">
+    <div class="l">Licence — Validité</div>
+    <div style="font-size:11px;font-weight:700;color:#fff" id="sb-lic-key-disp">—</div>
+    <div style="font-size:10px;margin-top:3px" id="sb-lic-date-disp">Non activée</div>
+    <div style="font-size:10px;margin-top:2px" id="sb-lic-days-disp"></div>
+  </div>
+  <div class="sb-foot">© Système comptable paroissial</div>
+</aside>
+
+<!-- ══════════════════════ MAIN ══════════════════════ -->
+<main class="main">
+  <div class="topbar">
+    <div style="display:flex;align-items:center;gap:4px">
+      <button class="ham-btn" onclick="toggleMobileSb()">☰</button>
+      <div>
+      <h2 id="pg-title">Tableau de bord</h2>
+      <small id="pg-date"></small>
+    </div></div>
+    <div class="tb-r no-print">
+      <button class="btn btn-out btn-sm" onclick="logout()" title="Se déconnecter">🔒 Déconnexion</button>
+      <button class="btn btn-out btn-sm" onclick="go('recherche')">🔍 Recherche</button>
+      <button class="btn btn-out btn-sm" onclick="openChpw()" title="Changer mon mot de passe">🔒</button>
+      <button class="btn btn-gold btn-sm" onclick="go('recettes')">＋ Recette</button>
+      <button class="btn btn-navy btn-sm" onclick="go('depenses')">＋ Dépense</button>
+    </div>
+  </div>
+
+  <div class="content">
+
+    <!-- ██ DASHBOARD ██ -->
+    <div class="page on" id="p-dashboard">
+      <div class="mets">
+        <div class="met met-gold">  <div class="met-ico">💰</div><div class="met-lbl">Recettes cumulées</div> <div class="met-val" id="dm-rec">0 F</div><div class="met-sub" id="dm-rec-s">0 dimanche(s)</div></div>
+        <div class="met met-red">   <div class="met-ico">📤</div><div class="met-lbl">Dépenses cumulées</div><div class="met-val" id="dm-dep">0 F</div><div class="met-sub" id="dm-dep-s">0 opération(s)</div></div>
+        <div class="met met-green"> <div class="met-ico">📊</div><div class="met-lbl">Solde net</div>         <div class="met-val" id="dm-sol">0 F</div><div class="met-sub">Recettes − Dépenses</div></div>
+        <div class="met met-plum">  <div class="met-ico">🗓</div><div class="met-lbl">Budget vs Réel</div>   <div class="met-val" id="dm-bvr">—</div>  <div class="met-sub" id="dm-bvr-s">Budget annuel</div></div>
+      </div>
+      <div class="mets" style="grid-template-columns:repeat(3,1fr);margin-top:0">
+        <div class="met met-navy">  <div class="met-ico">👥</div><div class="met-lbl">Moy. présence / dimanche</div><div class="met-val" id="dm-fid">—</div><div class="met-sub" id="dm-fid-s">Fidèles</div></div>
+        <div class="met met-gold">  <div class="met-ico">🧔</div><div class="met-lbl">Hommes (cumul)</div><div class="met-val" id="dm-fid-h">—</div><div class="met-sub">Présences</div></div>
+        <div class="met met-green"> <div class="met-ico">👩</div><div class="met-lbl">Femmes (cumul)</div><div class="met-val" id="dm-fid-f">—</div><div class="met-sub">Présences</div></div>
+      </div>
+      <div class="dash-grid">
+        <div class="card">
+          <div class="card-hd"><div class="card-ht">📊 Répartition des recettes</div></div>
+          <div class="card-bd" id="dash-breakdown"><div class="empty-state"><div class="ico">📊</div><p>Aucune recette enregistrée</p></div></div>
+        </div>
+        <div class="card">
+          <div class="card-hd"><div class="card-ht">⚖️ Calculs automatiques</div></div>
+          <div style="background:var(--navy);padding:13px 15px">
+            <div class="pv-row"><span class="pv-lbl">Base (Ord+Dîmes+Sig+Récolte)</span><span id="dc-base" style="color:var(--gold3);font-weight:700">0 F</span></div>
+            <div class="pv-row"><span class="pv-lbl">→ 35% Paroisse</span><span id="dc-35" style="color:var(--gold3);font-weight:700">0 F</span></div>
+            <div class="pv-row"><span class="pv-lbl">→ 5% Réserve</span><span id="dc-5" style="color:var(--gold3);font-weight:700">0 F</span></div>
+            <div class="pv-row"><span class="pv-lbl">→ 80% Cartes membres</span><span id="dc-80" style="color:var(--gold3);font-weight:700">0 F</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-hd"><div class="card-ht">🕐 Dernières opérations</div></div>
+        <div class="tw"><table><thead><tr><th>Date</th><th>Type</th><th>Détail</th><th class="r">Montant</th></tr></thead><tbody id="dash-recent"></tbody></table></div>
+      </div>
+    </div>
+
+    <!-- ██ BUDGET ██ -->
+    <div class="page" id="p-budget">
+      <div class="card">
+        <div class="card-hd">
+          <div class="card-ht">🗓 Budget annuel <span id="bgt-yr-lbl" style="color:var(--gold3);font-size:12px;margin-left:5px"></span></div>
+          <button class="btn btn-out btn-sm no-print" onclick="pdfBudget()">📄 PDF Budget</button>
+        </div>
+        <div class="card-bd">
+          <p style="font-size:11.5px;color:var(--slate);margin-bottom:12px">Cliquez sur un mois pour définir son budget. Objectif : <strong>Recettes prévues = Dépenses prévues</strong> (budget équilibré).</p>
+          <div class="bgt-grid" id="bgt-grid"></div>
+          <div class="bgt-form" id="bgt-form">
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:13px">
+              <div style="font-family:'Libre Baskerville',serif;font-size:15px;font-weight:700" id="bgt-form-title">Budget — Janvier</div>
+              <button class="btn btn-out btn-xs" onclick="closeBgtForm()">✕ Fermer</button>
+            </div>
+            <div class="bgt-cols">
+              <div>
+                <div class="bgt-col-t rec">📥 Recettes prévues</div>
+                <div id="bgt-rec-lines"></div>
+                <div style="display:flex;justify-content:space-between;font-size:12px;font-weight:700;padding:7px 0;border-top:1px solid var(--bdr);margin-top:5px">
+                  <span style="color:var(--green)">Total Recettes</span><span id="bgt-tot-r" style="color:var(--green)">0 FCFA</span>
+                </div>
+              </div>
+              <div>
+                <div class="bgt-col-t dep">📤 Dépenses prévues</div>
+                <div id="bgt-dep-lines"></div>
+                <div style="display:flex;justify-content:space-between;font-size:12px;font-weight:700;padding:7px 0;border-top:1px solid var(--bdr);margin-top:5px">
+                  <span style="color:var(--red)">Total Dépenses</span><span id="bgt-tot-d" style="color:var(--red)">0 FCFA</span>
+                </div>
+              </div>
+              <div class="bgt-summary">
+                <div class="bgt-si"><div class="l">Recettes</div><div class="v" id="bgs-r" style="color:var(--gold3)">0</div></div>
+                <div class="bgt-si"><div class="l">Dépenses</div><div class="v" id="bgs-d" style="color:#f87171">0</div></div>
+                <div class="bgt-si"><div class="l">Écart</div><div class="v" id="bgs-e" style="color:var(--gold3)">0</div></div>
+                <div class="bgt-si"><div class="l">Statut</div><div class="v" id="bgs-eq">—</div></div>
+                <div style="margin-left:auto"><button class="btn btn-gold" onclick="saveBgtMonth()">💾 Enregistrer ce mois</button></div>
+              </div>
+            </div>
+          </div>
+          <div style="margin-top:18px">
+            <div style="font-family:'Libre Baskerville',serif;font-size:14.5px;font-weight:700;margin-bottom:10px">Récapitulatif annuel du budget</div>
+            <div class="tw"><table>
+              <thead><tr><th>Mois</th><th class="r">Recettes prévues</th><th class="r">Dépenses prévues</th><th class="r">Écart</th><th>Équilibre</th></tr></thead>
+              <tbody id="bgt-ann-body"></tbody>
+              <tfoot><tr><td>TOTAL ANNUEL</td><td class="r" id="ann-r">0 FCFA</td><td class="r" id="ann-d">0 FCFA</td><td class="r" id="ann-e">0 FCFA</td><td></td></tr></tfoot>
+            </table></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ██ RECETTES ██ -->
+    <div class="page" id="p-recettes">
+      <div class="card">
+        <div class="card-hd">
+          <div class="card-ht">📥 Saisie des recettes du dimanche</div>
+          <span id="rec-edit-badge" style="display:none"><span class="badge badge-o">MODE MODIFICATION</span></span>
+        </div>
+        <div class="card-bd">
+          <div class="g2">
+            <div class="fg"><label>Date du dimanche *</label><input type="date" id="r-date"></div>
+            <div class="fg"><label>Note / Observation</label><input type="text" id="r-note" placeholder="Remarque optionnelle…"></div>
+          </div>
+          <div class="g4" style="margin-top:14px">
+            <div class="sec-div">💰 Collectes courantes</div>
+            <div class="fg"><label>Offrandes ordinaires</label><input type="number" id="r-offOrd" placeholder="0" min="0" oninput="computeRec()"></div>
+            <div class="fg"><label>Offrandes spéciales</label><input type="number" id="r-offSpe" placeholder="0" min="0"></div>
+            <div class="fg"><label>Dîmes en argent</label><input type="number" id="r-dimes" placeholder="0" min="0" oninput="computeRec()"></div>
+            <div class="fg"><label>Signature carte</label><input type="number" id="r-sig" placeholder="0" min="0" oninput="computeRec()"></div>
+            <div class="sec-div">🌾 Événements & Projets</div>
+            <div class="fg"><label>Fête de récolte</label><input type="number" id="r-recolte" placeholder="0" min="0" oninput="computeRec()"></div>
+            <div class="fg"><label>Investissements</label><input type="number" id="r-invest" placeholder="0" min="0"></div>
+            <div class="fg"><label>Dimanche de mission</label><input type="number" id="r-mission" placeholder="0" min="0"></div>
+            <div class="fg"><label>Achat carte membre</label><input type="number" id="r-carte" placeholder="0" min="0" oninput="computeRec()"></div>
+            <div class="sec-div">🎁 Autres recettes</div>
+            <div class="fg"><label>Dons divers</label><input type="number" id="r-dons" placeholder="0" min="0"></div>
+            <div class="fg"><label>Dîmes en nature (valeur)</label><input type="number" id="r-dnat" placeholder="0" min="0"></div>
+            <div class="fg"><label>Autre recette</label><input type="number" id="r-autre" placeholder="0" min="0"></div>
+            <div class="fg"></div>
+            <div class="sec-div">🧮 Calculs automatiques (lecture seule)</div>
+            <div class="fg"><label>Base (Ord+Dîmes+Sig+Récolte)</label><input type="number" id="r-base" class="readonly-field" readonly></div>
+            <div class="fg"><label>35% → Paroisse</label><input type="number" id="r-35" class="readonly-field" readonly></div>
+            <div class="fg"><label>5% → Réserve</label><input type="number" id="r-5" class="readonly-field" readonly></div>
+            <div class="fg"><label>80% → Cartes membres</label><input type="number" id="r-80" class="readonly-field" readonly></div>
+          </div>
+          <div class="pv-box" id="r-pv">
+            <div style="font-size:13px;font-weight:700;margin-bottom:8px;color:var(--gold3)">Aperçu — Dimanche du <span id="r-pv-date"></span></div>
+            <div id="r-pv-lines"></div>
+            <div class="pv-row pv-total"><span>TOTAL RECETTES</span><span id="r-pv-tot">0 FCFA</span></div>
+          </div>
+          <div class="form-act no-print">
+            <button class="btn btn-out"   onclick="cancelRec()">✕ Annuler</button>
+            <button class="btn btn-out"   onclick="previewRec()">👁 Aperçu</button>
+            <button class="btn btn-gold"  onclick="saveRec()">✅ Enregistrer</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ██ DÉPENSES ██ -->
+    <div class="page" id="p-depenses">
+      <div class="card">
+        <div class="card-hd">
+          <div class="card-ht">📤 Saisie des dépenses</div>
+          <span id="dep-edit-badge" style="display:none"><span class="badge badge-o">MODE MODIFICATION</span></span>
+        </div>
+        <div class="card-bd">
+          <div class="g2">
+            <div class="fg"><label>Date *</label><input type="date" id="d-date"></div>
+            <div class="fg"><label>Description</label><input type="text" id="d-desc" placeholder="Libellé de la dépense…"></div>
+          </div>
+          <div class="g4" style="margin-top:14px">
+            <div class="sec-div">⚙️ Administration & Personnel</div>
+            <div class="fg"><label>Fonctionnement</label><input type="number" id="d-fonct"   placeholder="0" min="0"></div>
+            <div class="fg"><label>Salaire pasteur</label><input type="number" id="d-salaire" placeholder="0" min="0"></div>
+            <div class="fg"><label>Déplacement</label><input type="number" id="d-deplac"  placeholder="0" min="0"></div>
+            <div class="fg"><label>Électricité ENEO</label><input type="number" id="d-elec"    placeholder="0" min="0"></div>
+            <div class="sec-div">🏛️ Contributions & Missions</div>
+            <div class="fg"><label>CNPS</label><input type="number" id="d-cnps"   placeholder="0" min="0"></div>
+            <div class="fg"><label>Assistance aux fidèles</label><input type="number" id="d-assist" placeholder="0" min="0"></div>
+            <div class="fg"><label>Offrandes spéciales (sortie)</label><input type="number" id="d-offspe" placeholder="0" min="0"></div>
+            <div class="fg"><label>Dimanche mission (sortie)</label><input type="number" id="d-dmiss"  placeholder="0" min="0"></div>
+            <div class="sec-div">💼 Investissements & Aides</div>
+            <div class="fg"><label>Investissement (sortie)</label><input type="number" id="d-invest" placeholder="0" min="0"></div>
+            <div class="fg"><label>Aides diverses</label><input type="number" id="d-aides"  placeholder="0" min="0"></div>
+            <div class="fg"><label>Autre dépense</label><input type="number" id="d-autre"  placeholder="0" min="0"></div>
+            <div class="fg"></div>
+            <div class="sec-div">🧮 Reversements calculés (depuis recettes)</div>
+            <div class="fg"><label>80% Cartes membres (calculé)</label><input type="number" id="d-80" class="readonly-field" readonly placeholder="—"></div>
+            <div class="fg"><label>35% Paroisse (calculé)</label><input type="number" id="d-35" class="readonly-field" readonly placeholder="—"></div>
+            <div class="fg"><label>5% Réserve (calculé)</label><input type="number" id="d-5"  class="readonly-field" readonly placeholder="—"></div>
+            <div class="fg"></div>
+          </div>
+          <div class="pv-box" id="d-pv">
+            <div style="font-size:13px;font-weight:700;margin-bottom:8px;color:var(--gold3)">Aperçu dépense</div>
+            <div id="d-pv-lines"></div>
+            <div class="pv-row pv-total"><span>TOTAL DÉPENSES</span><span id="d-pv-tot">0 FCFA</span></div>
+          </div>
+          <div class="form-act no-print">
+            <button class="btn btn-out"  onclick="cancelDep()">✕ Annuler</button>
+            <button class="btn btn-out"  onclick="previewDep()">👁 Aperçu</button>
+            <button class="btn btn-navy" onclick="saveDep()">✅ Enregistrer</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ██ HISTORIQUE ██ -->
+    <div class="page" id="p-historique">
+      <div class="sbar no-print">
+        <div class="sbar-wrap"><span class="sbar-ico">🔍</span><input type="text" id="h-kw" placeholder="Rechercher…" oninput="renderHist()"></div>
+        <select id="h-type" onchange="renderHist()" style="width:auto;padding:6px 9px"><option value="all">Tout</option><option value="r">Recettes</option><option value="d">Dépenses</option></select>
+        <select id="h-mois" onchange="renderHist()" style="width:auto;padding:6px 9px"><option value="all">Tous mois</option></select>
+        <button class="btn btn-gold btn-sm" onclick="pdfHist()">📄 PDF</button>
+      </div>
+      <div class="tabs">
+        <div class="tab on" onclick="histTab('r')">📥 Recettes</div>
+        <div class="tab"    onclick="histTab('d')">📤 Dépenses</div>
+      </div>
+      <div id="hp-r">
+        <div class="card"><div class="tw"><table>
+          <thead><tr><th>Date</th><th class="r">Off.Ord.</th><th class="r">Off.Spé.</th><th class="r">Dîmes</th><th class="r">Sig.</th><th class="r">Récolte</th><th class="r">Mission</th><th class="r">Cartes</th><th class="r">Dons</th><th class="r">Dîm.Nat.</th><th class="r">Total</th><th>Note</th><th class="no-print">Actions</th></tr></thead>
+          <tbody id="hb-r"></tbody>
+        </table></div></div>
+      </div>
+      <div id="hp-d" style="display:none">
+        <div class="card"><div class="tw"><table>
+          <thead><tr><th>Date</th><th>Description</th><th class="r">Fonct.</th><th class="r">Salaire</th><th class="r">Déplac.</th><th class="r">ENEO</th><th class="r">CNPS</th><th class="r">Assist.</th><th class="r">Mission</th><th class="r">Invest.</th><th class="r">Total</th><th class="no-print">Actions</th></tr></thead>
+          <tbody id="hb-d"></tbody>
+        </table></div></div>
+      </div>
+    </div>
+
+    <!-- ██ BUDGET VS REEL ██ -->
+    <div class="page" id="p-budgetvs">
+      <div class="card">
+        <div class="card-hd">
+          <div class="card-ht">📈 Budget prévu vs Réel</div>
+          <div style="display:flex;gap:7px;align-items:center">
+            <select id="cmp-mois" onchange="renderCmp()" style="background:rgba(255,255,255,.1);color:#fff;border:1px solid rgba(255,255,255,.2);border-radius:4px;padding:4px 8px;font-size:11.5px"><option value="all">Année complète</option></select>
+            <button class="btn btn-out btn-sm no-print" onclick="pdfCmp()">📄 PDF</button>
+          </div>
+        </div>
+        <div class="card-bd" id="cmp-content"></div>
+      </div>
+    </div>
+
+    <!-- ██ RÉPARTITION ██ -->
+    <div class="page" id="p-repartition">
+      <div class="card">
+        <div class="card-hd"><div class="card-ht">⚖️ Répartition automatique des fonds</div></div>
+        <div class="card-bd">
+          <div class="g2" style="margin-bottom:13px">
+            <div class="fg"><label>Filtrer par mois</label><select id="rp-mois" onchange="calcRep()" style="width:100%"><option value="all">Toutes les recettes</option></select></div>
+            <div class="fg" style="justify-content:flex-end;align-items:flex-end"><button class="btn btn-gold" onclick="calcRep()">🔄 Calculer</button></div>
+          </div>
+          <div style="background:var(--navy);border-radius:var(--r);padding:15px">
+            <div class="pv-row"><span class="pv-lbl">Offrandes ordinaires</span><span id="rp-offOrd" style="color:var(--gold3);font-weight:700">0 F</span></div>
+            <div class="pv-row"><span class="pv-lbl">Dîmes en argent</span><span id="rp-dimes" style="color:var(--gold3);font-weight:700">0 F</span></div>
+            <div class="pv-row"><span class="pv-lbl">Signature carte</span><span id="rp-sig" style="color:var(--gold3);font-weight:700">0 F</span></div>
+            <div class="pv-row"><span class="pv-lbl">Fête de récolte</span><span id="rp-rec" style="color:var(--gold3);font-weight:700">0 F</span></div>
+            <div style="height:6px"></div>
+            <div class="pv-row" style="border-color:rgba(192,138,40,.3)"><span style="color:var(--gold3);font-weight:700">✅ BASE DE CALCUL</span><span id="rp-base" style="color:var(--gold3);font-size:14px;font-weight:700">0 F</span></div>
+            <div style="height:6px"></div>
+            <div class="pv-row"><span class="pv-lbl">→ 35% Paroisse (à reverser)</span><span id="rp-35" style="color:var(--gold3);font-weight:700">0 F</span></div>
+            <div class="pv-row"><span class="pv-lbl">→ 5% Réserve</span><span id="rp-5" style="color:var(--gold3);font-weight:700">0 F</span></div>
+            <div class="pv-row"><span class="pv-lbl">→ 60% Fonds disponibles</span><span id="rp-60" style="color:var(--gold3);font-weight:700">0 F</span></div>
+            <div style="height:6px"></div>
+            <div class="pv-row"><span class="pv-lbl">Total achat cartes membres</span><span id="rp-carte" style="color:var(--gold3);font-weight:700">0 F</span></div>
+            <div class="pv-row"><span class="pv-lbl">→ 80% à reverser</span><span id="rp-80" style="color:var(--gold3);font-weight:700">0 F</span></div>
+          </div>
+          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:13px">
+            <div class="met met-navy"> <div class="met-lbl">35% — Paroisse</div>        <div class="met-val" id="rp-35b">0 F</div></div>
+            <div class="met met-gold"> <div class="met-lbl">5% — Réserve</div>          <div class="met-val" id="rp-5b">0 F</div></div>
+            <div class="met met-plum"> <div class="met-lbl">80% — Cartes membres</div>  <div class="met-val" id="rp-80b">0 F</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ██ PRÉSENCE FIDÈLES ██ -->
+    <div class="page" id="p-fideles">
+
+      <!-- ── Saisie ── -->
+      <div class="card">
+        <div class="card-hd">
+          <div class="card-ht">👥 Enregistrement de la présence — Dimanche</div>
+          <span id="fid-edit-badge" style="display:none"><span class="badge badge-o">MODIFICATION</span></span>
+        </div>
+        <div class="card-bd">
+          <div class="g2" style="margin-bottom:18px">
+            <div class="fg"><label>Date du dimanche *</label><input type="date" id="fid-date"></div>
+            <div class="fg"><label>Culte / Observation</label><input type="text" id="fid-note" placeholder="Ex: Culte ordinaire, Fête de Pâques…"></div>
+          </div>
+
+          <!-- Compteurs visuels -->
+          <div class="fideles-grid">
+
+            <!-- HOMMES -->
+            <div class="fidele-card fc-h">
+              <span class="fc-ico">🧔</span>
+              <div class="fc-lbl">Hommes</div>
+              <div class="counter-input-wrap">
+                <button class="counter-btn" onclick="adjustCount('fid-h',-1)">−</button>
+                <input type="number" id="fid-h" class="counter-inp" value="0" min="0" oninput="updateFidTotal()">
+                <button class="counter-btn" onclick="adjustCount('fid-h',1)">+</button>
+              </div>
+              <div class="fc-pct" id="fid-h-pct">— %</div>
+            </div>
+
+            <!-- FEMMES -->
+            <div class="fidele-card fc-f">
+              <span class="fc-ico">👩</span>
+              <div class="fc-lbl">Femmes</div>
+              <div class="counter-input-wrap">
+                <button class="counter-btn" onclick="adjustCount('fid-f',-1)">−</button>
+                <input type="number" id="fid-f" class="counter-inp" value="0" min="0" oninput="updateFidTotal()">
+                <button class="counter-btn" onclick="adjustCount('fid-f',1)">+</button>
+              </div>
+              <div class="fc-pct" id="fid-f-pct">— %</div>
+            </div>
+
+            <!-- ENFANTS -->
+            <div class="fidele-card fc-e">
+              <span class="fc-ico">🧒</span>
+              <div class="fc-lbl">Enfants</div>
+              <div class="counter-input-wrap">
+                <button class="counter-btn" onclick="adjustCount('fid-e',-1)">−</button>
+                <input type="number" id="fid-e" class="counter-inp" value="0" min="0" oninput="updateFidTotal()">
+                <button class="counter-btn" onclick="adjustCount('fid-e',1)">+</button>
+              </div>
+              <div class="fc-pct" id="fid-e-pct">— %</div>
+            </div>
+
+          </div>
+
+          <!-- Total + proportion -->
+          <div class="fideles-total-bar">
+            <div>
+              <div class="tot-lbl">Total présents ce dimanche</div>
+              <div class="tot-val" id="fid-total">0 fidèle(s)</div>
+            </div>
+            <div style="text-align:right">
+              <div style="font-size:10px;color:rgba(255,255,255,.4);margin-bottom:4px">Répartition</div>
+              <div style="font-size:11px;color:rgba(255,255,255,.6)" id="fid-repartition-txt">—</div>
+            </div>
+          </div>
+
+          <!-- Barre de proportion -->
+          <div style="margin-bottom:16px">
+            <div class="fideles-proportion" id="fid-proportion">
+              <div class="fp-h" id="fp-h" style="width:33%"></div>
+              <div class="fp-f" id="fp-f" style="width:33%"></div>
+              <div class="fp-e" id="fp-e" style="width:34%"></div>
+            </div>
+            <div style="display:flex;gap:12px;font-size:10px;color:var(--slate)">
+              <span><span style="display:inline-block;width:10px;height:10px;background:#4a7fd4;border-radius:2px;margin-right:4px"></span>Hommes</span>
+              <span><span style="display:inline-block;width:10px;height:10px;background:#d44a90;border-radius:2px;margin-right:4px"></span>Femmes</span>
+              <span><span style="display:inline-block;width:10px;height:10px;background:#4ad494;border-radius:2px;margin-right:4px"></span>Enfants</span>
+            </div>
+          </div>
+
+          <div class="form-act no-print">
+            <button class="btn btn-out"  onclick="cancelFid()">✕ Annuler</button>
+            <button class="btn btn-gold" onclick="saveFid()">✅ Enregistrer</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Statistiques ── -->
+      <div class="fideles-stats-grid" id="fid-stats-grid">
+        <div class="fstat"><div class="fl">Dimanche actuel</div><div class="fv" id="fstat-dim">0</div><div class="fs">Total présents</div></div>
+        <div class="fstat"><div class="fl">Moyenne mensuelle</div><div class="fv" id="fstat-moy">—</div><div class="fs">Fidèles / dimanche</div></div>
+        <div class="fstat"><div class="fl">Record de présence</div><div class="fv" id="fstat-max">—</div><div class="fs">Plus grand culte</div></div>
+        <div class="fstat"><div class="fl">Total enregistrés</div><div class="fv" id="fstat-nb">0</div><div class="fs">Dimanche(s) saisis</div></div>
+      </div>
+
+      <!-- ── Historique ── -->
+      <div class="card">
+        <div class="card-hd">
+          <div class="card-ht">📋 Historique des présences</div>
+          <div style="display:flex;gap:7px;align-items:center">
+            <select id="fid-hist-mois" onchange="renderFidHist()" style="background:rgba(255,255,255,.1);color:#fff;border:1px solid rgba(255,255,255,.2);border-radius:4px;padding:4px 8px;font-size:11px"><option value="all">Tous les mois</option></select>
+            <button class="btn btn-out btn-sm no-print" onclick="pdfFideles()">📄 PDF</button>
+          </div>
+        </div>
+        <div class="tw">
+          <table>
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Culte / Note</th>
+                <th class="r">🧔 Hommes</th>
+                <th class="r">👩 Femmes</th>
+                <th class="r">🧒 Enfants</th>
+                <th class="r">Total</th>
+                <th>Répartition</th>
+                <th class="no-print">Actions</th>
+              </tr>
+            </thead>
+            <tbody id="fid-hist-body"></tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ██ RÉCAPITULATIF MENSUEL ██ -->
+    <div class="page" id="p-recap">
+      <div class="card no-print">
+        <div class="card-hd"><div class="card-ht">📄 Récapitulatif mensuel — impression</div></div>
+        <div class="card-bd">
+          <div class="g2">
+            <div class="fg"><label>Sélectionner le mois</label><select id="recap-mois" style="width:100%"><option value="">— Choisir un mois —</option></select></div>
+            <div class="fg" style="flex-direction:row;align-items:flex-end;gap:8px">
+              <button class="btn btn-out"  onclick="genRecap()">🔄 Aperçu</button>
+              <button class="btn btn-gold" onclick="pdfRecap()">📄 Imprimer PDF</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="recap-content">
+        <div class="card" style="padding:32px;text-align:center;color:var(--slate)">
+          <div style="font-size:40px;opacity:.28">📄</div>
+          <p style="margin-top:9px">Sélectionnez un mois et cliquez sur <strong>Générer</strong></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ██ RECHERCHE ██ -->
+    <div class="page" id="p-recherche">
+      <div class="card">
+        <div class="card-hd"><div class="card-ht">🔍 Recherche avancée</div></div>
+        <div class="card-bd">
+          <div class="g3">
+            <div class="fg"><label>Mot-clé</label><input type="text" id="s-kw" placeholder="Note, montant, date…" oninput="doSearch()"></div>
+            <div class="fg"><label>Type</label><select id="s-type" onchange="doSearch()"><option value="all">Tout</option><option value="r">Recettes</option><option value="d">Dépenses</option></select></div>
+            <div class="fg"><label>Mois</label><select id="s-mois" onchange="doSearch()"><option value="all">Tous</option></select></div>
+            <div class="fg"><label>Date début</label><input type="date" id="s-from" onchange="doSearch()"></div>
+            <div class="fg"><label>Date fin</label>  <input type="date" id="s-to"   onchange="doSearch()"></div>
+            <div class="fg" style="justify-content:flex-end;align-items:flex-end"><button class="btn btn-out" onclick="clearSearch()">✕ Effacer</button></div>
+          </div>
+        </div>
+      </div>
+      <div id="s-results"></div>
+    </div>
+
+    <!-- ██ PARAMÈTRES ██ -->
+    <div class="page" id="p-parametres">
+      <div class="card">
+        <div class="card-hd"><div class="card-ht">⚙️ Paramètres de l'église</div></div>
+        <div class="card-bd">
+          <p style="font-size:12px;color:var(--slate);margin-bottom:14px">Ces informations apparaissent sur le <strong>récapitulatif mensuel imprimé</strong> et dans tous les en-têtes PDF.</p>
+          <div class="set-row"><label>⛪ Nom de l'église</label><input type="text" id="cfg-church" placeholder="Ex : Église Évangélique Bethel" oninput="saveConfig()"></div>
+          <div class="set-row"><label>📍 Ville / Localisation</label><input type="text" id="cfg-city" placeholder="Ex : Douala, Cameroun" oninput="saveConfig()"></div>
+          <div class="set-row"><label>✝️ Nom du Pasteur</label><input type="text" id="cfg-pastor" placeholder="Ex : Pasteur Jean DUPONT" oninput="saveConfig()"></div>
+          <div class="set-row"><label>📊 Nom du Comptable</label><input type="text" id="cfg-accountant" placeholder="Ex : M. Pierre MARTIN" oninput="saveConfig()"></div>
+          <div class="set-row"><label>📞 Téléphone</label><input type="text" id="cfg-tel" placeholder="Ex : +237 6XX XXX XXX" oninput="saveConfig()"></div>
+          <div class="set-row"><label>📧 Email</label><input type="text" id="cfg-email" placeholder="Ex : eglise@exemple.cm" oninput="saveConfig()"></div>
+          <div style="margin-top:18px;padding-top:14px;border-top:2px solid var(--bdr)">
+            <div style="font-family:'Libre Baskerville',serif;font-size:14px;font-weight:700;margin-bottom:10px;color:var(--navy)">🔐 Sécurité — Mot de passe</div>
+
+            <div id="default-pw-warn" class="default-warn" style="display:none">
+              <div class="dw-ico">⚠️</div>
+              <div>
+                <strong>Vous utilisez encore le mot de passe par défaut !</strong>
+                Pour la sécurité de vos données, changez votre mot de passe maintenant.
+                <br><button class="btn-chpw-now" onclick="openChpw()">🔒 Changer maintenant</button>
+              </div>
+            </div>
+
+            <div class="set-row" style="align-items:flex-start;flex-direction:column;gap:8px">
+              <label style="font-size:13px;font-weight:600;text-transform:none;letter-spacing:0;color:var(--navy)">Mot de passe de connexion</label>
+              <div style="display:flex;gap:8px;align-items:center;width:100%">
+                <div id="pw-status-display" style="flex:1;padding:9px 13px;background:var(--parch);border:1.5px solid var(--bdr2);border-radius:var(--rs);font-size:13px;color:var(--slate)">••••••</div>
+                <button class="btn btn-gold" onclick="openChpw()">🔒 Modifier</button>
+              </div>
+              <div id="pw-last-changed" style="font-size:11px;color:var(--slate)"></div>
+            </div>
+
+            <div class="set-row" style="flex-direction:column;align-items:flex-start;gap:6px">
+              <label style="font-size:13px;font-weight:600;text-transform:none;letter-spacing:0;color:var(--navy)">Identifiant de connexion (9 chiffres)</label>
+              <div style="display:flex;gap:8px;align-items:center;width:100%">
+                <input type="text" id="cfg-loginId" placeholder="Ex : 123456789" maxlength="9"
+                  style="flex:1" oninput="this.value=this.value.replace(/[^0-9]/g,'');saveConfig();checkDefaultCreds()">
+                <div id="loginid-status" style="font-size:20px"></div>
+              </div>
+              <div style="font-size:11px;color:var(--slate)">L'identifiant doit contenir exactement 9 chiffres.</div>
+            </div>
+
+            <!-- Champ caché loginPw géré en interne -->
+            <input type="hidden" id="cfg-loginPw">
+          </div>
+          <div style="margin-top:18px;padding-top:14px;border-top:2px solid var(--bdr)">
+            <div style="font-family:'Libre Baskerville',serif;font-size:14px;font-weight:700;margin-bottom:4px;color:var(--navy)">📋 Informations de licence</div>
+            <div id="param-lic-info" style="font-size:12px;color:var(--slate);padding:10px;background:var(--parch2);border-radius:var(--rs)">Chargement…</div>
+          </div>
+          <div style="margin-top:13px;padding:11px;background:var(--greenl);border-radius:var(--rs);font-size:12px;color:var(--green);font-weight:600">
+            ✅ Les modifications sont automatiquement sauvegardées dans votre navigateur.
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /content -->
+</main>
+
+
+<!-- ══════ MODAL CHANGEMENT MOT DE PASSE ══════ -->
+<div id="chpw-overlay">
+  <div class="chpw-box">
+    <div class="chpw-hd">
+      <h3>🔒 Changer mon mot de passe</h3>
+      <button class="xbtn" style="color:rgba(255,255,255,.6)" onclick="closeChpw()">✕</button>
+    </div>
+    <div class="chpw-body">
+
+      <div class="chpw-rules">
+        <div class="rule"><span class="ico" id="rule-len">⬜</span> Exactement <strong>6 caractères</strong></div>
+        <div class="rule"><span class="ico" id="rule-diff">⬜</span> Différent de l'<strong>identifiant</strong></div>
+        <div class="rule"><span class="ico" id="rule-old">⬜</span> Différent de l'<strong>ancien mot de passe</strong></div>
+      </div>
+
+      <div id="chpw-err" class="chpw-err"></div>
+      <div id="chpw-ok"  class="chpw-ok"></div>
+
+      <div class="chpw-field">
+        <label>Mot de passe actuel</label>
+        <div class="chpw-input-wrap">
+          <input type="password" id="chpw-old" placeholder="Votre mot de passe actuel"
+            maxlength="6" autocomplete="current-password"
+            onkeydown="if(event.key==='Enter')document.getElementById('chpw-new').focus()"
+            oninput="validateChpw()">
+          <button class="chpw-eye" onclick="toggleChpwEye('chpw-old',this)">👁</button>
+        </div>
+      </div>
+
+      <div class="chpw-field">
+        <label>Nouveau mot de passe <span style="font-weight:400;text-transform:none;letter-spacing:0">(6 caractères)</span></label>
+        <div class="chpw-input-wrap">
+          <input type="password" id="chpw-new" placeholder="Nouveau mot de passe"
+            maxlength="6" autocomplete="new-password"
+            onkeydown="if(event.key==='Enter')document.getElementById('chpw-confirm').focus()"
+            oninput="validateChpw()">
+          <button class="chpw-eye" onclick="toggleChpwEye('chpw-new',this)">👁</button>
+        </div>
+        <div class="chpw-strength" id="chpw-strength-bars">
+          <div class="chpw-strength-bar" id="csb1"></div>
+          <div class="chpw-strength-bar" id="csb2"></div>
+          <div class="chpw-strength-bar" id="csb3"></div>
+          <div class="chpw-strength-bar" id="csb4"></div>
+        </div>
+        <div class="chpw-strength-txt" id="chpw-strength-txt"></div>
+      </div>
+
+      <div class="chpw-field">
+        <label>Confirmer le nouveau mot de passe</label>
+        <div class="chpw-input-wrap">
+          <input type="password" id="chpw-confirm" placeholder="Répétez le nouveau mot de passe"
+            maxlength="6" autocomplete="new-password"
+            onkeydown="if(event.key==='Enter')submitChpw()"
+            oninput="validateChpw()">
+          <button class="chpw-eye" onclick="toggleChpwEye('chpw-confirm',this)">👁</button>
+        </div>
+      </div>
+
+    </div>
+    <div class="chpw-ft">
+      <button class="btn btn-out" onclick="closeChpw()">Annuler</button>
+      <button class="btn btn-gold" onclick="submitChpw()" id="chpw-submit-btn">🔒 Changer le mot de passe</button>
+    </div>
+  </div>
+</div>
+
+<!-- ══════ MODAL SUPPRESSION ══════ -->
+<div class="overlay" id="del-overlay">
+  <div class="modal">
+    <div class="modal-hd"><h3>⚠️ Confirmer la suppression</h3><button class="xbtn" onclick="closeOverlay('del-overlay')">✕</button></div>
+    <div class="modal-bd"><p style="color:var(--slate)">Voulez-vous vraiment supprimer cet enregistrement ? Cette action est <strong>irréversible</strong>.</p></div>
+    <div class="modal-ft"><button class="btn btn-out" onclick="closeOverlay('del-overlay')">Annuler</button><button class="btn btn-red" id="del-confirm-btn">🗑 Supprimer</button></div>
+  </div>
+</div>
+
+<!-- ══════ TOAST ══════ -->
+<div class="toast" id="toast"><span id="t-ico">✅</span><span id="t-msg"></span></div>
+
+<script>
+// ╔══════════════════════════════════════════════════════════╗
+// ║              ÉGLISE FINANCES — MOTEUR JS                ║
+// ╚══════════════════════════════════════════════════════════╝
+
+// ── Config cats ──
+const REC_CATS = [
+  {k:'offOrd',  l:'Offrandes ordinaires'},  {k:'offSpe', l:'Offrandes spéciales'},
+  {k:'dimes',   l:'Dîmes en argent'},        {k:'sig',    l:'Signature carte'},
+  {k:'recolte', l:'Fête de récolte'},        {k:'invest', l:'Investissements'},
+  {k:'mission', l:'Dimanche de mission'},    {k:'carte',  l:'Achat carte membre'},
+  {k:'dons',    l:'Dons divers'},            {k:'dnat',   l:'Dîmes en nature'},
+  {k:'autre',   l:'Autre recette'},
+];
+const DEP_CATS = [
+  {k:'fonct',   l:'Fonctionnement'},         {k:'salaire',l:'Salaire pasteur'},
+  {k:'deplac',  l:'Déplacement'},            {k:'elec',   l:'Électricité ENEO'},
+  {k:'cnps',    l:'CNPS'},                   {k:'assist', l:'Assistance aux fidèles'},
+  {k:'offspe',  l:'Offrandes spéciales(s)'},{k:'dmiss',  l:'Dimanche mission(s)'},
+  {k:'invest',  l:'Investissement(s)'},      {k:'aides',  l:'Aides diverses'},
+  {k:'autre',   l:'Autre dépense'},
+];
+const BGT_REC = [...REC_CATS];
+const BGT_DEP = [
+  ...DEP_CATS,
+  {k:'p35', l:'35% Paroisse (reversement)'},
+  {k:'p5',  l:'5% Réserve (reversement)'},
+  {k:'p80', l:'80% Cartes membres (reversement)'},
+];
+const MONTHS = ['Janvier','Février','Mars','Avril','Mai','Juin','Juillet','Août','Septembre','Octobre','Novembre','Décembre'];
+
+// ── State ──
+let curYear = new Date().getFullYear();
+let histActiveTab = 'r';
+let bgtActiveMi   = null;
+let pendingDelId   = null;
+let pendingDelType = null;
+let editRecId      = null;
+let editDepId      = null;
+
+// ── DB ──
+function loadDB()       { try { return JSON.parse(localStorage.getItem('eglise_v4')||'{}'); } catch { return {}; } }
+function getYD(yr)      { const db=loadDB(); if(!db[yr]) db[yr]={budget:{},recettes:[],depenses:[]}; return db[yr]; }
+function yd()           { return getYD(curYear); }
+function saveYD(data)   { const db=loadDB(); db[curYear]=data; localStorage.setItem('eglise_v4',JSON.stringify(db)); }
+function loadCfg()      { try { return JSON.parse(localStorage.getItem('eglise_cfg')||'{}'); } catch { return {}; } }
+function saveCfg(cfg)   { localStorage.setItem('eglise_cfg',JSON.stringify(cfg)); }
+
+// ── Helpers ──
+const fmt   = n => (Math.round(n||0)+'').replace(/\B(?=(\d{3})+(?!\d))/g,' ')+' FCFA';
+const fmts  = n => (Math.round(n||0)+'').replace(/\B(?=(\d{3})+(?!\d))/g,' ');
+const el    = id => document.getElementById(id);
+const gv    = id => parseFloat(el(id)?.value)||0;
+const sv    = (id,v) => { const e=el(id); if(e) e.textContent=v; };
+const uid   = () => Date.now().toString(36)+Math.random().toString(36).slice(2,5);
+const miKey = mi => curYear+'-'+mi;
+
+function toast(msg, type='ok') {
+  const t=el('toast'); el('t-msg').textContent=msg;
+  el('t-ico').textContent=type==='ok'?'✅':type==='err'?'❌':type==='wrn'?'⚠️':'ℹ️';
+  t.className='toast on t-'+type; setTimeout(()=>t.classList.remove('on'),3300);
+}
+function openOverlay(id)  { el(id).classList.add('on'); }
+function closeOverlay(id) { el(id).classList.remove('on'); }
+
+// ── Navigation ──
+const PAGE_TITLES = {
+  dashboard:'Tableau de bord', budget:'Budget annuel', recettes:'Recettes du dimanche',
+  depenses:'Dépenses', historique:'Historique', budgetvs:'Budget vs Réel',
+  repartition:'Répartition des fonds', recap:'Récapitulatif mensuel',
+  fideles:'Présence des fidèles',
+  recherche:'Recherche avancée', parametres:'Paramètres',
+};
+function go(id) {
+  closeMobileSb();
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('on'));
+  document.querySelectorAll('.sb-lnk').forEach(l=>l.classList.remove('on'));
+  el('p-'+id)?.classList.add('on');
+  document.querySelectorAll('.sb-lnk').forEach(l=>{ if(l.getAttribute('onclick')?.includes("'"+id+"'")) l.classList.add('on'); });
+  el('pg-title').textContent = PAGE_TITLES[id]||id;
+  refreshSelects();
+  if(id==='dashboard')   renderDash();
+  if(id==='budget')      renderBudget();
+  if(id==='historique')  renderHist();
+  if(id==='budgetvs')    renderCmp();
+  if(id==='repartition') calcRep();
+  if(id==='recherche')   doSearch();
+  if(id==='recap')       refreshRecapSel();
+  if(id==='fideles')     { renderFidHist(); renderFidStats(); refreshFidSelects(); }
+  if(id==='parametres')  {
+    loadConfigUI();
+    checkDefaultCreds();
+    updatePwStatusDisplay();
+    const lic=getLicStore();
+    const pi=document.getElementById('param-lic-info');
+    if(pi) {
+      const pi = document.getElementById('param-lic-info');
+      if(!lic || !lic.key){
+        const pill = document.getElementById('lic-status-pill');
+        if(pill){ pill.textContent='Aucune licence'; pill.style.background='rgba(139,30,30,.3)'; pill.style.color='#fca5a5'; }
+        const grid = document.getElementById('lic-info-grid');
+        if(grid) grid.innerHTML='<div style="grid-column:1/-1;color:var(--red);font-weight:600;padding:8px 0">⚠️ Aucune licence active. Contactez votre administrateur.</div>';
+      } else {
+        const days = daysLeft(lic.expiresAt);
+        const col  = days>90?'var(--green)':days>30?'var(--amber)':'var(--red)';
+        const pill = document.getElementById('lic-status-pill');
+        if(pill){
+          if(days<=0){ pill.textContent='Expirée'; pill.style.background='rgba(139,30,30,.4)'; pill.style.color='#fca5a5'; }
+          else if(days<=30){ pill.textContent='⚠️ Expire bientôt'; pill.style.background='rgba(180,92,16,.4)'; pill.style.color='#fcd7aa'; }
+          else { pill.textContent='✅ Active'; pill.style.background='rgba(31,107,69,.4)'; pill.style.color='#86efac'; }
+        }
+        const piKey   = document.getElementById('pi-key');
+        const piDays  = document.getElementById('pi-days');
+        const piStart = document.getElementById('pi-start');
+        const piEnd   = document.getElementById('pi-end');
+        if(piKey)   { piKey.textContent = licDisplay(lic.key); }
+        if(piDays)  { piDays.textContent = days>0?days+' jours':'Expirée'; piDays.style.color=col; }
+        if(piStart) { piStart.textContent = dateFr(lic.activatedAt); }
+        if(piEnd)   { piEnd.textContent = dateFr(lic.expiresAt); piEnd.style.color=col; }
+      }
+    }
+  }
+}
+
+// ── Year ──
+function changeYear(d) {
+  curYear += d;
+  el('yr-display').textContent = curYear;
+  el('sb-yr2').textContent     = curYear;
+  el('bgt-yr-lbl').textContent = curYear;
+  refreshSelects(); updateSidebar(); renderDash();
+}
+
+// ── Config ──
+function loadConfigUI() {
+  const c=loadCfg();
+  ['church','city','pastor','accountant','tel','email','loginId'].forEach(k=>{ if(el('cfg-'+k)) el('cfg-'+k).value=c[k]||''; });
+  // loginPw is managed separately - don't auto-fill for security
+  updateChurchHeader();
+}
+function saveConfig() {
+  const c={};
+  ['church','city','pastor','accountant','tel','email','loginId'].forEach(k=>{ c[k]=el('cfg-'+k)?.value||''; });
+  // loginPw is preserved from existing config
+  saveCfg(c); updateChurchHeader();
+}
+function updateChurchHeader() {
+  const c=loadCfg();
+  if(c.church) el('sb-church-name').textContent=c.church;
+  if(c.city)   el('sb-church-sub').textContent=c.city+' — Gestion financière';
+}
+function cfg(k) { return loadCfg()[k]||''; }
+
+// ── BUDGET ──
+function renderBudget() {
+  el('bgt-yr-lbl').textContent = curYear;
+  const data = yd();
+  el('bgt-grid').innerHTML = MONTHS.map((m,i)=>{
+    const mi=String(i+1).padStart(2,'0');
+    const b=data.budget[mi]||{};
+    const tR=BGT_REC.reduce((s,c)=>s+(b.rec?.[c.k]||0),0);
+    const tD=BGT_DEP.reduce((s,c)=>s+(b.dep?.[c.k]||0),0);
+    const ec=tR-tD; const has=tR>0||tD>0;
+    return `<div class="bm${bgtActiveMi===mi?' sel':''}" onclick="openBgtMonth('${mi}')">
+      <div class="mn">${m}</div>
+      ${has?`<div class="mr">R: ${fmts(tR)}</div><div class="md">D: ${fmts(tD)}</div>
+      <div class="eq ${ec===0?'ok':ec>0?'ok':'ko'}">${ec===0?'✓ Équilibré':ec>0?'+'+fmts(ec):'−'+fmts(Math.abs(ec))}</div>`
+      :`<div class="eq na">Non défini</div>`}
+    </div>`;
+  }).join('');
+  renderBgtAnnual();
+}
+
+function openBgtMonth(mi) {
+  bgtActiveMi = mi;
+  const data=yd(); const b=data.budget[mi]||{rec:{},dep:{}};
+  el('bgt-form-title').textContent='Budget — '+MONTHS[parseInt(mi)-1]+' '+curYear;
+  el('bgt-form').classList.add('on');
+  el('bgt-rec-lines').innerHTML=BGT_REC.map(c=>`<div class="bgt-line">
+    <label>${c.l}</label>
+    <input type="number" id="br-${c.k}" min="0" placeholder="0" value="${b.rec?.[c.k]||''}" oninput="bgtTotals()">
+  </div>`).join('');
+  el('bgt-dep-lines').innerHTML=BGT_DEP.map(c=>`<div class="bgt-line">
+    <label>${c.l}</label>
+    <input type="number" id="bd-${c.k}" min="0" placeholder="0" value="${b.dep?.[c.k]||''}" oninput="bgtTotals()">
+  </div>`).join('');
+  bgtTotals(); el('bgt-form').scrollIntoView({behavior:'smooth',block:'start'});
+  renderBudget();
+}
+function closeBgtForm() { el('bgt-form').classList.remove('on'); bgtActiveMi=null; renderBudget(); }
+
+function bgtTotals() {
+  const tR=BGT_REC.reduce((s,c)=>s+(parseFloat(el('br-'+c.k)?.value)||0),0);
+  const tD=BGT_DEP.reduce((s,c)=>s+(parseFloat(el('bd-'+c.k)?.value)||0),0);
+  const ec=tR-tD;
+  sv('bgt-tot-r',fmt(tR)); sv('bgt-tot-d',fmt(tD));
+  sv('bgs-r',fmts(tR)+' F'); sv('bgs-d',fmts(tD)+' F');
+  sv('bgs-e',(ec>=0?'+':'')+fmts(ec)+' F');
+  const eq=el('bgs-eq');
+  if(ec===0){eq.textContent='✓ Équilibré';eq.style.color='#4ade80';}
+  else{eq.textContent=ec>0?'⬆ Excédent':'⬇ Déficit';eq.style.color=ec>0?'#fbbf24':'#f87171';}
+}
+
+function saveBgtMonth() {
+  if(!bgtActiveMi) return;
+  const data=yd();
+  if(!data.budget) data.budget={};
+  const rec={},dep={};
+  BGT_REC.forEach(c=>{ const v=parseFloat(el('br-'+c.k)?.value)||0; if(v) rec[c.k]=v; });
+  BGT_DEP.forEach(c=>{ const v=parseFloat(el('bd-'+c.k)?.value)||0; if(v) dep[c.k]=v; });
+  data.budget[bgtActiveMi]={rec,dep};
+  saveYD(data); renderBudget(); updateSidebar();
+  toast('Budget de '+MONTHS[parseInt(bgtActiveMi)-1]+' enregistré !');
+}
+
+function renderBgtAnnual() {
+  const data=yd(); let annR=0,annD=0;
+  el('bgt-ann-body').innerHTML=MONTHS.map((m,i)=>{
+    const mi=String(i+1).padStart(2,'0');
+    const b=data.budget[mi]||{};
+    const tR=BGT_REC.reduce((s,c)=>s+(b.rec?.[c.k]||0),0);
+    const tD=BGT_DEP.reduce((s,c)=>s+(b.dep?.[c.k]||0),0);
+    const ec=tR-tD; annR+=tR; annD+=tD;
+    return `<tr><td><strong>${m}</strong></td><td class="r pos">${fmts(tR)}</td><td class="r neg">${fmts(tD)}</td>
+      <td class="r ${ec>=0?'pos':'neg'}">${ec>=0?'+':''}${fmts(ec)}</td>
+      <td><span class="badge ${ec===0?'badge-g':ec>0?'badge-b':'badge-r'}">${ec===0?'✓ Équilibré':ec>0?'Excédent':'Déficit'}</span></td></tr>`;
+  }).join('');
+  const annE=annR-annD;
+  sv('ann-r',fmt(annR)); sv('ann-d',fmt(annD)); sv('ann-e',(annE>=0?'+':'')+fmts(annE)+' FCFA');
+}
+
+// ── RECETTES ──
+function computeRec() {
+  const offOrd=gv('r-offOrd'), dimes=gv('r-dimes'), sig=gv('r-sig'), rec=gv('r-recolte'), carte=gv('r-carte');
+  const base=offOrd+dimes+sig+rec;
+  const p35=Math.round(base*.35), p5=Math.round(base*.05), p80=Math.round(carte*.80);
+  el('r-base').value=base||''; el('r-35').value=p35||''; el('r-5').value=p5||''; el('r-80').value=p80||'';
+  el('d-35').value=p35||'';    el('d-5').value=p5||'';   el('d-80').value=p80||'';
+}
+function previewRec() {
+  let tot=0;
+  el('r-pv-lines').innerHTML=REC_CATS.map(c=>{ const v=gv('r-'+c.k); tot+=v; return v>0?`<div class="pv-row"><span class="pv-lbl">${c.l}</span><span class="pv-val">${fmt(v)}</span></div>`:''}).join('');
+  sv('r-pv-tot',fmt(tot)); el('r-pv-date').textContent=el('r-date').value||'—';
+  el('r-pv').classList.add('on');
+}
+function saveRec() {
+  const date=el('r-date').value;
+  if(!date){toast('Veuillez sélectionner une date.','err');return;}
+  const offOrd=gv('r-offOrd'),dimes=gv('r-dimes'),sig=gv('r-sig'),recolte=gv('r-recolte'),carte=gv('r-carte');
+  const base=offOrd+dimes+sig+recolte;
+  const r={id:editRecId||uid(),date,note:el('r-note').value,
+    offOrd,offSpe:gv('r-offSpe'),dimes,sig,recolte,invest:gv('r-invest'),mission:gv('r-mission'),
+    carte,dons:gv('r-dons'),dnat:gv('r-dnat'),autre:gv('r-autre'),
+    base,p35:Math.round(base*.35),p5:Math.round(base*.05),p80:Math.round(carte*.80)};
+  r.total=REC_CATS.reduce((s,c)=>s+(r[c.k]||0),0);
+  if(r.total===0){toast('Aucun montant saisi.','err');return;}
+  const data=yd();
+  if(editRecId){const i=data.recettes.findIndex(x=>x.id===editRecId);if(i>=0)data.recettes[i]=r;editRecId=null;el('rec-edit-badge').style.display='none';toast('Recette modifiée.');}
+  else{data.recettes.push(r);toast('Recette enregistrée : '+fmt(r.total));}
+  saveYD(data); clearRecForm(); updateSidebar();
+}
+function clearRecForm() {
+  ['r-date','r-note',...REC_CATS.map(c=>'r-'+c.k),'r-base','r-35','r-5','r-80'].forEach(id=>{if(el(id))el(id).value='';});
+  el('r-pv').classList.remove('on'); editRecId=null; el('rec-edit-badge').style.display='none';
+}
+function cancelRec() {if(editRecId&&!confirm('Annuler la modification ?'))return;clearRecForm();toast('Saisie annulée.','inf');}
+
+function previewDep() {
+  let tot=0;
+  el('d-pv-lines').innerHTML=DEP_CATS.map(c=>{const v=gv('d-'+c.k);tot+=v;return v>0?`<div class="pv-row"><span class="pv-lbl">${c.l}</span><span class="pv-val">${fmt(v)}</span></div>`:''}).join('');
+  sv('d-pv-tot',fmt(tot)); el('d-pv').classList.add('on');
+}
+function saveDep() {
+  const date=el('d-date').value;
+  if(!date){toast('Veuillez sélectionner une date.','err');return;}
+  const d={id:editDepId||uid(),date,desc:el('d-desc').value||'Dépense diverse',
+    ...Object.fromEntries(DEP_CATS.map(c=>[c.k,gv('d-'+c.k)])),
+    calc80:gv('d-80'),calc35:gv('d-35'),calc5:gv('d-5')};
+  d.total=DEP_CATS.reduce((s,c)=>s+(d[c.k]||0),0);
+  if(d.total===0){toast('Aucun montant saisi.','err');return;}
+  const data=yd();
+  if(editDepId){const i=data.depenses.findIndex(x=>x.id===editDepId);if(i>=0)data.depenses[i]=d;editDepId=null;el('dep-edit-badge').style.display='none';toast('Dépense modifiée.');}
+  else{data.depenses.push(d);toast('Dépense enregistrée : '+fmt(d.total));}
+  saveYD(data); clearDepForm(); updateSidebar();
+}
+function clearDepForm() {
+  ['d-date','d-desc',...DEP_CATS.map(c=>'d-'+c.k),'d-80','d-35','d-5'].forEach(id=>{if(el(id))el(id).value='';});
+  el('d-pv').classList.remove('on'); editDepId=null; el('dep-edit-badge').style.display='none';
+}
+function cancelDep() {if(editDepId&&!confirm('Annuler la modification ?'))return;clearDepForm();toast('Saisie annulée.','inf');}
+
+// ── DELETE ──
+function askDelete(type,id) {
+  pendingDelId=id; pendingDelType=type; openOverlay('del-overlay');
+  el('del-confirm-btn').onclick=()=>{confirmDelete();closeOverlay('del-overlay');};
+}
+function confirmDelete() {
+  const data=yd();
+  if(pendingDelType==='r') data.recettes=data.recettes.filter(x=>x.id!==pendingDelId);
+  else data.depenses=data.depenses.filter(x=>x.id!==pendingDelId);
+  saveYD(data); renderHist(); renderDash(); updateSidebar(); toast('Supprimé.','inf');
+}
+
+// ── EDIT ──
+function editRec(id) {
+  const r=yd().recettes.find(x=>x.id===id); if(!r) return;
+  go('recettes'); editRecId=id; el('rec-edit-badge').style.display='block';
+  el('r-date').value=r.date||''; el('r-note').value=r.note||'';
+  REC_CATS.forEach(c=>{if(el('r-'+c.k))el('r-'+c.k).value=r[c.k]||'';});
+  computeRec();
+}
+function editDep(id) {
+  const d=yd().depenses.find(x=>x.id===id); if(!d) return;
+  go('depenses'); editDepId=id; el('dep-edit-badge').style.display='block';
+  el('d-date').value=d.date||''; el('d-desc').value=d.desc||'';
+  DEP_CATS.forEach(c=>{if(el('d-'+c.k))el('d-'+c.k).value=d[c.k]||'';});
+}
+
+// ── DASHBOARD ──
+function renderDash() {
+  const data=yd();
+  const totRec=data.recettes.reduce((s,r)=>s+(r.total||0),0);
+  const totDep=data.depenses.reduce((s,d)=>s+(d.total||0),0);
+  const solde=totRec-totDep;
+  sv('dm-rec',fmt(totRec)); sv('dm-rec-s',data.recettes.length+' dimanche(s)');
+  sv('dm-dep',fmt(totDep)); sv('dm-dep-s',data.depenses.length+' opération(s)');
+  el('dm-sol').textContent=fmt(Math.abs(solde));
+  el('dm-sol').style.color=solde>=0?'var(--green)':'var(--red)';
+  const totBgtR=Object.values(data.budget||{}).reduce((s,b)=>s+BGT_REC.reduce((ss,c)=>ss+(b.rec?.[c.k]||0),0),0);
+  if(totBgtR>0){const pct=Math.round(totRec/totBgtR*100);sv('dm-bvr',pct+'%');sv('dm-bvr-s','du budget atteint');}
+  else{sv('dm-bvr','—');sv('dm-bvr-s','Budget non défini');}
+  const base=data.recettes.reduce((s,r)=>s+(r.base||0),0);
+  const carte=data.recettes.reduce((s,r)=>s+(r.carte||0),0);
+  sv('dc-base',fmt(base)); sv('dc-35',fmt(base*.35)); sv('dc-5',fmt(base*.05)); sv('dc-80',fmt(carte*.80));
+  const cats=[
+    {k:'offOrd',l:'Offrandes ordinaires',c:'#c08a28'},{k:'offSpe',l:'Offrandes spéciales',c:'#1f6b45'},
+    {k:'dimes', l:'Dîmes en argent',c:'#182840'},     {k:'sig',   l:'Signature carte',c:'#b85c10'},
+    {k:'recolte',l:'Fête de récolte',c:'#8b1e1e'},    {k:'mission',l:'Dimanche mission',c:'#4a2878'},
+    {k:'carte', l:'Achat carte',c:'#1a4a7a'},         {k:'dons',  l:'Dons divers',c:'#5c4a1e'},
+  ];
+  const grand=totRec||1;
+  const bk=el('dash-breakdown');
+  if(!data.recettes.length){bk.innerHTML='<div class="empty-state"><div class="ico">📊</div><p>Aucune recette</p></div>';return;}
+  bk.innerHTML=cats.map(c=>{
+    const v=data.recettes.reduce((s,r)=>s+(r[c.k]||0),0); if(!v) return '';
+    const pct=Math.min(100,Math.round(v/grand*100));
+    return `<div class="pb-wrap"><div class="pb-head"><span>${c.l}</span><span style="font-weight:700">${fmt(v)} (${pct}%)</span></div><div class="pb"><div class="pb-fill" style="width:${pct}%;background:${c.c}"></div></div></div>`;
+  }).join('');
+  const recent=[...data.recettes.map(r=>({...r,_t:'r'})),...data.depenses.map(d=>({...d,_t:'d'}))]
+    .sort((a,b)=>(b.date||'').localeCompare(a.date||'')).slice(0,8);
+  el('dash-recent').innerHTML=!recent.length?'<tr><td colspan="4"><div class="empty-state"><div class="ico">📋</div><p>Aucune opération</p></div></td></tr>':
+    recent.map(o=>`<tr><td>${o.date}</td>
+      <td><span class="badge ${o._t==='r'?'badge-g':'badge-r'}">${o._t==='r'?'Recette':'Dépense'}</span></td>
+      <td style="color:var(--slate);font-size:11.5px">${o._t==='r'?(o.note||'Dimanche'):(o.desc||'')}</td>
+      <td class="r ${o._t==='r'?'pos':'neg'}">${o._t==='r'?'+':'−'}${fmt(o.total)}</td>
+    </tr>`).join('');
+}
+
+// ── HISTORIQUE ──
+function histTab(t) {
+  histActiveTab=t;
+  document.querySelectorAll('.tab').forEach((tab,i)=>tab.classList.toggle('on',(t==='r'&&i===0)||(t==='d'&&i===1)));
+  el('hp-r').style.display=t==='r'?'block':'none';
+  el('hp-d').style.display=t==='d'?'block':'none';
+  renderHist();
+}
+function renderHist() {
+  const data=yd(); const kw=(el('h-kw')?.value||'').toLowerCase();
+  const type=el('h-type')?.value||'all'; const mois=el('h-mois')?.value||'all';
+  const filt=(arr,t)=>arr.filter(o=>{
+    if(mois!=='all'&&!(o.date||'').startsWith(miKey(mois))) return false;
+    if(type!=='all'&&type!==t) return false;
+    if(kw&&!JSON.stringify(o).toLowerCase().includes(kw)) return false;
+    return true;
+  }).sort((a,b)=>(b.date||'').localeCompare(a.date||''));
+  const recs=filt(data.recettes,'r'), deps=filt(data.depenses,'d');
+  el('hb-r').innerHTML=!recs.length?'<tr><td colspan="13"><div class="empty-state"><div class="ico">📥</div><p>Aucune recette</p></div></td></tr>':
+    recs.map(r=>`<tr><td>${r.date}</td>
+      <td class="r">${fmts(r.offOrd)}</td><td class="r">${fmts(r.offSpe)}</td>
+      <td class="r">${fmts(r.dimes)}</td><td class="r">${fmts(r.sig)}</td>
+      <td class="r">${fmts(r.recolte)}</td><td class="r">${fmts(r.mission)}</td>
+      <td class="r">${fmts(r.carte)}</td><td class="r">${fmts(r.dons)}</td><td class="r">${fmts(r.dnat)}</td>
+      <td class="r pos" style="font-weight:700">${fmt(r.total)}</td>
+      <td style="color:var(--slate);font-size:11px">${r.note||''}</td>
+      <td class="no-print" style="white-space:nowrap">
+        <button class="btn btn-out btn-xs" onclick="editRec('${r.id}')">✏️</button>
+        <button class="btn btn-red btn-xs" onclick="askDelete('r','${r.id}')">🗑</button>
+      </td></tr>`).join('');
+  el('hb-d').innerHTML=!deps.length?'<tr><td colspan="12"><div class="empty-state"><div class="ico">📤</div><p>Aucune dépense</p></div></td></tr>':
+    deps.map(d=>`<tr><td>${d.date}</td>
+      <td style="max-width:120px;overflow:hidden;text-overflow:ellipsis">${d.desc||''}</td>
+      <td class="r">${fmts(d.fonct)}</td><td class="r">${fmts(d.salaire)}</td>
+      <td class="r">${fmts(d.deplac)}</td><td class="r">${fmts(d.elec)}</td>
+      <td class="r">${fmts(d.cnps)}</td><td class="r">${fmts(d.assist)}</td>
+      <td class="r">${fmts(d.dmiss)}</td><td class="r">${fmts(d.invest)}</td>
+      <td class="r neg" style="font-weight:700">${fmt(d.total)}</td>
+      <td class="no-print" style="white-space:nowrap">
+        <button class="btn btn-out btn-xs" onclick="editDep('${d.id}')">✏️</button>
+        <button class="btn btn-red btn-xs" onclick="askDelete('d','${d.id}')">🗑</button>
+      </td></tr>`).join('');
+}
+
+// ── BUDGET VS REEL ──
+function renderCmp() {
+  const data=yd(); const selM=el('cmp-mois')?.value||'all';
+  const mis=selM==='all'?MONTHS.map((_,i)=>String(i+1).padStart(2,'0')):[selM];
+  const rows=mis.map(mi=>{
+    const b=data.budget[mi]||{}; const mKey=miKey(mi);
+    const bR=BGT_REC.reduce((s,c)=>s+(b.rec?.[c.k]||0),0);
+    const bD=BGT_DEP.reduce((s,c)=>s+(b.dep?.[c.k]||0),0);
+    const rR=data.recettes.filter(r=>(r.date||'').startsWith(mKey)).reduce((s,r)=>s+r.total,0);
+    const rD=data.depenses.filter(d=>(d.date||'').startsWith(mKey)).reduce((s,d)=>s+d.total,0);
+    const eR=rR-bR,eD=rD-bD,pR=bR>0?Math.min(120,Math.round(rR/bR*100)):0,pD=bD>0?Math.min(120,Math.round(rD/bD*100)):0;
+    return {m:MONTHS[parseInt(mi)-1],bR,bD,rR,rD,eR,eD,pR,pD};
+  });
+  const [tBR,tBD,tRR,tRD]=[rows.reduce((s,r)=>s+r.bR,0),rows.reduce((s,r)=>s+r.bD,0),rows.reduce((s,r)=>s+r.rR,0),rows.reduce((s,r)=>s+r.rD,0)];
+  el('cmp-content').innerHTML=`
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:15px">
+      <div class="met met-gold"><div class="met-lbl">Budget Recettes</div><div class="met-val">${fmt(tBR)}</div></div>
+      <div class="met met-green"><div class="met-lbl">Recettes réelles</div><div class="met-val">${fmt(tRR)}</div></div>
+      <div class="met met-red"><div class="met-lbl">Budget Dépenses</div><div class="met-val">${fmt(tBD)}</div></div>
+      <div class="met met-navy"><div class="met-lbl">Dépenses réelles</div><div class="met-val">${fmt(tRD)}</div></div>
+    </div>
+    <div class="tw"><table>
+      <thead><tr><th>Mois</th><th class="r">Bgt Rec.</th><th class="r">Réel Rec.</th><th class="r">Écart Rec.</th><th>% Rec.</th><th class="r">Bgt Dép.</th><th class="r">Réel Dép.</th><th class="r">Écart Dép.</th><th>% Dép.</th></tr></thead>
+      <tbody>${rows.map(r=>`<tr><td><strong>${r.m}</strong></td>
+        <td class="r">${fmts(r.bR)}</td><td class="r pos">${fmts(r.rR)}</td>
+        <td class="r ${r.eR>=0?'pos':'neg'}">${r.eR>=0?'+':''}${fmts(r.eR)}</td>
+        <td><div style="font-size:11px">${r.pR}%</div><div class="cbar"><div class="cbar-f" style="width:${r.pR}%;background:${r.pR>=100?'var(--green)':'var(--gold)'}"></div></div></td>
+        <td class="r">${fmts(r.bD)}</td><td class="r neg">${fmts(r.rD)}</td>
+        <td class="r ${r.eD<=0?'pos':'neg'}">${r.eD>=0?'+':''}${fmts(r.eD)}</td>
+        <td><div style="font-size:11px">${r.pD}%</div><div class="cbar"><div class="cbar-f" style="width:${r.pD}%;background:${r.pD>100?'var(--red)':'var(--plum)'}"></div></div></td>
+      </tr>`).join('')}</tbody>
+      <tfoot><tr><td>TOTAL</td><td class="r">${fmts(tBR)}</td><td class="r">${fmts(tRR)}</td><td class="r">${tRR-tBR>=0?'+':''}${fmts(tRR-tBR)}</td><td></td><td class="r">${fmts(tBD)}</td><td class="r">${fmts(tRD)}</td><td class="r">${tRD-tBD>=0?'+':''}${fmts(tRD-tBD)}</td><td></td></tr></tfoot>
+    </table></div>`;
+}
+
+// ── RÉPARTITION ──
+function calcRep() {
+  const data=yd(); const m=el('rp-mois')?.value||'all';
+  const recs=m==='all'?data.recettes:data.recettes.filter(r=>(r.date||'').startsWith(miKey(m)));
+  const get=k=>recs.reduce((s,r)=>s+(r[k]||0),0);
+  const offOrd=get('offOrd'),dimes=get('dimes'),sig=get('sig'),recolte=get('recolte'),carte=get('carte');
+  const base=offOrd+dimes+sig+recolte, p35=Math.round(base*.35),p5=Math.round(base*.05),p60=Math.round(base*.60),p80=Math.round(carte*.80);
+  sv('rp-offOrd',fmt(offOrd));sv('rp-dimes',fmt(dimes));sv('rp-sig',fmt(sig));sv('rp-rec',fmt(recolte));
+  sv('rp-base',fmt(base));sv('rp-35',fmt(p35));sv('rp-35b',fmt(p35));
+  sv('rp-5',fmt(p5));sv('rp-5b',fmt(p5));sv('rp-60',fmt(p60));
+  sv('rp-carte',fmt(carte));sv('rp-80',fmt(p80));sv('rp-80b',fmt(p80));
+}
+
+// ── RECHERCHE ──
+function doSearch() {
+  const data=yd(); const kw=(el('s-kw')?.value||'').toLowerCase();
+  const type=el('s-type')?.value||'all'; const m=el('s-mois')?.value||'all';
+  const from=el('s-from')?.value; const to=el('s-to')?.value;
+  const mKey=m!=='all'?miKey(m):null;
+  let res=[];
+  if(type!=='d') data.recettes.filter(r=>{
+    if(mKey&&!(r.date||'').startsWith(mKey)) return false;
+    if(from&&r.date<from) return false; if(to&&r.date>to) return false;
+    if(kw&&!JSON.stringify(r).toLowerCase().includes(kw)) return false; return true;
+  }).forEach(r=>res.push({...r,_t:'r'}));
+  if(type!=='r') data.depenses.filter(d=>{
+    if(mKey&&!(d.date||'').startsWith(mKey)) return false;
+    if(from&&d.date<from) return false; if(to&&d.date>to) return false;
+    if(kw&&!JSON.stringify(d).toLowerCase().includes(kw)) return false; return true;
+  }).forEach(d=>res.push({...d,_t:'d'}));
+  res.sort((a,b)=>(b.date||'').localeCompare(a.date||''));
+  const ct=el('s-results');
+  if(!res.length){ct.innerHTML='<div class="card"><div class="card-bd"><div class="empty-state"><div class="ico">🔍</div><p>Aucun résultat</p></div></div></div>';return;}
+  ct.innerHTML=`<div class="card"><div class="card-hd"><div class="card-ht">📋 ${res.length} résultat(s)</div></div>
+    <div class="tw"><table><thead><tr><th>Date</th><th>Type</th><th>Description</th><th class="r">Montant</th><th class="no-print">Actions</th></tr></thead>
+    <tbody>${res.map(o=>`<tr><td>${o.date}</td>
+      <td><span class="badge ${o._t==='r'?'badge-g':'badge-r'}">${o._t==='r'?'Recette':'Dépense'}</span></td>
+      <td>${o._t==='r'?(o.note||'Dimanche'):(o.desc||'')}</td>
+      <td class="r ${o._t==='r'?'pos':'neg'}" style="font-weight:700">${o._t==='r'?'+':'−'}${fmt(o.total)}</td>
+      <td class="no-print" style="white-space:nowrap">
+        <button class="btn btn-out btn-xs" onclick="${o._t==='r'?'editRec':'editDep'}('${o.id}')">✏️ Modifier</button>
+        <button class="btn btn-red btn-xs" onclick="askDelete('${o._t}','${o.id}')">🗑</button>
+      </td></tr>`).join('')}</tbody></table></div></div>`;
+}
+function clearSearch() {
+  ['s-kw','s-from','s-to'].forEach(id=>{if(el(id))el(id).value='';});
+  if(el('s-type'))el('s-type').value='all'; if(el('s-mois'))el('s-mois').value='all'; doSearch();
+}
+
+// ── RÉCAPITULATIF MENSUEL ──
+function refreshRecapSel() {
+  const mis=getMoisList();
+  const sel=el('recap-mois'); if(!sel) return;
+  sel.innerHTML='<option value="">— Choisir un mois —</option>'+
+    mis.map(m=>`<option value="${m}">${MONTHS[parseInt(m)-1]} ${curYear}</option>`).join('');
+}
+
+function genRecap() {
+  const mi=el('recap-mois')?.value;
+  if(!mi){toast('Veuillez choisir un mois.','err');return;}
+  const data=yd(); const mKey=miKey(mi);
+  const recs=data.recettes.filter(r=>(r.date||'').startsWith(mKey));
+  const deps=data.depenses.filter(d=>(d.date||'').startsWith(mKey));
+  const b=data.budget[mi]||{};
+  const bgtR=BGT_REC.reduce((s,c)=>s+(b.rec?.[c.k]||0),0);
+  const bgtD=BGT_DEP.reduce((s,c)=>s+(b.dep?.[c.k]||0),0);
+  const totRec=recs.reduce((s,r)=>s+(r.total||0),0);
+  const totDep=deps.reduce((s,r)=>s+(r.total||0),0);
+  const solde=totRec-totDep;
+  const base=recs.reduce((s,r)=>s+(r.base||0),0);
+  const carte=recs.reduce((s,r)=>s+(r.carte||0),0);
+  const mLabel=MONTHS[parseInt(mi)-1]+' '+curYear;
+  const today=new Date().toLocaleDateString('fr-FR',{weekday:'long',year:'numeric',month:'long',day:'numeric'});
+  const church=cfg('church')||'Église';
+  const city=cfg('city')||'';
+  const pastor=cfg('pastor')||'—';
+  const accountant=cfg('accountant')||'—';
+
+  const recRows=REC_CATS.map(c=>[c.l,recs.reduce((s,r)=>s+(r[c.k]||0),0)]).filter(([,v])=>v>0);
+  const depRows=DEP_CATS.map(c=>[c.l,deps.reduce((s,d)=>s+(d[c.k]||0),0)]).filter(([,v])=>v>0);
+
+  el('recap-content').innerHTML=`
+  <div id="recap-printable" class="card">
+    <div style="background:var(--navy);padding:22px 26px;text-align:center">
+      <div style="font-size:28px;margin-bottom:6px">✝</div>
+      <div style="font-family:'Libre Baskerville',serif;font-size:20px;color:#fff;font-weight:700">${church}</div>
+      ${city?`<div style="font-size:11px;color:rgba(255,255,255,.4);margin-top:2px">${city}</div>`:''}
+      <div style="font-family:'Libre Baskerville',serif;font-size:14px;color:var(--gold3);margin-top:8px">RÉCAPITULATIF FINANCIER MENSUEL</div>
+      <div style="font-size:13px;color:var(--gold2);font-weight:700;margin-top:4px">${mLabel}</div>
+      <div style="font-size:10px;color:rgba(255,255,255,.35);margin-top:5px">Établi le ${today}</div>
+    </div>
+    <div style="padding:20px 24px">
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:18px">
+        <div class="met met-gold" style="margin:0"><div class="met-lbl">Total Recettes</div><div class="met-val">${fmt(totRec)}</div>${bgtR>0?`<div class="met-sub">Budget: ${fmt(bgtR)}</div>`:''}</div>
+        <div class="met met-red"  style="margin:0"><div class="met-lbl">Total Dépenses</div><div class="met-val">${fmt(totDep)}</div>${bgtD>0?`<div class="met-sub">Budget: ${fmt(bgtD)}</div>`:''}</div>
+        <div class="met ${solde>=0?'met-green':'met-red'}" style="margin:0"><div class="met-lbl">Solde net</div><div class="met-val" style="color:${solde>=0?'var(--green)':'var(--red)'}">${solde>=0?'+':''}${fmt(solde)}</div><div class="met-sub">${solde>=0?'Excédent':'Déficit'}</div></div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px">
+        <div>
+          <div style="font-family:'Libre Baskerville',serif;font-size:14px;font-weight:700;color:var(--green);border-bottom:2px solid var(--greenl);padding-bottom:5px;margin-bottom:8px">📥 Recettes du mois</div>
+          <table class="recap-table">
+            ${recRows.map(([l,v],i)=>`<tr style="background:${i%2===0?'var(--parch)':'#fff'}"><td>${l}</td><td style="color:var(--green)">${fmt(v)}</td></tr>`).join('')}
+            <tr class="total"><td>TOTAL RECETTES</td><td>${fmt(totRec)}</td></tr>
+          </table>
+        </div>
+        <div>
+          <div style="font-family:'Libre Baskerville',serif;font-size:14px;font-weight:700;color:var(--red);border-bottom:2px solid var(--redl);padding-bottom:5px;margin-bottom:8px">📤 Dépenses du mois</div>
+          <table class="recap-table">
+            ${depRows.map(([l,v],i)=>`<tr style="background:${i%2===0?'var(--parch)':'#fff'}"><td>${l}</td><td style="color:var(--red)">${fmt(v)}</td></tr>`).join('')}
+            <tr class="total"><td>TOTAL DÉPENSES</td><td>${fmt(totDep)}</td></tr>
+          </table>
+        </div>
+      </div>
+
+      <div style="background:var(--navy);border-radius:var(--r);padding:14px 17px;margin-bottom:16px">
+        <div style="color:rgba(255,255,255,.4);font-size:10px;text-transform:uppercase;letter-spacing:.8px;margin-bottom:8px">⚖️ Répartition calculée</div>
+        <div class="pv-row"><span class="pv-lbl">Base de calcul (Ord + Dîmes + Sig. + Récolte)</span><span style="color:var(--gold3);font-weight:700">${fmt(base)}</span></div>
+        <div class="pv-row"><span class="pv-lbl">→ 35% reversement Paroisse</span><span style="color:var(--gold3);font-weight:700">${fmt(base*.35)}</span></div>
+        <div class="pv-row"><span class="pv-lbl">→ 5% Réserve</span><span style="color:var(--gold3);font-weight:700">${fmt(base*.05)}</span></div>
+        <div class="pv-row"><span class="pv-lbl">→ 60% Fonds disponibles</span><span style="color:var(--gold3);font-weight:700">${fmt(base*.60)}</span></div>
+        <div class="pv-row"><span class="pv-lbl">Total achat cartes membres</span><span style="color:var(--gold3);font-weight:700">${fmt(carte)}</span></div>
+        <div class="pv-row"><span class="pv-lbl">→ 80% à reverser</span><span style="color:var(--gold3);font-weight:700">${fmt(carte*.80)}</span></div>
+      </div>
+
+      <div class="recap-bilan">
+        <div style="color:rgba(255,255,255,.4);font-size:10px;text-transform:uppercase;letter-spacing:.8px;margin-bottom:4px">BILAN DU MOIS — ${mLabel}</div>
+        <div style="font-family:'Libre Baskerville',serif;font-size:28px;font-weight:700;color:${solde>=0?'var(--gold3)':'#f87171'}">${solde>=0?'+':''}${fmt(solde)}</div>
+        <div style="color:rgba(255,255,255,.35);font-size:11px;margin-top:3px">${solde>=0?'Excédent':'Déficit'}</div>
+      </div>
+
+      <div class="recap-sig" style="margin-top:20px">
+        <div class="recap-sig-box">
+          <div class="title">Le Pasteur</div>
+          <div class="name">${pastor}</div>
+          <div class="role">Responsable de l'église</div>
+          <div class="recap-sig-line"></div>
+          <div style="font-size:10px;color:var(--slate);margin-top:4px">Signature et cachet</div>
+        </div>
+        <div class="recap-sig-box">
+          <div class="title">Le Comptable</div>
+          <div class="name">${accountant}</div>
+          <div class="role">Responsable financier</div>
+          <div class="recap-sig-line"></div>
+          <div style="font-size:10px;color:var(--slate);margin-top:4px">Signature et cachet</div>
+        </div>
+      </div>
+
+      ${recs.length>0?`
+      <div style="margin-top:18px">
+        <div style="font-family:'Libre Baskerville',serif;font-size:13px;font-weight:700;margin-bottom:8px;color:var(--navy)">Détail des dimanches</div>
+        <div class="tw"><table>
+          <thead><tr><th>Date</th><th class="r">Off.Ord.</th><th class="r">Dîmes</th><th class="r">Sig.</th><th class="r">Récolte</th><th class="r">Cartes</th><th class="r">Total</th><th>Note</th></tr></thead>
+          <tbody>${recs.map(r=>`<tr><td>${r.date}</td><td class="r">${fmts(r.offOrd)}</td><td class="r">${fmts(r.dimes)}</td><td class="r">${fmts(r.sig)}</td><td class="r">${fmts(r.recolte)}</td><td class="r">${fmts(r.carte)}</td><td class="r pos" style="font-weight:700">${fmt(r.total)}</td><td style="font-size:11px;color:var(--slate)">${r.note||''}</td></tr>`).join('')}</tbody>
+          <tfoot><tr><td colspan="6">TOTAL DIMANCHES</td><td class="r">${fmt(totRec)}</td><td></td></tr></tfoot>
+        </table></div>
+      </div>`:''}</div>
+  </div>`;
+}
+
+// ── PDF EXPORTS ──
+function pdfRecap() {
+  // ── Validation ──
+  const mi = el('recap-mois') ? el('recap-mois').value : '';
+  if(!mi || mi === '') {
+    toast('Veuillez choisir un mois dans la liste.', 'err');
+    el('recap-mois') && el('recap-mois').focus();
+    return;
+  }
+
+  // ── Données ──
+  const {jsPDF} = window.jspdf;
+  const doc     = new jsPDF('p','pt','a4');
+  const data    = yd();
+  const mKey    = miKey(mi);
+  const recs    = data.recettes.filter(r=>(r.date||'').startsWith(mKey));
+  const deps    = data.depenses.filter(d=>(d.date||'').startsWith(mKey));
+  const totRec  = recs.reduce((s,r)=>s+(r.total||0), 0);
+  const totDep  = deps.reduce((s,d)=>s+(d.total||0), 0);
+  const solde   = totRec - totDep;
+  const base    = recs.reduce((s,r)=>s+(r.base||0), 0);
+  const carte   = recs.reduce((s,r)=>s+(r.carte||0), 0);
+  const mLabel  = MONTHS[parseInt(mi)-1] + ' ' + curYear;
+  const church  = cfg('church') || 'Église';
+  const city    = cfg('city')   || '';
+  const pastor  = cfg('pastor') || '—';
+  const acct    = cfg('accountant') || '—';
+
+  // ── En-tête ──
+  doc.setFillColor(24,40,64);
+  doc.rect(0,0,595,90,'F');
+  doc.setTextColor(192,138,40);
+  doc.setFontSize(16);
+  doc.text(church.toUpperCase(), 297, 30, {align:'center'});
+  doc.setFontSize(10);
+  doc.setTextColor(180,180,180);
+  if(city) doc.text(city, 297, 46, {align:'center'});
+  doc.setTextColor(232,192,96);
+  doc.setFontSize(11);
+  doc.text('RECAPITULATIF FINANCIER MENSUEL — ' + mLabel.toUpperCase(), 297, 64, {align:'center'});
+  doc.setFontSize(9);
+  doc.setTextColor(140,140,140);
+  doc.text('Etabli le ' + new Date().toLocaleDateString('fr-FR'), 297, 80, {align:'center'});
+
+  let y = 105;
+
+  // ── KPI ──
+  doc.autoTable({
+    startY: y,
+    head:[['Periode','Recettes','Depenses','Solde Net']],
+    body:[['Mois de '+mLabel, fmts(totRec)+' FCFA', fmts(totDep)+' FCFA', (solde>=0?'+':'')+fmts(solde)+' FCFA']],
+    headStyles:{fillColor:[24,40,64], textColor:[192,138,40], fontStyle:'bold'},
+    styles:{fontSize:11, halign:'center'},
+    columnStyles:{0:{halign:'left'}}
+  });
+  y = doc.lastAutoTable.finalY + 14;
+
+  // ── Recettes ──
+  doc.setFontSize(11); doc.setTextColor(31,107,69);
+  doc.text('RECETTES DU MOIS', 40, y);
+  y += 10;
+  const recRows = REC_CATS
+    .map(c => [c.l, fmts(recs.reduce((s,r)=>s+(r[c.k]||0), 0))+' FCFA'])
+    .filter(([,v]) => v !== '0 FCFA');
+  recRows.push(['TOTAL RECETTES', fmts(totRec)+' FCFA']);
+  doc.autoTable({
+    startY: y,
+    head:[['Categorie','Montant']],
+    body: recRows,
+    headStyles:{fillColor:[31,107,69], textColor:255},
+    columnStyles:{1:{halign:'right'}},
+    styles:{fontSize:10},
+    didParseCell: d=>{
+      if(d.row.index === recRows.length-1){
+        d.cell.styles.fillColor=[24,40,64];
+        d.cell.styles.textColor=[232,192,96];
+        d.cell.styles.fontStyle='bold';
+      }
+    }
+  });
+  y = doc.lastAutoTable.finalY + 14;
+
+  // ── Dépenses ──
+  doc.setFontSize(11); doc.setTextColor(139,30,30);
+  doc.text('DEPENSES DU MOIS', 40, y);
+  y += 10;
+  const depRows = DEP_CATS
+    .map(c => [c.l, fmts(deps.reduce((s,d)=>s+(d[c.k]||0), 0))+' FCFA'])
+    .filter(([,v]) => v !== '0 FCFA');
+  depRows.push(['TOTAL DEPENSES', fmts(totDep)+' FCFA']);
+  doc.autoTable({
+    startY: y,
+    head:[['Categorie','Montant']],
+    body: depRows,
+    headStyles:{fillColor:[139,30,30], textColor:255},
+    columnStyles:{1:{halign:'right'}},
+    styles:{fontSize:10},
+    didParseCell: d=>{
+      if(d.row.index === depRows.length-1){
+        d.cell.styles.fillColor=[139,30,30];
+        d.cell.styles.textColor=255;
+        d.cell.styles.fontStyle='bold';
+      }
+    }
+  });
+  y = doc.lastAutoTable.finalY + 14;
+
+  // ── Répartition ──
+  doc.autoTable({
+    startY: y,
+    head:[['REPARTITION CALCULEE','Montant']],
+    body:[
+      ['Base (Ord. + Dimes + Sig. + Recolte)',       fmts(base)+' FCFA'],
+      ['35% Paroisse a reverser',                    fmts(Math.round(base*.35))+' FCFA'],
+      ['5% Reserve',                                 fmts(Math.round(base*.05))+' FCFA'],
+      ['60% Fonds disponibles',                      fmts(Math.round(base*.60))+' FCFA'],
+      ['Total achat cartes membres',                 fmts(carte)+' FCFA'],
+      ['80% a reverser',                             fmts(Math.round(carte*.80))+' FCFA'],
+    ],
+    headStyles:{fillColor:[74,40,120], textColor:255, fontStyle:'bold'},
+    columnStyles:{1:{halign:'right'}},
+    styles:{fontSize:10}
+  });
+  y = doc.lastAutoTable.finalY + 14;
+
+  // ── Bilan final ──
+  const bilanH = 44;
+  // Check page overflow
+  if(y + bilanH > 780) { doc.addPage(); y = 40; }
+  doc.setFillColor(24,40,64);
+  doc.rect(40, y, 515, bilanH, 'F');
+  doc.setTextColor(192,138,40);
+  doc.setFontSize(11);
+  doc.setFont(undefined,'bold');
+  doc.text('BILAN NET — ' + mLabel, 50, y+16);
+  doc.setFontSize(15);
+  doc.text((solde>=0?'+':'')+fmts(solde)+' FCFA', 550, y+28, {align:'right'});
+  doc.setFont(undefined,'normal');
+  y += bilanH + 30;
+
+  // ── Détail dimanches ──
+  if(recs.length > 0) {
+    if(y + 60 > 780) { doc.addPage(); y = 40; }
+    doc.setFontSize(10); doc.setTextColor(24,40,64);
+    doc.text('DETAIL DES DIMANCHES', 40, y);
+    y += 8;
+    doc.autoTable({
+      startY: y,
+      head:[['Date','Off.Ord.','Dimes','Sig.','Recolte','Cartes','Total','Note']],
+      body: recs.map(r=>[
+        r.date,
+        fmts(r.offOrd||0), fmts(r.dimes||0), fmts(r.sig||0),
+        fmts(r.recolte||0), fmts(r.carte||0),
+        fmts(r.total||0), r.note||''
+      ]),
+      headStyles:{fillColor:[24,40,64], textColor:[192,138,40]},
+      columnStyles:{1:{halign:'right'},2:{halign:'right'},3:{halign:'right'},4:{halign:'right'},5:{halign:'right'},6:{halign:'right',fontStyle:'bold'}},
+      styles:{fontSize:9}
+    });
+    y = doc.lastAutoTable.finalY + 20;
+  }
+
+  // ── Signatures ──
+  if(y + 60 > 780) { doc.addPage(); y = 40; }
+  doc.setDrawColor(200,200,200);
+  doc.setTextColor(100,116,139);
+  doc.setFontSize(9);
+  doc.setFont(undefined,'normal');
+  doc.text('LE PASTEUR',        130, y,    {align:'center'});
+  doc.text('LE COMPTABLE',      465, y,    {align:'center'});
+  doc.setFontSize(10);
+  doc.setTextColor(24,40,64);
+  doc.setFont(undefined,'bold');
+  doc.text(pastor,              130, y+14, {align:'center'});
+  doc.text(acct,                465, y+14, {align:'center'});
+  doc.setFont(undefined,'normal');
+  doc.setTextColor(100,116,139);
+  doc.setFontSize(9);
+  doc.text('Signature et cachet', 130, y+30, {align:'center'});
+  doc.text('Signature et cachet', 465, y+30, {align:'center'});
+  doc.line(75,  y+44, 185, y+44);
+  doc.line(410, y+44, 520, y+44);
+
+  // ── Sauvegarde ──
+  const filename = 'Recap_' + mLabel.replace(/\s/g,'_').replace(/[^a-zA-Z0-9_]/g,'') + '.pdf';
+  doc.save(filename);
+  toast('PDF recapitulatif exporte : ' + filename);
+}
+
+function pdfBudget() {
+  const {jsPDF}=window.jspdf; const doc=new jsPDF('l','pt','a4');
+  const church=cfg('church')||'Église';
+  doc.setFillColor(24,40,64); doc.rect(0,0,841,65,'F');
+  doc.setTextColor(192,138,40); doc.setFontSize(15);
+  doc.text('BUDGET ANNUEL — '+church.toUpperCase()+' — '+curYear,420,36,{align:'center'});
+  doc.setFontSize(9); doc.setTextColor(150,150,150);
+  doc.text('Document généré le '+new Date().toLocaleDateString('fr-FR'),420,54,{align:'center'});
+  const data=yd();
+  const rows=MONTHS.map((m,i)=>{
+    const mi=String(i+1).padStart(2,'0'); const b=data.budget[mi]||{};
+    const tR=BGT_REC.reduce((s,c)=>s+(b.rec?.[c.k]||0),0);
+    const tD=BGT_DEP.reduce((s,c)=>s+(b.dep?.[c.k]||0),0);
+    const ec=tR-tD;
+    return[m,fmts(tR)+' FCFA',fmts(tD)+' FCFA',(ec>=0?'+':'')+fmts(ec)+' FCFA',ec===0?'Équilibré':ec>0?'Excédent':'Déficit'];
+  });
+  doc.autoTable({startY:80,head:[['Mois','Recettes prévues','Dépenses prévues','Écart','Statut']],body:rows,
+    headStyles:{fillColor:[24,40,64],textColor:[192,138,40],fontStyle:'bold'},
+    columnStyles:{1:{halign:'right'},2:{halign:'right'},3:{halign:'right'}},styles:{fontSize:10}});
+  doc.save('Budget_'+curYear+'.pdf');
+  toast('PDF budget exporté !');
+}
+
+function pdfHist() {
+  const {jsPDF}=window.jspdf; const doc=new jsPDF('l','pt','a4');
+  const church=cfg('church')||'Église';
+  doc.setFillColor(24,40,64); doc.rect(0,0,841,60,'F');
+  doc.setTextColor(192,138,40); doc.setFontSize(13);
+  doc.text('HISTORIQUE — '+church.toUpperCase()+' — '+curYear,420,36,{align:'center'});
+  const data=yd(); const m=el('h-mois')?.value||'all';
+  const mKey=m!=='all'?miKey(m):null;
+  const recs=mKey?data.recettes.filter(r=>(r.date||'').startsWith(mKey)):data.recettes;
+  const deps=mKey?data.depenses.filter(d=>(d.date||'').startsWith(mKey)):data.depenses;
+  let y=70;
+  if(recs.length){
+    doc.setFontSize(10); doc.setTextColor(31,107,69); doc.text('RECETTES',40,y); y+=8;
+    doc.autoTable({startY:y,head:[['Date','Off.Ord.','Off.Spé.','Dîmes','Sig.','Récolte','Mission','Cartes','Dons','Dîm.Nat.','Total','Note']],
+      body:recs.map(r=>[r.date,fmts(r.offOrd),fmts(r.offSpe),fmts(r.dimes),fmts(r.sig),fmts(r.recolte),fmts(r.mission),fmts(r.carte),fmts(r.dons),fmts(r.dnat),fmts(r.total),r.note||'']),
+      headStyles:{fillColor:[31,107,69],textColor:255},styles:{fontSize:8}});
+    y=doc.lastAutoTable.finalY+12;
+  }
+  if(deps.length){
+    doc.setFontSize(10); doc.setTextColor(139,30,30); doc.text('DÉPENSES',40,y); y+=8;
+    doc.autoTable({startY:y,head:[['Date','Description','Fonct.','Salaire','Déplac.','ENEO','CNPS','Assist.','Mission','Invest.','Total']],
+      body:deps.map(d=>[d.date,d.desc||'',fmts(d.fonct),fmts(d.salaire),fmts(d.deplac),fmts(d.elec),fmts(d.cnps),fmts(d.assist),fmts(d.dmiss),fmts(d.invest),fmts(d.total)]),
+      headStyles:{fillColor:[139,30,30],textColor:255},styles:{fontSize:8}});
+  }
+  doc.save('Historique_'+curYear+'.pdf');
+  toast('PDF historique exporté !');
+}
+
+function pdfCmp() {
+  const {jsPDF}=window.jspdf; const doc=new jsPDF('l','pt','a4');
+  const church=cfg('church')||'Église';
+  doc.setFillColor(24,40,64); doc.rect(0,0,841,60,'F');
+  doc.setTextColor(192,138,40); doc.setFontSize(13);
+  doc.text('BUDGET vs RÉEL — '+church.toUpperCase()+' — '+curYear,420,36,{align:'center'});
+  const data=yd();
+  const rows=MONTHS.map((m,i)=>{
+    const mi=String(i+1).padStart(2,'0'); const b=data.budget[mi]||{}; const mKey=miKey(mi);
+    const bR=BGT_REC.reduce((s,c)=>s+(b.rec?.[c.k]||0),0);
+    const bD=BGT_DEP.reduce((s,c)=>s+(b.dep?.[c.k]||0),0);
+    const rR=data.recettes.filter(r=>(r.date||'').startsWith(mKey)).reduce((s,r)=>s+r.total,0);
+    const rD=data.depenses.filter(d=>(d.date||'').startsWith(mKey)).reduce((s,d)=>s+d.total,0);
+    return[m,fmts(bR),fmts(rR),(rR-bR>=0?'+':'')+fmts(rR-bR),fmts(bD),fmts(rD),(rD-bD>=0?'+':'')+fmts(rD-bD)];
+  });
+  doc.autoTable({startY:70,head:[['Mois','Bgt Rec.','Réel Rec.','Écart Rec.','Bgt Dép.','Réel Dép.','Écart Dép.']],
+    body:rows,headStyles:{fillColor:[24,40,64],textColor:[192,138,40],fontStyle:'bold'},
+    columnStyles:{1:{halign:'right'},2:{halign:'right'},3:{halign:'right'},4:{halign:'right'},5:{halign:'right'},6:{halign:'right'}},
+    styles:{fontSize:9}});
+  doc.save('BudgetVsReel_'+curYear+'.pdf');
+  toast('PDF comparaison exporté !');
+}
+
+// ── SIDEBAR & SELECTS ──
+function getMoisList() {
+  const data=yd(); const all=[...data.recettes,...data.depenses];
+  return [...new Set(all.map(o=>(o.date||'').slice(5,7)).filter(Boolean))].sort();
+}
+function refreshSelects() {
+  const mis=getMoisList();
+  [['h-mois','Tous mois'],['rp-mois','Toutes les recettes'],['s-mois','Tous'],['cmp-mois','Année complète']].forEach(([id,lbl])=>{
+    const s=el(id); if(!s) return; const prev=s.value;
+    s.innerHTML=`<option value="all">${lbl}</option>`+mis.map(m=>`<option value="${m}">${MONTHS[parseInt(m)-1]}</option>`).join('');
+    if(mis.includes(prev)) s.value=prev;
+  });
+  const rs=el('recap-mois'); 
+  if(rs) {
+    const p=rs.value;
+    // Show months that have data
+    const recapOpts = mis.length > 0
+      ? mis.map(m=>`<option value="${m}">${MONTHS[parseInt(m)-1]} ${curYear}</option>`).join('')
+      : MONTHS.map((_,i)=>{const m=String(i+1).padStart(2,'0');return `<option value="${m}">${MONTHS[i]} ${curYear}</option>`;}).join('');
+    rs.innerHTML='<option value="">— Choisir un mois —</option>'+recapOpts;
+    if(mis.includes(p)) rs.value=p;
+  }
+}
+function updateSidebar() {
+  const data=yd();
+  const totRec=data.recettes.reduce((s,r)=>s+(r.total||0),0);
+  const totDep=data.depenses.reduce((s,d)=>s+(d.total||0),0);
+  const solde=totRec-totDep;
+  const ss=el('sb-solde'); if(ss){ss.textContent=fmt(Math.abs(solde));ss.style.color=solde>=0?'#4ade80':'#f87171';}
+  sv('sb-solde-s',(solde>=0?'Excédent ':'Déficit ')+curYear);
+}
+
+
+
+
+// ══════════════════════════════════════════════════
+// MOBILE / PWA HELPERS
+// ══════════════════════════════════════════════════
+function toggleMobileSb() {
+  const sb = document.getElementById('main-sb');
+  const ov = document.getElementById('sb-overlay');
+  if(sb) sb.classList.toggle('mobile-open');
+  if(ov) ov.classList.toggle('show');
+}
+function closeMobileSb() {
+  const sb = document.getElementById('main-sb');
+  const ov = document.getElementById('sb-overlay');
+  if(sb) sb.classList.remove('mobile-open');
+  if(ov) ov.classList.remove('show');
+}
+
+// Close sidebar on nav (mobile)
+const _origGo = typeof go !== 'undefined' ? go : null;
+
+function showSplash() {
+  const sp = document.getElementById('splash-screen');
+  const cfg = loadCfg();
+  if(cfg && cfg.church) {
+    const sn = document.getElementById('splash-name');
+    if(sn) sn.textContent = cfg.church;
+  }
+  if(sp) {
+    sp.classList.remove('fade-out','gone');
+    setTimeout(() => {
+      sp.classList.add('fade-out');
+      setTimeout(() => sp.classList.add('gone'), 500);
+    }, 1800);
+  }
+}
+
+// ══════════════════════════════════════════════════
+// LICENCE SYSTEM
+// ══════════════════════════════════════════════════
+// SYSTÈME DE LICENCE v3 — 9 CARACTÈRES ALPHANUMÉRIQUES
+// Format : XXXXXXXXX (0-9 et A-Z), affiché XXX-XXX-XXX
+// Durée  : 12 mois — Administrateur uniquement
+// ══════════════════════════════════════════════════
+
+const ADMIN_DEFAULT_PW = 'ADMIN2024';
+const LIC_STORE_KEY    = 'eglise_lic_v3';
+const LIC_HIST_KEY     = 'eglise_lic_hist_v3';
+const LIC_ADMIN_KEY    = 'eglise_admin_pw_v3';
+
+// ── Stockage ──
+function getLicStore()    { try { return JSON.parse(localStorage.getItem(LIC_STORE_KEY)||'null'); } catch { return null; } }
+function setLicStore(d)   { localStorage.setItem(LIC_STORE_KEY, JSON.stringify(d)); }
+function getAdminPw()     { return localStorage.getItem(LIC_ADMIN_KEY) || ADMIN_DEFAULT_PW; }
+function setAdminPw(p)    { localStorage.setItem(LIC_ADMIN_KEY, p); }
+function getLicHist()     { try { return JSON.parse(localStorage.getItem(LIC_HIST_KEY)||'[]'); } catch { return []; } }
+function saveLicHist(h)   { localStorage.setItem(LIC_HIST_KEY, JSON.stringify(h)); }
+function addLicHist(e)    { const h=getLicHist(); h.unshift(e); saveLicHist(h.slice(0,50)); }
+
+// ── Format clé ──
+// Brut  : 9 chars ex. "A7B3KZ29M"
+// Affich: "A7B-3KZ-29M"
+function licRaw(k)     { return (k||'').replace(/-/g,'').toUpperCase().trim(); }
+function licDisplay(r) {
+  r = licRaw(r);
+  if(r.length === 9) return r.slice(0,3)+'-'+r.slice(3,6)+'-'+r.slice(6,9);
+  return r;
+}
+
+// ── Formatage saisie en temps réel ──
+function licFormatInput(inp) {
+  let v = inp.value.replace(/[^0-9A-Za-z]/g,'').toUpperCase();
+  if(v.length > 9) v = v.slice(0,9);
+  // Insérer tirets : XXX-XXX-XXX
+  let out = '';
+  for(let i=0;i<v.length;i++){
+    if(i===3||i===6) out+='-';
+    out+=v[i];
+  }
+  inp.value = out;
+  // Compteur
+  const c=document.getElementById('lic-cnt');
+  if(c){ c.textContent=v.length+' / 9'; c.style.color=v.length===9?'#86efac':'rgba(255,255,255,.3)'; }
+}
+
+// ── Validation ──
+function isValidKey(raw) {
+  // Exactement 9 caractères alphanumériques A-Z et 0-9
+  return /^[0-9A-Z]{9}$/.test(raw);
+}
+
+// ── Génération d'une clé ──
+function generateKey() {
+  const CHARS = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  // Garantir au moins 2 chiffres et 2 lettres
+  let pool = [];
+  // 2 chiffres garantis
+  for(let i=0;i<2;i++) pool.push('0123456789'[Math.floor(Math.random()*10)]);
+  // 2 lettres garanties
+  for(let i=0;i<2;i++) pool.push('ABCDEFGHIJKLMNOPQRSTUVWXYZ'[Math.floor(Math.random()*26)]);
+  // 5 aléatoires
+  for(let i=0;i<5;i++) pool.push(CHARS[Math.floor(Math.random()*CHARS.length)]);
+  // Mélanger (Fisher-Yates)
+  for(let i=pool.length-1;i>0;i--){
+    const j=Math.floor(Math.random()*(i+1));
+    [pool[i],pool[j]]=[pool[j],pool[i]];
+  }
+  return pool.join('');
+}
+
+// ── Dates ──
+function daysLeft(expDate) {
+  const now=new Date(); now.setHours(0,0,0,0);
+  const exp=new Date(expDate); exp.setHours(0,0,0,0);
+  return Math.ceil((exp-now)/86400000);
+}
+function dateFr(d) {
+  return new Date(d).toLocaleDateString('fr-FR',{day:'2-digit',month:'long',year:'numeric'});
+}
+function dateShort(d) {
+  return new Date(d).toLocaleDateString('fr-FR',{day:'2-digit',month:'2-digit',year:'numeric'});
+}
+
+// ── Vérification au démarrage ──
+function checkLicenceOnStart() {
+  const lic = getLicStore();
+  if(!lic || !lic.key) { showLicScreen('none'); return false; }
+  const days = daysLeft(lic.expiresAt);
+  if(days <= 0) { showLicScreen('expired', lic); return false; }
+  // Licence valide
+  hideLicScreen();
+  return true;
+}
+
+// ── Affichage écran licence ──
+function showLicScreen(state, lic) {
+  const scr=document.getElementById('licence-screen');
+  scr.classList.remove('hidden');
+  const badge=document.getElementById('lic-status-badge');
+  const icon=document.getElementById('lic-icon');
+  const info=document.getElementById('lic-info-box');
+
+  document.getElementById('lic-err').classList.remove('show');
+  document.getElementById('lic-ok').classList.remove('show');
+
+  if(state==='expired' && lic){
+    icon.textContent='🔒';
+    badge.className='lic-status-badge expired';
+    badge.innerHTML='🚫 &nbsp;Licence expirée';
+    info.style.display='block';
+    document.getElementById('lic-disp-key').textContent   = licDisplay(lic.key);
+    document.getElementById('lic-disp-start').textContent = dateFr(lic.activatedAt);
+    const eel=document.getElementById('lic-disp-end');
+    eel.textContent=dateFr(lic.expiresAt); eel.className='lic-info-val expired';
+    document.getElementById('lic-disp-days').innerHTML='<span class="days-badge days-exp">Expiree</span>';
+    showLicErr('Licence expiree le '+dateFr(lic.expiresAt)+'. Contactez votre administrateur pour obtenir une nouvelle cle.');
+  } else if(state==='valid' && lic){
+    // Licence valide — remplir les infos pour le panneau admin et param
+    const days = daysLeft(lic.expiresAt);
+    icon.textContent='✅';
+    badge.className='lic-status-badge valid';
+    badge.innerHTML='✅ &nbsp;Licence active — '+days+' jours restants';
+    info.style.display='block';
+    document.getElementById('lic-disp-key').textContent   = licDisplay(lic.key);
+    document.getElementById('lic-disp-start').textContent = dateFr(lic.activatedAt);
+    const vel=document.getElementById('lic-disp-end');
+    vel.textContent=dateFr(lic.expiresAt);
+    vel.className = days>60?'lic-info-val valid':'lic-info-val warn';
+    const dEl=document.getElementById('lic-disp-days');
+    const dcol=days>60?'days-ok':days>30?'days-warn':'days-exp';
+    dEl.innerHTML='<span class="days-badge '+dcol+'">'+days+' jours</span>';
+  } else {
+    icon.textContent='🔐';
+    badge.className='lic-status-badge nolicence';
+    badge.innerHTML='⚠️ &nbsp;Aucune licence active';
+    info.style.display='none';
+  }
+}
+function hideLicScreen() { document.getElementById('licence-screen').classList.add('hidden'); }
+
+function showLicErr(msg){
+  const e=document.getElementById('lic-err');
+  e.textContent=msg; e.classList.remove('show');
+  void e.offsetWidth; e.classList.add('show');
+  document.getElementById('lic-ok').classList.remove('show');
+}
+function showLicOk(msg){
+  const e=document.getElementById('lic-ok');
+  e.textContent=msg; e.classList.remove('show');
+  void e.offsetWidth; e.classList.add('show');
+  document.getElementById('lic-err').classList.remove('show');
+}
+
+// ── Activation de la licence ──
+function activateLicence(){
+  const raw=licRaw(document.getElementById('lic-key-input').value);
+  if(!raw){ showLicErr('Veuillez saisir une clé de licence.'); return; }
+  if(raw.length!==9){ showLicErr('La clé doit contenir exactement 9 caractères. Saisie actuelle : '+raw.length+' caractère(s).'); return; }
+  if(!isValidKey(raw)){ showLicErr('Format invalide. Seuls les chiffres (0-9) et les lettres (A-Z) sont acceptés.'); return; }
+
+  // Vérifier que la clé existe dans l'historique admin et n'est pas encore utilisée
+  const hist=getLicHist();
+  const found=hist.find(h=>h.key===raw && !h.used);
+  if(!found){
+    // Vérifier si elle existe mais déjà utilisée
+    const used=hist.find(h=>h.key===raw && h.used);
+    if(used) showLicErr('Cette clé a déjà été utilisée le '+dateFr(used.usedAt)+'. Demandez une nouvelle clé à votre administrateur.');
+    else     showLicErr('Clé introuvable. Elle doit d\'abord être générée par l\'administrateur. Contactez-le.');
+    return;
+  }
+
+  // Activer
+  const now=new Date();
+  const exp=new Date(now); exp.setFullYear(exp.getFullYear()+1);
+  const licData={ key:raw, activatedAt:now.toISOString(), expiresAt:exp.toISOString(), church:found.church||'' };
+  setLicStore(licData);
+
+  // Marquer comme utilisée
+  found.used=true; found.usedAt=now.toISOString(); found.usedMachine=navigator.userAgent.slice(0,60);
+  saveLicHist(hist);
+
+  const days=daysLeft(licData.expiresAt);
+  showLicOk('✅ Licence activée ! Valable 12 mois — Expire le '+dateFr(licData.expiresAt)+' ('+days+' jours).');
+  document.getElementById('lic-key-input').value='';
+
+  setTimeout(()=>{ hideLicScreen(); }, 2500);
+}
+
+// ════════════════════════════════════════════════════
+// PANNEAU ADMINISTRATEUR
+// ════════════════════════════════════════════════════
+let adminOK = false;
+
+function showAdminPanel(){
+  const scr=document.getElementById('admin-screen');
+  scr.classList.add('show');
+  document.getElementById('admin-pw').value='';
+  document.getElementById('admin-panel-content').style.display='none';
+  document.getElementById('admin-err').classList.remove('show');
+  document.getElementById('admin-result').classList.remove('show');
+  adminOK=false;
+  // Remettre le bouton "Accéder" visible
+  const authBtn=document.getElementById('admin-auth-btn');
+  if(authBtn) authBtn.style.display='block';
+  const pwField=document.getElementById('admin-pw-field');
+  if(pwField) pwField.style.display='block';
+  setTimeout(()=>document.getElementById('admin-pw').focus(),100);
+}
+function closeAdminPanel(){
+  document.getElementById('admin-screen').classList.remove('show');
+  adminOK=false;
+}
+
+function adminAuth(){
+  const pw=document.getElementById('admin-pw').value;
+  if(pw===getAdminPw()){
+    adminOK=true;
+    document.getElementById('admin-panel-content').style.display='block';
+    document.getElementById('admin-pw-field').style.display='none';
+    document.getElementById('admin-auth-btn').style.display='none';
+    document.getElementById('admin-err').classList.remove('show');
+    renderAdminHist();
+    renderLicStatus();
+    document.getElementById('admin-church-ref').focus();
+  } else {
+    const e=document.getElementById('admin-err');
+    e.textContent='Mot de passe administrateur incorrect.';
+    e.classList.remove('show'); void e.offsetWidth; e.classList.add('show');
+    document.getElementById('admin-pw').value='';
+  }
+}
+
+function adminGenerate(){
+  if(!adminOK) return;
+  const church=(document.getElementById('admin-church-ref').value||'').trim()||'Église';
+  const raw=generateKey();
+  const now=new Date();
+  const exp=new Date(now); exp.setFullYear(exp.getFullYear()+1);
+  const entry={ key:raw, church, generatedAt:now.toISOString(), expiresAfter:exp.toISOString(), used:false };
+  addLicHist(entry);
+
+  const dispCode=document.getElementById('admin-gen-code');
+  const dispDate=document.getElementById('admin-gen-date');
+  dispCode.textContent=licDisplay(raw);
+  dispDate.innerHTML='<b>Générée le</b> '+dateShort(now.toISOString())+'&nbsp;&nbsp;|&nbsp;&nbsp;<b>Expire le</b> '+dateShort(exp.toISOString())+'<br><b>Église :</b> '+church;
+  document.getElementById('admin-result').classList.add('show');
+  renderAdminHist();
+}
+
+function copyLicence(){
+  const code=document.getElementById('admin-gen-code').textContent.trim();
+  if(navigator.clipboard){
+    navigator.clipboard.writeText(code).then(()=>{
+      const btn=document.querySelector('.admin-gen-copy');
+      const orig=btn.textContent; btn.textContent='✅ Copié !';
+      setTimeout(()=>btn.textContent=orig,2000);
+    }).catch(()=>{ window.prompt('Copiez cette clé de licence :',code); });
+  } else { window.prompt('Copiez cette clé de licence :',code); }
+}
+
+function renderAdminHist(){
+  const hist=getLicHist();
+  const ct=document.getElementById('admin-history');
+  if(!hist.length){ ct.innerHTML='<p style="font-size:11px;color:rgba(255,255,255,.3);text-align:center;padding:10px">Aucune licence générée</p>'; return; }
+  ct.innerHTML=hist.map((h,i)=>`
+    <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 10px;background:rgba(255,255,255,.04);border-radius:6px;margin-bottom:5px;border-left:3px solid ${h.used?'var(--red)':'var(--gold)'}">
+      <div>
+        <div style="color:var(--gold3);font-weight:700;letter-spacing:3px;font-size:13px">${licDisplay(h.key)}</div>
+        <div style="color:rgba(255,255,255,.35);font-size:10px;margin-top:2px">${h.church||''} · Généré le ${dateShort(h.generatedAt)}</div>
+        ${h.used?'<div style="color:rgba(255,100,100,.6);font-size:10px">Utilisée le '+dateShort(h.usedAt)+'</div>':''}
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:flex-end;gap:4px">
+        <span class="days-badge ${h.used?'days-exp':'days-ok'}">${h.used?'✓ Utilisée':'Disponible'}</span>
+        ${!h.used?`<button onclick="revokeKey('${h.key}')" style="background:rgba(139,30,30,.4);color:#fca5a5;border:none;border-radius:4px;padding:2px 7px;font-size:10px;cursor:pointer">Révoquer</button>`:''}
+      </div>
+    </div>`).join('');
+}
+
+function revokeKey(raw){
+  if(!confirm('Révoquer la clé '+licDisplay(raw)+' ? Elle ne pourra plus être utilisée.')) return;
+  const hist=getLicHist();
+  const entry=hist.find(h=>h.key===raw);
+  if(entry){ entry.used=true; entry.usedAt=new Date().toISOString(); entry.revokedByAdmin=true; saveLicHist(hist); }
+  renderAdminHist();
+}
+
+function renderLicStatus(){
+  const lic=getLicStore();
+  const box=document.getElementById('admin-current-lic');
+  if(!box) return;
+  if(!lic||!lic.key){
+    box.innerHTML='<span style="color:rgba(255,200,100,.7)">⚠️ Aucune licence active sur cet appareil</span>';
+  } else {
+    const days=daysLeft(lic.expiresAt);
+    const col=days>30?'#86efac':days>7?'#fcd7aa':'#fca5a5';
+    box.innerHTML=`<span style="color:var(--gold3);font-weight:700;letter-spacing:2px">${licDisplay(lic.key)}</span> &nbsp;·&nbsp; Expire le <b>${dateFr(lic.expiresAt)}</b> &nbsp;·&nbsp; <span style="color:${col};font-weight:700">${days} jours restants</span>`;
+  }
+}
+
+function changeAdminPw(){
+  const np=(document.getElementById('admin-new-pw').value||'').trim();
+  if(np.length<4){ alert('Le mot de passe doit contenir au moins 4 caractères.'); return; }
+  setAdminPw(np);
+  document.getElementById('admin-new-pw').value='';
+  const ok=document.getElementById('admin-pw-ok');
+  if(ok){ ok.style.display='block'; setTimeout(()=>ok.style.display='none',3000); }
+  else alert('✅ Mot de passe administrateur modifié.');
+}
+
+// ── Badge sidebar ──
+function updateLicBadgeSidebar(){
+  const lic = getLicStore();
+
+  // ── Encadré sidebar "Licence — Validité" ──
+  const keyEl  = document.getElementById('sb-lic-key-disp');
+  const dateEl = document.getElementById('sb-lic-date-disp');
+  const daysEl = document.getElementById('sb-lic-days-disp');
+
+  if(!lic || !lic.key){
+    if(keyEl)  { keyEl.textContent='Non activée'; keyEl.style.color='rgba(255,200,100,.7)'; }
+    if(dateEl) { dateEl.textContent='Aucune licence active'; dateEl.style.color='rgba(255,150,100,.6)'; }
+    if(daysEl) { daysEl.textContent=''; }
+    return;
+  }
+
+  const days = daysLeft(lic.expiresAt);
+  const col  = days > 90 ? '#86efac' : days > 30 ? '#fcd7aa' : '#fca5a5';
+
+  if(keyEl){
+    keyEl.textContent = licDisplay(lic.key);
+    keyEl.style.color = col;
+    keyEl.style.letterSpacing = '2px';
+  }
+  if(dateEl){
+    dateEl.innerHTML = 'Expire le <strong>' + dateFr(lic.expiresAt) + '</strong>';
+    dateEl.style.color = 'rgba(255,255,255,.55)';
+  }
+  if(daysEl){
+    const icon = days > 90 ? '✅' : days > 30 ? '⚠️' : '🔴';
+    daysEl.innerHTML = icon + ' <span style="color:'+col+';font-weight:700">'+days+' jours restants</span>';
+  }
+
+  // ── Badge alerte (J-30) ──
+  let badge = document.getElementById('sb-lic-badge');
+  if(!badge){
+    badge = document.createElement('div');
+    badge.id = 'sb-lic-badge';
+    badge.style.cssText = 'margin:4px 11px 0;padding:7px 10px;border-radius:5px;font-size:10.5px;font-weight:700;text-align:center;display:none;cursor:pointer';
+    const foot = document.querySelector('.sb-foot');
+    if(foot) foot.parentNode.insertBefore(badge, foot);
+  }
+  if(days <= 30 && days > 0){
+    badge.style.background = days<=7 ? 'rgba(139,30,30,.5)' : 'rgba(180,92,16,.4)';
+    badge.style.color      = days<=7 ? '#fca5a5' : '#fcd7aa';
+    badge.style.border     = days<=7 ? '1px solid rgba(200,60,60,.5)' : '1px solid rgba(200,130,20,.4)';
+    badge.innerHTML        = (days<=7?'🔴 ':'⚠️ ') + 'Licence expire dans '+days+' jour'+(days>1?'s':'')+'!';
+    badge.style.display    = 'block';
+  } else {
+    badge.style.display = 'none';
+  }
+}
+// ══════════════════════════════════════════════════
+// LOGIN SYSTEM — Constantes et variables
+// ══════════════════════════════════════════════════
+const LOGIN_ID   = '123456789'; // Identifiant par défaut (9 chiffres)
+const LOGIN_PW   = '123456';    // Mot de passe par défaut (6 caractères)
+const MAX_TRIES  = 5;           // Tentatives avant blocage
+const LOCK_SECS  = 60;          // Secondes de blocage
+
+let loginAttempts = 0;
+let lockTimer     = null;
+let lockInterval  = null;
+
+function showLoginChurch() {
+  const c = loadCfg();
+  const nm = document.getElementById('login-church-name');
+  const sb = document.getElementById('login-church-sub');
+  const lt = document.getElementById('lic-church-title');
+  if(nm && c.church) nm.textContent = c.church;
+  if(sb && c.city)   sb.textContent = c.city + ' — Gestion financière';
+  if(lt && c.church) lt.textContent = c.church;
+}
+
+function togglePw() {
+  const inp = document.getElementById('login-pw');
+  const btn = document.getElementById('eye-btn');
+  if(inp.type === 'password') { inp.type = 'text'; btn.textContent = '🙈'; }
+  else { inp.type = 'password'; btn.textContent = '👁'; }
+}
+
+function loginKey(e) { if(e.key === 'Enter') doLogin(); }
+
+function doLogin() {
+  const idEl  = document.getElementById('login-id');
+  const pwEl  = document.getElementById('login-pw');
+  const errEl = document.getElementById('login-error');
+  const lkEl  = document.getElementById('login-locked');
+  const attEl = document.getElementById('attempts-left');
+
+  // Check if locked
+  if(lockTimer) return;
+
+  const idVal = (idEl.value || '').trim();
+  const pwVal = (pwEl.value || '').trim();
+
+  // Validation
+  if(idVal.length !== 9) {
+    showLoginError("L'identifiant doit contenir exactement 9 chiffres.");
+    idEl.focus(); return;
+  }
+  if(pwVal.length !== 6) {
+    showLoginError("Le mot de passe doit contenir exactement 6 caractères.");
+    pwEl.focus(); return;
+  }
+
+  // Get credentials (from config or defaults)
+  const storedId = loadCfg().loginId || LOGIN_ID;
+  const storedPw = loadCfg().loginPw || LOGIN_PW;
+
+  if(idVal === storedId && pwVal === storedPw) {
+    // SUCCESS
+    errEl.classList.remove('show');
+    document.getElementById('login-screen').classList.add('hidden');
+    loginAttempts = 0;
+    idEl.value = ''; pwEl.value = '';
+    // Now check licence
+    if(checkLicenceOnStart()) {
+      document.getElementById('main-sb').style.display = 'flex';
+      document.querySelector('.main').style.display = 'flex';
+      // Small delay to ensure DOM is rendered before updating
+      setTimeout(function(){
+        updateLicBadgeSidebar();
+        checkDefaultAfterLogin();
+      }, 80);
+    }
+  } else {
+    // FAIL
+    loginAttempts++;
+    const left = MAX_TRIES - loginAttempts;
+    if(attEl) attEl.textContent = Math.max(0, left);
+    if(loginAttempts >= MAX_TRIES) {
+      startLock(lkEl, idEl, pwEl);
+    } else {
+      showLoginError('Identifiant ou mot de passe incorrect. (' + left + ' tentative(s) restante(s))');
+      pwEl.value = ''; pwEl.focus();
+    }
+  }
+}
+
+function showLoginError(msg) {
+  const errEl = document.getElementById('login-error');
+  errEl.textContent = msg;
+  errEl.classList.remove('show');
+  void errEl.offsetWidth; // reflow for animation
+  errEl.classList.add('show');
+}
+
+function startLock(lkEl, idEl, pwEl) {
+  let secs = LOCK_SECS;
+  const cdEl = document.getElementById('lock-countdown');
+  lkEl.classList.add('show');
+  document.getElementById('login-error').classList.remove('show');
+  idEl.disabled = true; pwEl.disabled = true;
+  document.querySelector('.login-btn').disabled = true;
+  if(cdEl) cdEl.textContent = secs;
+  lockTimer = true;
+  lockInterval = setInterval(() => {
+    secs--;
+    if(cdEl) cdEl.textContent = secs;
+    if(secs <= 0) {
+      clearInterval(lockInterval); lockTimer = null; lockInterval = null;
+      loginAttempts = 0; lkEl.classList.remove('show');
+      idEl.disabled = false; pwEl.disabled = false;
+      document.querySelector('.login-btn').disabled = false;
+      document.getElementById('attempts-left').textContent = MAX_TRIES;
+      idEl.focus();
+    }
+  }, 1000);
+}
+
+// Input hints
+document.addEventListener('DOMContentLoaded', () => {
+  const idInp = document.getElementById('login-id');
+  const pwInp = document.getElementById('login-pw');
+  if(idInp) idInp.addEventListener('input', () => {
+    document.getElementById('id-hint').textContent = idInp.value.length + ' / 9 chiffres';
+  });
+  if(pwInp) pwInp.addEventListener('input', () => {
+    document.getElementById('pw-hint').textContent = pwInp.value.length + ' / 6 caractères';
+  });
+});
+
+// Logout function
+function logout() {
+  document.getElementById('main-sb').style.display = 'none';
+  document.querySelector('.main').style.display = 'none';
+  document.getElementById('login-screen').classList.remove('hidden');
+  showLoginChurch();
+}
+
+
+// ══════════════════════════════════════════════════
+// MODULE PRÉSENCE DES FIDÈLES
+// ══════════════════════════════════════════════════
+let editFidId = null;
+
+// ── Données ──
+function getFidDB()      { const d=yd(); if(!d.fideles) d.fideles=[]; return d; }
+function saveFidEntry(e) {
+  const data=getFidDB();
+  if(editFidId) {
+    const i=data.fideles.findIndex(x=>x.id===editFidId);
+    if(i>=0) data.fideles[i]=e; editFidId=null;
+    el('fid-edit-badge').style.display='none';
+  } else {
+    data.fideles.push(e);
+  }
+  saveYD(data);
+}
+
+// ── Compteur +/- ──
+function adjustCount(id, delta) {
+  const inp = el(id);
+  if(!inp) return;
+  let v = parseInt(inp.value)||0;
+  v = Math.max(0, v + delta);
+  inp.value = v;
+  updateFidTotal();
+}
+
+// ── Mise à jour du total en temps réel ──
+function updateFidTotal() {
+  const h = Math.max(0, parseInt(el('fid-h')?.value)||0);
+  const f = Math.max(0, parseInt(el('fid-f')?.value)||0);
+  const e = Math.max(0, parseInt(el('fid-e')?.value)||0);
+  const tot = h + f + e;
+
+  const totEl = el('fid-total');
+  if(totEl) totEl.textContent = tot + ' fidèle' + (tot>1?'s':'');
+
+  // Mise à jour stat courant
+  const fstatDim = el('fstat-dim');
+  if(fstatDim) fstatDim.textContent = tot;
+
+  if(tot === 0) {
+    ['fid-h-pct','fid-f-pct','fid-e-pct'].forEach(id=>{ const e=el(id); if(e) e.textContent='— %'; });
+    ['fp-h','fp-f','fp-e'].forEach(id=>{ const e=el(id); if(e) e.style.width='33%'; });
+    const rt = el('fid-repartition-txt');
+    if(rt) rt.textContent = '—';
+    return;
+  }
+
+  const ph = Math.round(h/tot*100);
+  const pf = Math.round(f/tot*100);
+  const pe = 100 - ph - pf;
+
+  const hpct = el('fid-h-pct'); if(hpct) hpct.textContent = ph + '%';
+  const fpct = el('fid-f-pct'); if(fpct) fpct.textContent = pf + '%';
+  const epct = el('fid-e-pct'); if(epct) epct.textContent = pe + '%';
+
+  const fph = el('fp-h'); if(fph) fph.style.width = ph + '%';
+  const fpf = el('fp-f'); if(fpf) fpf.style.width = pf + '%';
+  const fpe = el('fp-e'); if(fpe) fpe.style.width = pe + '%';
+
+  const rt = el('fid-repartition-txt');
+  if(rt) rt.textContent = 'H:' + h + '  F:' + f + '  E:' + e;
+}
+
+// ── Enregistrement ──
+function saveFid() {
+  const date = el('fid-date')?.value;
+  if(!date) { toast('Veuillez sélectionner une date.', 'err'); return; }
+  const h = Math.max(0, parseInt(el('fid-h')?.value)||0);
+  const f = Math.max(0, parseInt(el('fid-f')?.value)||0);
+  const e = Math.max(0, parseInt(el('fid-e')?.value)||0);
+  const tot = h + f + e;
+  if(tot === 0) { toast('Veuillez saisir au moins un fidèle.', 'err'); return; }
+
+  const entry = {
+    id: editFidId || uid(),
+    date, note: el('fid-note')?.value || '',
+    hommes: h, femmes: f, enfants: e, total: tot,
+  };
+
+  saveFidEntry(entry);
+  toast((editFidId ? 'Présence modifiée' : 'Présence enregistrée') + ' : ' + tot + ' fidèle(s) — ' + date);
+  clearFidForm();
+  renderFidHist();
+  renderFidStats();
+  refreshFidSelects();
+}
+
+function clearFidForm() {
+  if(el('fid-date')) el('fid-date').value = new Date().toISOString().slice(0,10);
+  if(el('fid-note')) el('fid-note').value = '';
+  ['fid-h','fid-f','fid-e'].forEach(id=>{ if(el(id)) el(id).value = 0; });
+  updateFidTotal();
+  editFidId = null;
+  if(el('fid-edit-badge')) el('fid-edit-badge').style.display = 'none';
+}
+
+function cancelFid() {
+  if(editFidId && !confirm('Annuler la modification ?')) return;
+  clearFidForm();
+  toast('Saisie annulée.', 'inf');
+}
+
+// ── Modification ──
+function editFid(id) {
+  const data = getFidDB();
+  const entry = data.fideles.find(x=>x.id===id);
+  if(!entry) return;
+  go('fideles');
+  editFidId = id;
+  if(el('fid-edit-badge')) el('fid-edit-badge').style.display = 'block';
+  if(el('fid-date')) el('fid-date').value = entry.date || '';
+  if(el('fid-note')) el('fid-note').value = entry.note || '';
+  if(el('fid-h')) el('fid-h').value = entry.hommes || 0;
+  if(el('fid-f')) el('fid-f').value = entry.femmes || 0;
+  if(el('fid-e')) el('fid-e').value = entry.enfants || 0;
+  updateFidTotal();
+  window.scrollTo({top:0, behavior:'smooth'});
+}
+
+// ── Suppression ──
+function deleteFid(id) {
+  pendingDelId = id; pendingDelType = '_fidele';
+  openOverlay('del-overlay');
+  el('del-confirm-btn').onclick = () => {
+    const data = getFidDB();
+    data.fideles = data.fideles.filter(x => x.id !== id);
+    saveYD(data);
+    closeOverlay('del-overlay');
+    renderFidHist(); renderFidStats();
+    toast('Enregistrement supprimé.', 'inf');
+  };
+}
+
+// ── Historique ──
+function renderFidHist() {
+  const data = getFidDB();
+  const mois = el('fid-hist-mois')?.value || 'all';
+  let list = [...(data.fideles||[])];
+  if(mois !== 'all') list = list.filter(f=>(f.date||'').startsWith(curYear+'-'+mois));
+  list.sort((a,b)=>(b.date||'').localeCompare(a.date||''));
+
+  const tbody = el('fid-hist-body');
+  if(!tbody) return;
+  if(!list.length) {
+    tbody.innerHTML = '<tr><td colspan="8"><div class="empty-state"><div class="ico">👥</div><p>Aucune présence enregistrée</p></div></td></tr>';
+    return;
+  }
+
+  tbody.innerHTML = list.map(e => {
+    const tot = e.total || (e.hommes+e.femmes+e.enfants);
+    const ph = tot>0?Math.round(e.hommes/tot*100):0;
+    const pf = tot>0?Math.round(e.femmes/tot*100):0;
+    const pe = tot>0?Math.round(e.enfants/tot*100):0;
+    return `<tr class="fideles-hist-row">
+      <td><strong>${e.date}</strong></td>
+      <td style="color:var(--slate);font-size:11.5px">${e.note||'Culte'}</td>
+      <td class="r"><span style="color:#4a7fd4;font-weight:700">${e.hommes}</span></td>
+      <td class="r"><span style="color:#d44a90;font-weight:700">${e.femmes}</span></td>
+      <td class="r"><span style="color:#4ad494;font-weight:700">${e.enfants}</span></td>
+      <td class="r" style="font-weight:700;color:var(--navy)">${tot}</td>
+      <td>
+        <div style="display:flex;height:8px;border-radius:4px;overflow:hidden;width:80px;background:var(--parch2)">
+          <div style="width:${ph}%;background:#4a7fd4"></div>
+          <div style="width:${pf}%;background:#d44a90"></div>
+          <div style="width:${pe}%;background:#4ad494"></div>
+        </div>
+        <div style="font-size:9px;color:var(--slate);margin-top:2px">H:${ph}% F:${pf}% E:${pe}%</div>
+      </td>
+      <td class="no-print" style="white-space:nowrap">
+        <button class="btn btn-out btn-xs" onclick="editFid('${e.id}')">✏️</button>
+        <button class="btn btn-red btn-xs" onclick="deleteFid('${e.id}')">🗑</button>
+      </td>
+    </tr>`;
+  }).join('');
+}
+
+// ── Statistiques ──
+function renderFidStats() {
+  const data = getFidDB();
+  const list = data.fideles || [];
+  const yearList = list.filter(f=>(f.date||'').startsWith(String(curYear)));
+
+  const nb = yearList.length;
+  const totAll = yearList.reduce((s,f)=>s+(f.total||0), 0);
+  const moy = nb > 0 ? Math.round(totAll/nb) : 0;
+  const maxEntry = yearList.reduce((best,f)=>(!best||f.total>best.total)?f:best, null);
+
+  if(el('fstat-nb'))  el('fstat-nb').textContent  = nb;
+  if(el('fstat-moy')) el('fstat-moy').textContent  = nb>0 ? moy : '—';
+  if(el('fstat-max')) el('fstat-max').textContent  = maxEntry ? maxEntry.total+' ('+maxEntry.date+')' : '—';
+}
+
+// ── Sélecteurs mois ──
+function refreshFidSelects() {
+  const data = getFidDB();
+  const list = data.fideles || [];
+  const mis = [...new Set(list.map(f=>(f.date||'').slice(5,7)).filter(Boolean))].sort();
+  const MONTHS = ['Janvier','Février','Mars','Avril','Mai','Juin','Juillet','Août','Septembre','Octobre','Novembre','Décembre'];
+  const sel = el('fid-hist-mois');
+  if(!sel) return;
+  const prev = sel.value;
+  sel.innerHTML = '<option value="all">Tous les mois</option>' +
+    mis.map(m=>`<option value="${m}">${MONTHS[parseInt(m)-1]||m}</option>`).join('');
+  if(mis.includes(prev)) sel.value = prev;
+}
+
+// ── Export PDF ──
+function pdfFideles() {
+  const data = getFidDB();
+  const mois = el('fid-hist-mois')?.value || 'all';
+  const MONTHS = ['Janvier','Février','Mars','Avril','Mai','Juin','Juillet','Août','Septembre','Octobre','Novembre','Décembre'];
+  let list = [...(data.fideles||[])];
+  if(mois !== 'all') list = list.filter(f=>(f.date||'').startsWith(curYear+'-'+mois));
+  list.sort((a,b)=>(b.date||'').localeCompare(a.date||''));
+
+  const {jsPDF} = window.jspdf;
+  const doc = new jsPDF('p','pt','a4');
+  const church = cfg('church') || 'Église';
+  const period = mois==='all' ? 'Année '+curYear : (MONTHS[parseInt(mois)-1]||mois)+' '+curYear;
+
+  // Header
+  doc.setFillColor(24,40,64); doc.rect(0,0,595,80,'F');
+  doc.setTextColor(192,138,40); doc.setFontSize(16);
+  doc.text('PRÉSENCE DES FIDÈLES', 297, 32, {align:'center'});
+  doc.setFontSize(11); doc.setTextColor(200,200,200);
+  doc.text(church + ' — ' + period, 297, 52, {align:'center'});
+  doc.setFontSize(9); doc.setTextColor(140,140,140);
+  doc.text('Généré le '+new Date().toLocaleDateString('fr-FR'), 297, 68, {align:'center'});
+
+  // Totaux
+  const totH = list.reduce((s,f)=>s+f.hommes,0);
+  const totF = list.reduce((s,f)=>s+f.femmes,0);
+  const totE = list.reduce((s,f)=>s+f.enfants,0);
+  const totT = totH+totF+totE;
+  const nb   = list.length;
+
+  doc.autoTable({
+    startY: 95,
+    head:[['Période','Hommes','Femmes','Enfants','Total','% H','% F','% E']],
+    body:[
+      ['TOTAL '+period, totH+'', totF+'', totE+'', totT+'',
+       totT>0?Math.round(totH/totT*100)+'%':'—',
+       totT>0?Math.round(totF/totT*100)+'%':'—',
+       totT>0?Math.round(totE/totT*100)+'%':'—'],
+      ['Moyenne/dimanche', nb>0?Math.round(totH/nb)+'':'—', nb>0?Math.round(totF/nb)+'':'—', nb>0?Math.round(totE/nb)+'':'—', nb>0?Math.round(totT/nb)+'':'—','','',''],
+    ],
+    headStyles:{fillColor:[24,40,64],textColor:[192,138,40],fontStyle:'bold'},
+    styles:{fontSize:10,halign:'center'},
+    columnStyles:{0:{halign:'left'}},
+  });
+
+  let y = doc.lastAutoTable.finalY + 16;
+
+  doc.autoTable({
+    startY: y,
+    head:[['Date','Culte / Note','Hommes','Femmes','Enfants','Total']],
+    body: list.map(e=>[ e.date, e.note||'Culte ordinaire', e.hommes+'', e.femmes+'', e.enfants+'', (e.total||e.hommes+e.femmes+e.enfants)+'' ]),
+    headStyles:{fillColor:[24,40,64],textColor:255,fontStyle:'bold'},
+    styles:{fontSize:10},
+    columnStyles:{2:{halign:'right'},3:{halign:'right'},4:{halign:'right'},5:{halign:'right',fontStyle:'bold'}},
+  });
+
+  // Signatures
+  const pastor = cfg('pastor') || '—';
+  const accountant = cfg('accountant') || '—';
+  y = doc.lastAutoTable.finalY + 30;
+  if(y < 680) {
+    doc.setFontSize(9); doc.setTextColor(100,116,139);
+    doc.text('LE PASTEUR', 130, y, {align:'center'});
+    doc.text('LE COMPTABLE', 465, y, {align:'center'});
+    doc.setFontSize(10); doc.setTextColor(24,40,64); doc.setFont(undefined,'bold');
+    doc.text(pastor, 130, y+13, {align:'center'});
+    doc.text(accountant, 465, y+13, {align:'center'});
+    doc.setFont(undefined,'normal');
+    doc.line(80, y+35, 180, y+35);
+    doc.line(415, y+35, 515, y+35);
+  }
+
+  doc.save('Presence_Fideles_'+period.replace(/\s/g,'_')+'.pdf');
+  toast('PDF présence exporté !');
+}
+
+
+
+// ══════════════════════════════════════════════════
+// CHANGEMENT MOT DE PASSE UTILISATEUR
+// ══════════════════════════════════════════════════
+
+function openChpw() {
+  // Reset form
+  ['chpw-old','chpw-new','chpw-confirm'].forEach(id => { const e=el(id); if(e){e.value='';e.type='password';} });
+  ['csb1','csb2','csb3','csb4'].forEach(id => { const e=el(id); if(e) e.style.background='var(--parch2)'; });
+  ['rule-len','rule-diff','rule-old'].forEach(id => { const e=el(id); if(e) e.textContent='⬜'; });
+  const st=el('chpw-strength-txt'); if(st) st.textContent='';
+  const err=el('chpw-err'); if(err) err.classList.remove('show');
+  const ok=el('chpw-ok');  if(ok)  ok.classList.remove('show');
+  el('chpw-overlay').classList.add('on');
+  setTimeout(()=>{ const e=el('chpw-old'); if(e) e.focus(); },100);
+}
+
+function closeChpw() {
+  el('chpw-overlay').classList.remove('on');
+}
+
+function toggleChpwEye(inputId, btn) {
+  const inp = el(inputId);
+  if(!inp) return;
+  if(inp.type === 'password') { inp.type = 'text'; btn.textContent = '🙈'; }
+  else                        { inp.type = 'password'; btn.textContent = '👁'; }
+}
+
+function validateChpw() {
+  const oldV  = el('chpw-old')?.value     || '';
+  const newV  = el('chpw-new')?.value     || '';
+  const conV  = el('chpw-confirm')?.value || '';
+  const storedId = loadCfg().loginId || LOGIN_ID;
+  const storedPw = loadCfg().loginPw || LOGIN_PW;
+
+  // Règle 1 : longueur 6
+  const rLen  = el('rule-len');
+  if(rLen) rLen.textContent = newV.length === 6 ? '✅' : '⬜';
+
+  // Règle 2 : différent de l'identifiant
+  const rDiff = el('rule-diff');
+  if(rDiff) rDiff.textContent = (newV.length >= 1 && newV !== storedId) ? '✅' : '⬜';
+
+  // Règle 3 : différent de l'ancien
+  const rOld  = el('rule-old');
+  if(rOld) rOld.textContent = (newV.length >= 1 && newV !== storedPw) ? '✅' : '⬜';
+
+  // Force du mot de passe
+  let score = 0;
+  if(newV.length >= 6) score++;
+  if(/[A-Z]/.test(newV)) score++;
+  if(/[0-9]/.test(newV)) score++;
+  if(/[^A-Za-z0-9]/.test(newV)) score++;
+
+  const colors  = ['#ef4444','#f97316','#eab308','#22c55e'];
+  const labels  = ['Faible','Moyen','Bon','Fort'];
+  const bars    = ['csb1','csb2','csb3','csb4'];
+  if(newV.length > 0) {
+    bars.forEach((id,i) => {
+      const e=el(id);
+      if(e) e.style.background = i < score ? colors[score-1] : 'var(--parch2)';
+    });
+    const st=el('chpw-strength-txt');
+    if(st) { st.textContent = newV.length > 0 ? 'Force : '+labels[Math.min(score-1,3)] : ''; st.style.color = colors[Math.min(score-1,3)]; }
+  }
+
+  // Confirmation match
+  const confirmInp = el('chpw-confirm');
+  if(confirmInp && conV.length > 0) {
+    confirmInp.style.borderColor = (conV === newV) ? 'var(--green)' : 'var(--red)';
+  } else if(confirmInp) {
+    confirmInp.style.borderColor = '';
+  }
+}
+
+function showChpwErr(msg) {
+  const e=el('chpw-err');
+  e.textContent=msg; e.classList.remove('show');
+  void e.offsetWidth; e.classList.add('show');
+  el('chpw-ok').classList.remove('show');
+}
+function showChpwOk(msg) {
+  const e=el('chpw-ok');
+  e.textContent=msg; e.classList.remove('show');
+  void e.offsetWidth; e.classList.add('show');
+  el('chpw-err').classList.remove('show');
+}
+
+function submitChpw() {
+  const oldV  = (el('chpw-old')?.value     || '').trim();
+  const newV  = (el('chpw-new')?.value     || '').trim();
+  const conV  = (el('chpw-confirm')?.value || '').trim();
+  const storedId = loadCfg().loginId || LOGIN_ID;
+  const storedPw = loadCfg().loginPw || LOGIN_PW;
+
+  // Vérifications
+  if(!oldV) { showChpwErr('Veuillez saisir votre mot de passe actuel.'); el('chpw-old').focus(); return; }
+  if(oldV !== storedPw) { showChpwErr('❌ Le mot de passe actuel est incorrect.'); el('chpw-old').value=''; el('chpw-old').focus(); return; }
+  if(!newV) { showChpwErr('Veuillez saisir un nouveau mot de passe.'); el('chpw-new').focus(); return; }
+  if(newV.length !== 6) { showChpwErr('Le nouveau mot de passe doit contenir exactement 6 caractères.'); el('chpw-new').focus(); return; }
+  if(newV === storedId) { showChpwErr('Le mot de passe ne peut pas être identique à votre identifiant.'); el('chpw-new').focus(); return; }
+  if(newV === storedPw) { showChpwErr("Le nouveau mot de passe doit être différent de l'ancien."); el('chpw-new').focus(); return; }
+  if(!conV) { showChpwErr('Veuillez confirmer le nouveau mot de passe.'); el('chpw-confirm').focus(); return; }
+  if(newV !== conV) { showChpwErr('❌ Les deux mots de passe ne correspondent pas.'); el('chpw-confirm').value=''; el('chpw-confirm').focus(); return; }
+
+  // Sauvegarde
+  const c = loadCfg();
+  c.loginPw = newV;
+  c.pwLastChanged = new Date().toISOString();
+  saveCfg(c);
+
+  // Mettre à jour l'affichage caché
+  const cfgPw = el('cfg-loginPw'); if(cfgPw) cfgPw.value = newV;
+
+  showChpwOk('✅ Mot de passe modifié avec succès ! Vous utiliserez ce nouveau mot de passe à votre prochaine connexion.');
+  toast('Mot de passe modifié avec succès !');
+
+  // Mise à jour affichage paramètres
+  updatePwStatusDisplay();
+
+  // Fermer après délai
+  setTimeout(() => {
+    closeChpw();
+    ['chpw-old','chpw-new','chpw-confirm'].forEach(id => { const e=el(id); if(e) e.value=''; });
+  }, 2500);
+}
+
+function checkDefaultCreds() {
+  const c = loadCfg();
+  const curId = c.loginId || LOGIN_ID;
+  const curPw = c.loginPw || LOGIN_PW;
+  const isDefaultId = curId === LOGIN_ID;
+  const isDefaultPw = curPw === LOGIN_PW;
+  const warn = el('default-pw-warn');
+  if(warn) warn.style.display = (isDefaultId || isDefaultPw) ? 'flex' : 'none';
+  const idStatus = el('loginid-status');
+  if(idStatus) idStatus.textContent = isDefaultId ? '⚠️' : '✅';
+}
+
+function updatePwStatusDisplay() {
+  const c = loadCfg();
+  const isDefault = (c.loginPw || LOGIN_PW) === LOGIN_PW;
+  const disp = el('pw-status-display');
+  if(disp) {
+    disp.textContent = '••••••';
+    disp.style.color = isDefault ? 'var(--amber)' : 'var(--green)';
+    disp.style.borderColor = isDefault ? 'var(--amber)' : 'var(--green)';
+  }
+  const last = el('pw-last-changed');
+  if(last) {
+    if(c.pwLastChanged) {
+      last.innerHTML = '✅ Dernier changement : <strong>' + new Date(c.pwLastChanged).toLocaleDateString('fr-FR',{day:'2-digit',month:'long',year:'numeric'}) + '</strong>';
+      last.style.color = 'var(--green)';
+    } else {
+      last.innerHTML = '⚠️ Mot de passe par défaut — <strong>Changez-le dès maintenant</strong>';
+      last.style.color = 'var(--amber)';
+    }
+  }
+}
+
+// Vérifier si défaut à la connexion
+function checkDefaultAfterLogin() {
+  const c = loadCfg();
+  const isDefaultId = (c.loginId || LOGIN_ID) === LOGIN_ID;
+  const isDefaultPw = (c.loginPw || LOGIN_PW) === LOGIN_PW;
+  if(isDefaultId || isDefaultPw) {
+    // Afficher une alerte douce après 1.5 secondes
+    setTimeout(() => {
+      toast('⚠️ Vous utilisez encore le mot de passe par défaut. Changez-le dans Paramètres !', 'wrn');
+    }, 1500);
+  }
+}
+
+// ── INIT ──
+document.addEventListener('DOMContentLoaded',()=>{
+  // Hide app until login
+  document.getElementById('main-sb').style.display = 'none';
+  document.querySelector('.main').style.display = 'none';
+  document.getElementById('licence-screen').classList.add('hidden'); // start hidden, login shows it
+  showLoginChurch();
+  document.getElementById('login-id').focus();
+  showSplash();
+
+  const now=new Date();
+  el('pg-date').textContent=now.toLocaleDateString('fr-FR',{weekday:'long',year:'numeric',month:'long',day:'numeric'});
+  ['yr-display','sb-yr2'].forEach(id=>sv(id,curYear));
+  el('bgt-yr-lbl').textContent=curYear;
+  const today=now.toISOString().slice(0,10);
+  if(el('r-date')) el('r-date').value=today;
+  if(el('d-date')) el('d-date').value=today;
+  loadConfigUI(); updateSidebar(); renderDash(); refreshSelects();
+});
+
+// ══════════════════════════════════════════════════
+// PWA — SERVICE WORKER + INSTALL PROMPT
+// ══════════════════════════════════════════════════
+// Register service worker
+if('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    // Inline SW as blob since we're a single file
+    const swCode = `
+      const CACHE='eglise-v2';
+      const APP_URL = location.href;
+      self.addEventListener('install', e => { e.waitUntil(caches.open(CACHE).then(c => c.add(APP_URL))); self.skipWaiting(); });
+      self.addEventListener('activate', e => { e.waitUntil(caches.keys().then(ks => Promise.all(ks.filter(k=>k!==CACHE).map(k=>caches.delete(k))))); self.clients.claim(); });
+      self.addEventListener('fetch', e => { e.respondWith(caches.match(e.request).then(r => r || fetch(e.request).catch(() => caches.match(APP_URL)))); });
+    `;
+    const blob = new Blob([swCode], {type:'application/javascript'});
+    const swUrl = URL.createObjectURL(blob);
+    navigator.serviceWorker.register(swUrl, {scope: './'})
+      .then(reg => console.log('SW registered'))
+      .catch(err => console.log('SW error:', err));
+  });
+}
+
+// PWA install prompt
+let deferredInstallPrompt = null;
+window.addEventListener('beforeinstallprompt', (e) => {
+  e.preventDefault();
+  deferredInstallPrompt = e;
+  showInstallBanner();
+});
+
+function showInstallBanner() {
+  const banner = document.getElementById('pwa-install-banner');
+  if(banner) { banner.style.display = 'flex'; }
+}
+
+function installPWA() {
+  const banner = document.getElementById('pwa-install-banner');
+  if(deferredInstallPrompt) {
+    deferredInstallPrompt.prompt();
+    deferredInstallPrompt.userChoice.then(choice => {
+      if(choice.outcome === 'accepted') {
+        if(banner) banner.style.display = 'none';
+      }
+      deferredInstallPrompt = null;
+    });
+  } else {
+    // Manual instructions
+    document.getElementById('pwa-manual-modal').classList.add('show');
+  }
+}
+
+function dismissInstallBanner() {
+  const banner = document.getElementById('pwa-install-banner');
+  if(banner) banner.style.display = 'none';
+}
+
+window.addEventListener('appinstalled', () => {
+  const banner = document.getElementById('pwa-install-banner');
+  if(banner) banner.style.display = 'none';
+  deferredInstallPrompt = null;
+});
+
+</script>
+</body>
+</html>
